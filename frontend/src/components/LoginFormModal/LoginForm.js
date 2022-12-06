@@ -8,6 +8,7 @@ function LoginForm() {
   const [email, setEmail] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [errors, setErrors] = useState([]);
+  const [formType, setFormType] = useState(true)
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -29,27 +30,7 @@ function LoginForm() {
       });
   };
 
-const emailForm = (e) => {
-    return (
-        <form onSubmit={handleSubmit}>
-            <ul>
-                {errors.map(error => <li key={error}>{error}</li>)}
-            </ul>
-            <label>
-            Enter your email
-                <input
-                type="text"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-                />
-            </label>
-            <button type="submit">Continue</button>
-        </form>
-    )
-}
-
-  return (
+  return ( formType ? (
     <>
     <form onSubmit={handleSubmit}>
       <ul>
@@ -97,10 +78,28 @@ const emailForm = (e) => {
       <button type="submit">Continue</button>
       <br />
     </form>
-    <form onSubmit={emailForm()}>
-        <button type="submit">Use email instead</button>
-    </form>
-    </>
+    <button type="button" onClick={(e) => setFormType(false)}>Use email instead</button> 
+    </>) : (
+      <form onSubmit={handleSubmit}>
+      <ul>
+          {errors.map(error => <li key={error}>{error}</li>)}
+      </ul>
+      <h2>Enter your email</h2>
+      <p>Enter the email associated with your ConnecTable account, social login or new email. We’ll send a code to that email.</p>
+          <input
+          type="text"
+          value={email}
+          placeholder="Email"
+          onChange={(e) => setEmail(e.target.value)}
+          required
+          />
+      <br/>
+      <button type="submit">Continue</button>
+      <br/>
+      <button type="button" onClick={(e) => setFormType(true)}>Use phone instead</button> 
+  </form>
+    )
+
   );
 }
 

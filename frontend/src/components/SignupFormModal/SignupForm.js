@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import { React, useState } from "react";
 import * as sessionActions from "../../store/session";
 import { useDispatch } from "react-redux";
 import { Redirect } from "react-router";
 import { NavLink } from "react-router-dom";
 import SignupPage from '../SignupFormPage'
+import { Modal } from "../../context/Modal";
 
 
 function SignupForm() {
@@ -34,34 +35,6 @@ function SignupForm() {
 //       });
 
   };
-
-  const emailForm = (e) => {
-    return (
-        <form onSubmit={handleSubmit}>
-            <ul>
-                {errors.map(error => <li key={error}>{error}</li>)}
-            </ul>
-            <label>
-            Enter your email
-                <input
-                type="text"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-                />
-            </label>
-            
-            <button type="submit">Continue</button>
-        </form>
-    )
-}
-
-const signupRed = (e) => {
-    return (
-    <Redirect to={SignupPage}></Redirect>
-    )
-}
-
 
   return (
     <>
@@ -107,13 +80,13 @@ const signupRed = (e) => {
         />
       </label>
       <br />
-      <button onClick={signupRed}>Continue
-      </button>
+      {/* <button onClick={signupRed}>Continue */}
+      {/* </button> */}
       <br />
     </form>
-    <form onSubmit={emailForm()}>
+    {/* <form onSubmit={emailForm()}>
         <button type="submit">Use email instead</button>
-    </form>
+    </form> */}
     </>
   );
 }
