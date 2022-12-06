@@ -1,35 +1,41 @@
 import React, { useState } from "react";
 import * as sessionActions from "../../store/session";
 import { useDispatch } from "react-redux";
+import { Redirect } from "react-router";
+import { NavLink } from "react-router-dom";
+import SignupPage from '../SignupFormPage'
 
 
-function LoginForm() {
+function SignupForm() {
   const dispatch = useDispatch();
   const [email, setEmail] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [errors, setErrors] = useState([]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setErrors([]);
+        // debugger
 
-    
-    return dispatch(sessionActions.login({ email, phoneNumber }))
-      .catch(async (res) => {
-        let data;
-        try {
-          // .clone() essentially allows you to read the response body twice
-          data = await res.clone().json();
-        } catch {
-          data = await res.text(); // Will hit this case if the server is down
-        }
-        if (data?.errors) setErrors(data.errors);
-        else if (data) setErrors([data]);
-        else setErrors([res.statusText]);
-      });
+//     return dispatch(sessionActions.login({ email, phoneNumber }))
+//       .catch(async (res) => {
+//         let data;
+//         try {
+//           // .clone() essentially allows you to read the response body twice
+//           data = await res.clone().json();
+//         } catch {
+//           data = await res.text(); // Will hit this case if the server is down
+//         }
+//         if (data?.errors) setErrors(data.errors);
+//         else if (data) setErrors([data]);
+//         else setErrors([res.statusText]);
+//       });
+
   };
 
-const emailForm = (e) => {
+  const emailForm = (e) => {
     return (
         <form onSubmit={handleSubmit}>
             <ul>
@@ -44,10 +50,18 @@ const emailForm = (e) => {
                 required
                 />
             </label>
+            
             <button type="submit">Continue</button>
         </form>
     )
 }
+
+const signupRed = (e) => {
+    return (
+    <Redirect to={SignupPage}></Redirect>
+    )
+}
+
 
   return (
     <>
@@ -88,13 +102,13 @@ const emailForm = (e) => {
         <input
           type="text"
           value={phoneNumber}
-          placeholder="Phone Number"
           onChange={(e) => setPhoneNumber(e.target.value)}
           required
         />
       </label>
       <br />
-      <button type="submit">Continue</button>
+      <button onClick={signupRed}>Continue
+      </button>
       <br />
     </form>
     <form onSubmit={emailForm()}>
@@ -104,4 +118,4 @@ const emailForm = (e) => {
   );
 }
 
-export default LoginForm;
+export default SignupForm;

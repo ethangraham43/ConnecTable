@@ -9,8 +9,12 @@ class User < ApplicationRecord
     # validates :password, length: { in: 6..255 }, allow_nil: true
 
 
-    def self.find_by_credentials(email)
-        user = User.find_by(email: email)
+    def self.find_by_credentials(credential)
+        if URI::MailTo::EMAIL_REGEXP.match(credential)
+            user = User.find_by(email: credential)
+        else
+            user = User.find_by(phone_number: credential)
+        end
         if user
           return user
         else

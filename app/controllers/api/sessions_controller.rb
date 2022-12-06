@@ -13,11 +13,8 @@ class Api::SessionsController < ApplicationController
   end
 
   def create
-      email = params[:email]
-      first_name = params[:first_name]
-      last_name = params[:last_name]
-      phone_number = params[:phone_number]
-      @user = User.find_by_credentials(email, first_name, last_name, phone_number)
+      credential = params[:credential]
+      @user = User.find_by_credentials(credential)
 
       if @user
           login!(@user)

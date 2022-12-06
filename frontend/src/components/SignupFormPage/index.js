@@ -40,43 +40,43 @@ function SignupFormPage() {
       <ul>
         {errors.map(error => <li key={error}>{error}</li>)}
       </ul>
-      <label>
-        Email
+      <h2>Get Started</h2>
+      <p>Enter some information about yourself to get started.</p>
+
         <input
+          className=""
           type="text"
           value={email}
+          placeholder="Email"
           onChange={(e) => setEmail(e.target.value)}
           required
         />
-      </label>
-      <label>
-        First Name
+        <br />
         <input
           type="text"
           value={firstName}
+          placeholder="First Name"
           onChange={(e) => setFirstName(e.target.value)}
           required
         />
-      </label>
-      <label>
-        Last Name
+        <br />
         <input
           type="text"
           value={lastName}
+          placeholder="Last Name"
           onChange={(e) => setLastName(e.target.value)}
           required
         />
-      </label>
-      <label>
-        Phone Number
+        <br />
         <input
           type="text"
           value={phoneNumber}
+          placeholder="Phone Number"
           onChange={(e) => setPhoneNumber(e.target.value)}
           required
         />
-      </label>
-      <button type="submit">Sign Up</button>
+        <br />
+      <button type="submit">Continue</button>
     </form>
   );
 }

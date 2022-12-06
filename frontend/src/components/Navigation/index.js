@@ -1,10 +1,29 @@
-import React from 'react';
+import { useState, React } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import './Navigation.css';
 import * as sessionActions from '../../store/session';
 import { useDispatch } from 'react-redux';
 import LoginFormModal from '../LoginFormModal';
+import SignupFormModal from '../SignupFormModal';
+import SignupFormPage from '../SignupFormPage';
+import { Route } from 'react-router-dom';
+import { Modal } from '../../context/Modal';
+
+function SignupForm() {
+  const [showModal, setShowModal] = useState(false);
+
+  return (
+    <>
+      <button onClick={() => setShowModal(true)}>Sign Up</button>
+      {showModal && (
+        <Modal onClose={() => setShowModal(false)}>
+          <SignupFormPage />
+        </Modal>
+      )}
+    </>
+  );
+}
 
 function Navigation() {
 
@@ -24,8 +43,8 @@ function Navigation() {
   } else {
     sessionLinks = (
       <>
-        <LoginFormModal />
-        <NavLink to="/signup">Sign Up</NavLink>
+        <LoginFormModal className="login-modal"/>
+        <SignupForm></SignupForm>
       </>
     );
   }
