@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Redirect } from "react-router-dom";
 import * as sessionActions from "../../store/session";
+import './SignupForm.css'
 
 function SignupFormPage() {
   const dispatch = useDispatch();
@@ -36,48 +37,57 @@ function SignupFormPage() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <ul>
-        {errors.map(error => <li key={error}>{error}</li>)}
-      </ul>
-      <h2>Get Started</h2>
-      <p>Enter some information about yourself to get started.</p>
+    <body>
+      <div id="wrapper">
+        <div className="signup-modal">
+          <form onSubmit={handleSubmit}>
+            <ul>
+              {errors.map(error => <li key={error}>{error}</li>)}
+            </ul>
+            <h2>Get Started</h2>
+            <p>Enter some information about yourself to get started.</p>
 
-        <input
-          className=""
-          type="text"
-          value={email}
-          placeholder="Email"
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
-        <br />
-        <input
-          type="text"
-          value={firstName}
-          placeholder="First Name"
-          onChange={(e) => setFirstName(e.target.value)}
-          required
-        />
-        <br />
-        <input
-          type="text"
-          value={lastName}
-          placeholder="Last Name"
-          onChange={(e) => setLastName(e.target.value)}
-          required
-        />
-        <br />
-        <input
-          type="text"
-          value={phoneNumber}
-          placeholder="Phone Number"
-          onChange={(e) => setPhoneNumber(e.target.value)}
-          required
-        />
-        <br />
-      <button type="submit">Continue</button>
-    </form>
+              <input
+                className="email"
+                type="text"
+                value={email}
+                placeholder="Email"
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
+              <br />
+              <input
+                className="firstName"
+                type="text"
+                value={firstName}
+                placeholder="First Name"
+                onChange={(e) => setFirstName(e.target.value)}
+                required
+              />
+              <br />
+              <input
+                className="lastName" 
+                type="text"
+                value={lastName}
+                placeholder="Last Name"
+                onChange={(e) => setLastName(e.target.value)}
+                required
+              />
+              <br />
+              <input
+                className="phoneNumber"
+                type="text"
+                value={phoneNumber}
+                placeholder="Phone Number"
+                onChange={(e) => setPhoneNumber(e.target.value)}
+                required
+              />
+              <br />
+            <button type="submit">Continue</button>
+          </form>
+        </div>
+      </div>
+    </body>
   );
 }
 

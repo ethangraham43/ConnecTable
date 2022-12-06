@@ -1,0 +1,39 @@
+input {
+    background: #0000;
+    border: none;
+    box-sizing: border-box;
+    color: #2d333f;
+    display: block;
+    line-height: 24px;
+    min-height: 48px;
+    padding: 0.75rem 8px;
+    width: 100%;
+}
+
+#wrapper {
+    display: flex;
+    margin: 0 auto;
+    max-width: 100rem;
+    flex-direction: column;
+    width: 100%;
+}
+
+div.signup-modal {
+    background-color: #fff;
+    min-height: calc(48.0625rem - 96px);
+    padding: 48px 32px;
+    padding-top: 4.5rem;
+    display: block;
+}
+
+body {
+    text-size-adjust: 100%;
+    background-color: #f7f7f7;
+    color: #2d333f;
+    height: 100%;
+}
+
+form {
+    display: block;
+    margin-top:0em;
+}
