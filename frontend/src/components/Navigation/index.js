@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 import './Navigation.css';
 import * as sessionActions from '../../store/session';
 import { useDispatch } from 'react-redux';
+import LoginFormModal from '../LoginFormModal';
 
 function Navigation() {
 
@@ -23,7 +24,7 @@ function Navigation() {
   } else {
     sessionLinks = (
       <>
-        <NavLink to="/login">Log In</NavLink>
+        <LoginFormModal />
         <NavLink to="/signup">Sign Up</NavLink>
       </>
     );
