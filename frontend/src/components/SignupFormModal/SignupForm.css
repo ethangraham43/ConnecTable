@@ -28,11 +28,10 @@ input {
     border: 0.0625rem solid #d8d9db;
     border-radius: 4px;
     box-sizing: border-box;
-}
+} 
 
 
 div.signup-modal {
-    min-height: calc(48.0625rem - 96px);
     padding: 48px 32px;
     display: block;
     margin: 20vh auto 0px auto;

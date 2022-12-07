@@ -42,12 +42,8 @@ function LoginForm() {
   return ( formType ? (
     <>
     <form onSubmit={handleSubmit}>
-      <ul>
-        {errors.map(error => <li key={error}>{error}</li>)}
-      </ul>
-      <label>
-      <h2>Enter your Phone Number</h2>
-        <p>You will receive a text message to verify your account. Message & data rates may apply.</p>
+      <h2 className="login-title">Enter your Phone Number</h2>
+        <p className="login-body">You will receive a text message to verify your account. Message & data rates may apply.</p>
         <input
           type="text"
           value={phoneNumber}
@@ -55,7 +51,9 @@ function LoginForm() {
           onChange={(e) => setPhoneNumber(e.target.value)}
           required
         />
-      </label>
+      <ul>
+        {errors.map(error => <li key={error}>{error}</li>)}
+      </ul>
       <br />
       <button className="signin-continue" type="submit">Continue</button>
       <br />
@@ -67,8 +65,8 @@ function LoginForm() {
       <ul>
           {errors.map(error => <li key={error}>{error}</li>)}
       </ul>
-      <h2>Enter your email</h2>
-      <p>Enter the email associated with your ConnecTable account, social login or new email. We’ll send a code to that email.</p>
+      <h2 className="login-title">Enter your email</h2>
+      <p className="login-body">Enter the email associated with your ConnecTable account, social login or new email. We’ll send a code to that email.</p>
           <input
           type="text"
           value={email}

@@ -1,0 +1,31 @@
+.user-logo {
+    height: 24px;
+    width: 24px;
+    float: right;
+    margin-top: 4px;
+}
+
+.logout-button {
+    float: right;
+    margin-left: 8px;
+    margin-right: 8px;
+    padding: 0px 16px;
+    margin: 0 8px;
+    display: flex;
+    font-weight: 200;
+    padding: 6px 12px;
+    cursor: pointer;
+    align-items: flex-start;
+    text-align: center;
+    text-indent: 0px;
+    word-spacing: normal;
+}
+.logout-button:hover {
+    cursor: pointer;
+}
+
+.user-button {
+    border-radius: 5px;
+    border-style: solid;
+    float: right;
+}

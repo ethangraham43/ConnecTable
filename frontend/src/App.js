@@ -4,12 +4,15 @@ import { Switch } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import './index.css';
 
+function renderBody() {
+  
+}
+
 function App() {
   return (
     <>
-    <Switch>
     <Navigation />
-    </Switch>
+
     </>
   );
 }
