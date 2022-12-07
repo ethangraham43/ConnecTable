@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import * as sessionActions from "../../store/session";
 import { useDispatch } from "react-redux";
+import './LoginForm.css';
 
 
 function LoginForm() {
@@ -30,39 +31,20 @@ function LoginForm() {
       });
   };
 
+  const handleDemo = (e) => {
+    e.preventDefault();
+    return dispatch(sessionActions.login({
+      phoneNumber: '0000000000',
+      email: 'demo@user.io'
+    }))
+  }
+
   return ( formType ? (
     <>
     <form onSubmit={handleSubmit}>
       <ul>
         {errors.map(error => <li key={error}>{error}</li>)}
       </ul>
-      {/* <label>
-        Email
-        <input
-          type="text"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
-      </label>
-      <label>
-        First Name
-        <input
-          type="text"
-          value={firstName}
-          onChange={(e) => setFirstName(e.target.value)}
-          required
-        />
-      </label>
-      <label>
-        Last Name
-        <input
-          type="text"
-          value={lastName}
-          onChange={(e) => setLastName(e.target.value)}
-          required
-        />
-      </label> */}
       <label>
       <h2>Enter your Phone Number</h2>
         <p>You will receive a text message to verify your account. Message & data rates may apply.</p>
@@ -75,10 +57,11 @@ function LoginForm() {
         />
       </label>
       <br />
-      <button type="submit">Continue</button>
+      <button className="signin-continue" type="submit">Continue</button>
       <br />
     </form>
-    <button type="button" onClick={(e) => setFormType(false)}>Use email instead</button> 
+    <button className="signin-switch" type="button" onClick={(e) => setFormType(false)}>Use email instead</button> 
+    <button className="demo-button"type="button" onClick={handleDemo}>Demo User</button>
     </>) : (
       <form onSubmit={handleSubmit}>
       <ul>
@@ -94,9 +77,10 @@ function LoginForm() {
           required
           />
       <br/>
-      <button type="submit">Continue</button>
+      <button className="signin-continue" type="submit">Continue</button>
       <br/>
-      <button type="button" onClick={(e) => setFormType(true)}>Use phone instead</button> 
+      <button className="signin-switch" type="button" onClick={(e) => setFormType(true)}>Use phone instead</button> 
+      <button className="demo-button" type="button" onClick={handleDemo}>Demo User</button>
   </form>
     )
 

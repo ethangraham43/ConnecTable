@@ -1,0 +1,90 @@
+button.signin-continue {
+    background-color: #da3743;
+    color: #fff;
+    border-radius: 4px;
+    height: 3rem;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    outline: none;
+    width: 75%;
+    text-align: center;
+    margin: auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signin-switch {
+    color: red;
+    background-color: #fff;
+    text-decoration: underline;
+    border-radius: 4px;
+    height: 3rem;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    outline: none;
+    width: 75%;
+    text-align: center;
+    margin: auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom:20px;
+}
+button.signin-continue:hover:not(:disabled) {
+    background-color: #b8222d;
+}
+
+div #modal-content {
+    background-color: #fff;
+    min-height: calc(48.0625rem - 96px);
+    padding: 48px 32px;
+    padding-top: 4.5rem;
+
+}
+
+button.signin-change {
+    background-color: initial;
+    color: #da3743;
+}
+
+button.signin-button-modal{
+    margin-left: 8px;
+    margin-right: 8px;
+    padding: 0px 16px;
+    margin: 0 8px;
+    float: right;
+    display: flex;
+    font-weight: 200;
+    padding: 6px 12px;
+    cursor: pointer;
+    align-items: flex-start;
+    text-align: center;
+    text-indent: 0px;
+    word-spacing: normal;
+}
+
+button.demo-button {
+    background-color: #247f9e;
+    color: #fff;
+    border-radius: 4px;
+    height: 3rem;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    outline: none;
+    width: 75%;
+    text-align: center;
+    margin: auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
