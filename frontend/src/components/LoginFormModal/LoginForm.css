@@ -45,7 +45,7 @@ div #modal-content {
     background-color: #fff;
     padding: 48px 32px;
     padding-top: 4.5rem;
-
+    border-radius: 3px;
 }
 
 button.signin-change {
@@ -96,4 +96,65 @@ button.demo-button {
 .login-body {
     font-size: 16px;
     font-weight: 400;
+}
+
+.phone-number-input-login {
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    text-align: start;
+    appearance: auto;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    background: #0000;
+    border: none;
+    box-sizing: border-box;
+    color: #2d333f;
+    display: block;
+    line-height: 24px;
+    min-height: 48px;
+    padding: 0.75rem 8px;
+    width: 100%;
+    background: #fff;
+    border: 0.0625rem solid #d8d9db;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.email-input-login {
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    text-align: start;
+    appearance: auto;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    background: #0000;
+    border: none;
+    box-sizing: border-box;
+    color: #2d333f;
+    display: block;
+    line-height: 24px;
+    min-height: 48px;
+    padding: 0.75rem 8px;
+    width: 100%;
+    background: #fff;
+    border: 0.0625rem solid #d8d9db;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+.error {
+    color: #931b23;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 4px 0 0 8px
 }

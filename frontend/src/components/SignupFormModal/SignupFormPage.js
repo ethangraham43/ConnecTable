@@ -39,9 +39,6 @@ function SignupFormPage() {
   return (
       <form onSubmit={handleSubmit}>
         
-        <ul>
-          {errors.map(error => <li key={error}>{error}</li>)}
-        </ul>
         <h2>Get Started</h2>
         <p>Enter some information about yourself to get started.</p>
 
@@ -88,8 +85,12 @@ function SignupFormPage() {
           />
           {errors&&phoneNumber.length<=0?
           <label id="empty-warning">Phone Number is required.</label>:""}
+          {errors.map(error => <p className="error"key={error}>{error} </p> )  }
           <br />
-        <button className="signupButton" type="submit">Continue</button>
+          {(email.length > 0)&&(firstName.length > 0)&&(lastName.length > 0)&&(phoneNumber.length > 0) ? 
+            <button className="signup-button-true" type="submit">Continue</button> :
+            <button className="signup-button-false" type="submit">Continue</button>
+        }
       </form>
   );
 }

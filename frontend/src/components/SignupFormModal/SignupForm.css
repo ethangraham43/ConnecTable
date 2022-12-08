@@ -4,7 +4,7 @@ button, input {
     overflow: visible;
 }
 
-input {
+input.email{
     text-rendering: auto;
     letter-spacing: normal;
     word-spacing: normal;
@@ -29,6 +29,84 @@ input {
     border-radius: 4px;
     box-sizing: border-box;
 } 
+
+input.firstName {
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    text-align: start;
+    appearance: auto;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    background: #0000;
+    border: none;
+    box-sizing: border-box;
+    color: #2d333f;
+    display: block;
+    line-height: 24px;
+    min-height: 48px;
+    padding: 0.75rem 8px;
+    width: 100%;
+    background: #fff;
+    border: 0.0625rem solid #d8d9db;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input.lastName {
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    text-align: start;
+    appearance: auto;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    background: #0000;
+    border: none;
+    box-sizing: border-box;
+    color: #2d333f;
+    display: block;
+    line-height: 24px;
+    min-height: 48px;
+    padding: 0.75rem 8px;
+    width: 100%;
+    background: #fff;
+    border: 0.0625rem solid #d8d9db;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input.phoneNumber {
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    text-align: start;
+    appearance: auto;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    background: #0000;
+    border: none;
+    box-sizing: border-box;
+    color: #2d333f;
+    display: block;
+    line-height: 24px;
+    min-height: 48px;
+    padding: 0.75rem 8px;
+    width: 100%;
+    background: #fff;
+    border: 0.0625rem solid #d8d9db;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
 
 
 div.signup-modal {
@@ -80,8 +158,28 @@ form {
     word-spacing: normal;
 }
 
-.signupButton {
+.signup-button-false {
+    background-color: #f1f2f4;
+    color: #6f737b;
+    border-radius: 4px;
+    height: 3rem;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    outline: none;
+    width: 75%;
+    text-align: center;
+    margin: auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup-button-true {
     color: #fff;
+    background: #da3743;
     border-radius: 4px;
     height: 3rem;
     font-weight: 700;

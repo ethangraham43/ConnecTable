@@ -25,7 +25,51 @@
 }
 
 .user-button {
-    border-radius: 5px;
+    border-radius: 20px;
     border-style: solid;
     float: right;
+    border-width: thin;
+}
+
+.user-button:hover {
+    cursor: pointer;
+}
+
+.search-button {
+    height: 24px;
+    width: 24px;
+    float: right;
+    padding: 5px;
+}
+
+.search-button:hover {
+    cursor: pointer;
+}
+
+.profile-dropdown {
+    float: right;
+    background: white;
+    background-color: #fff;
+    border-radius: 0.1875rem;
+    box-shadow: 0 0 0 0.0625rem #0000001a;
+    display: flex;
+    flex-direction: column;
+    margin-top: 36px;
+    padding-bottom: 8px;
+    width: 19.75rem;
+    position: absolute;
+    margin-left: 1050px;
+    font-weight: bold;
+}
+
+.sign-out {
+    background: white;
+    color: #da3743;
+    border: transparent;
+    float: left;
+    flex-direction: column;
+}
+
+.sign-out:hover {
+    cursor: pointer;
 }

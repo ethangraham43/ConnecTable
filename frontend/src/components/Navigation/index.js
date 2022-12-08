@@ -6,6 +6,7 @@ import * as sessionActions from '../../store/session';
 import { useDispatch } from 'react-redux';
 import LoginFormModal from '../LoginFormModal';
 import SignupFormModal from '../SignupFormModal';
+import ProfileDropdown from './ProfileDropdown';
 
 function Navigation() {
 
@@ -21,10 +22,8 @@ function Navigation() {
   if (sessionUser) {
     sessionLinks = (
         <>
-        <button className="logout-button"onClick={logout}>Log out</button>
-        <button className='user-button'>
-            <img className="user-logo" src="https://img.icons8.com/external-anggara-basic-outline-anggara-putra/512/external-user-ui-basic-anggara-basic-outline-anggara-putra.png" alt="" />
-        </button>
+        <ProfileDropdown user={sessionUser}className="user-button">
+        </ProfileDropdown>
         </>
     );
   } else {
@@ -41,6 +40,7 @@ function Navigation() {
         <NavLink exact to="/">
             <img src="https://cdn.icon-icons.com/icons2/2699/PNG/512/opentable_logo_icon_170879.png" className="logo"alt=''/><h3 className='title'>ConnecTable</h3>
         </NavLink>
+        <img src="https://img.icons8.com/ios-filled/512/search.png" className='search-button'/>
         {sessionLinks}
     </ul>
   );
