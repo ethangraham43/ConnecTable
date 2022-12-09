@@ -1,3 +1,22 @@
+# == Schema Information
+#
+# Table name: users
+#
+#  id            :bigint           not null, primary key
+#  email         :string           not null
+#  first_name    :string           not null
+#  last_name     :string           not null
+#  phone_number  :string           not null
+#  session_token :string           not null
+#  created_at    :datetime         not null
+#  updated_at    :datetime         not null
+#
+# Indexes
+#
+#  index_users_on_email          (email) UNIQUE
+#  index_users_on_phone_number   (phone_number) UNIQUE
+#  index_users_on_session_token  (session_token) UNIQUE
+#
 class User < ApplicationRecord
     before_validation :ensure_session_token
 
@@ -24,7 +43,7 @@ class User < ApplicationRecord
 
     def reset_session_token!
         self.session_token = generate_unique_session_token
-        save!
+        save
         session_token
     end
 
