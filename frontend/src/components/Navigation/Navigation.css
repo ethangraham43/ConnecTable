@@ -72,4 +72,6 @@
 
 .sign-out:hover {
     cursor: pointer;
+    background-color: #00000008;
+    color: #2d333f;
 }
