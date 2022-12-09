@@ -30,7 +30,7 @@ input.splash-search-bar {
     margin-top: -10px;
 }
 
-form.splash-search-bar-form {
+div.splash-search-bar-form {
   border: none;
   padding: 10px;
 }

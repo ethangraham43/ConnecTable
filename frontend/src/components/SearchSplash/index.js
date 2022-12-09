@@ -7,7 +7,7 @@ function SearchSplash() {
             <form className='splash-search'>
                 <div className='search-select'>
                     <input type="date" className="reservation-date-select"></input>
-                    <select class="splash-time-select" aria-label='Time selector' date-test="time-picker">
+                    <select className="splash-time-select" aria-label='Time selector' date-test="time-picker">
                         <option value="10:00:00">10:00 AM</option>
                         <option value="10:30:00">10:30 AM</option>
                         <option value="11:00:00">11:00 AM</option>
@@ -61,9 +61,9 @@ function SearchSplash() {
                         <option value="21">Larger party</option>
                     </select>
                 </div>
-                <form  className='splash-search-bar-form' >
+                <div  className='splash-search-bar-form' >
                     <input className="splash-search-bar"placeholder='Location, Restaurant, or Cuisine'></ input>  
-                </form>
+                </div>
                 <button className="splash-search-button" type="submit">Let's go</button>
             </form> 
         </header>
