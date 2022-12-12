@@ -1,30 +1,47 @@
 import csrfFetch from './csrf';
 
-const SET_RESTAURANTS = 'restaurants/setRestaurants'
-const SET_RESTAURANT = 'restaurants/setRestaurant'
+const RECEIVE_RESTAURANTS = 'restaurants/RECEIVE_RESTAURANTS'
+const RECEIVE_RESTAURANT = 'restaurants/RECEIVE_RESTAURANT'
 
-const setRestaurants = restaurants => ({
-    type: SET_RESTAURANTS,
-    payload: restaurants
-})
-const setRestaurant = restaurants => ({
-    type: SET_RESTAURANT,
-    payload: restaurants
+const receiveRestaurants = (restaurants) => ({
+    type: RECEIVE_RESTAURANTS,
+    restaurants
 })
 
+const receiveRestaurant = (restaurant) => ({
+    type: RECEIVE_RESTAURANT,
+    restaurant
+})
 
-export const fetchRestaurants = filters => async dispatch => {
-    const filterParams = new URLSearchParams(filters);
-    const response = await csrfFetch(`/api/restaurants${filterParams}`);
+
+export const getRestaurants = (state) => state.restaurants ? Object.values(state.restaurants) : [];
+export const getRestaurant= (restaurantId) => (state) => state.restaurants ? state.restaurants[restaurantId] : null;
+
+
+export const fetchRestaurants = () => async (dispatch) => {
+    const response = await csrfFetch(`/api/restaurants/`);
     const data = await response.json();
-    dispatch(setRestaurants(data.restaurants));
-    return response;
+    dispatch(receiveRestaurants(data));
   };
 
-  export const fetchRestaurant = restaurantId => async dispatch => {
-    const response = await csrfFetch(`/api/restaurants/${restaurantId}`);
+  export const fetchRestaurant = (restaurant) => async (dispatch) => {
+    const response = await csrfFetch(`/api/restaurants/${restaurant}`);
     const data = await response.json();
-    dispatch(setRestaurant(data.restaurant));
-    return response;
+    dispatch(receiveRestaurant(data));
   }
+
+  function restaurantsReducer(state = {}, action) {
+    const newState = { ...state };
+    switch (action.type) {
+        case RECEIVE_RESTAURANTS:
+            return { ...newState, ...action.restaurants}
+      case RECEIVE_RESTAURANT:
+        newState[action.restaurant.restaurant.id] = action.restaurant;
+        return newState;
+      default:
+        return state;
+    }
+  }
+
+  export default restaurantsReducer;
   

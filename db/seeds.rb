@@ -10,10 +10,16 @@ ApplicationRecord.transaction do
     puts "Destroying tables..."
     # Unnecessary if using `rails db:seed:replant`
     User.destroy_all
+    CuisineRestaurant.destroy_all
+    Restaurant.destroy_all
+    Cuisine.destroy_all
 
     puts "Resetting primary keys..."
     # For easy testing, so that after seeding, the first `User` has `id` of 1
     ApplicationRecord.connection.reset_pk_sequence!('users')
+    ApplicationRecord.connection.reset_pk_sequence!('cuisine_restaurants')
+    ApplicationRecord.connection.reset_pk_sequence!('restaurants')
+    ApplicationRecord.connection.reset_pk_sequence!('cuisines')
 
     puts "Creating users..."
 #     # Create one user with an easy to remember username, email, and password:
@@ -45,9 +51,10 @@ ApplicationRecord.transaction do
         }, 
     ]
     # american_cuisine = Cuisine.create({name: "American"})
+    puts "Creating cuisines..."
 
     CUISINES.each do |cuisine_params|
-        Cuisine.create(cuisine_params)
+        Cuisine.create!(cuisine_params)
     end
 
     RESTAURANTS = [
@@ -80,7 +87,7 @@ ApplicationRecord.transaction do
         },
         {
             name: 'The Smith - Nomad',
-            address: '1114 6th Ave, New York, NY 10036',
+            address: '1115 6th Ave, New York, NY 10036',
             price_range: '$31 to $50',
             phone_number: '(212) 685-4500',
             open_time: '11:30am',
@@ -115,7 +122,7 @@ ApplicationRecord.transaction do
             avg_rating: 4.5
         },
         {
-            name: ' La Masseria',
+            name: 'La Masseria',
             address: '235 W 48th St, New York, NY 10036',
             price_range: '$30 and under',
             phone_number: '(212) 582-2111',
@@ -134,7 +141,7 @@ ApplicationRecord.transaction do
         },
         {
             name: 'DaMarino NYC',
-            address: '1114 6th Ave, New York, NY 10036',
+            address: '1116 6th Ave, New York, NY 10036',
             price_range: '$31 to $50',
             phone_number: '(212) 541-6601',
             open_time: '4pm',
@@ -169,7 +176,7 @@ ApplicationRecord.transaction do
         avg_rating: 4.5
     },
     {
-        name: ' Dhaba',
+        name: 'Dhaba',
         address: '108 Lexington Ave, New York, NY 10016',
         price_range: '$30 and under',
         phone_number: '(212) 679-1284',
@@ -331,7 +338,7 @@ ApplicationRecord.transaction do
     avg_rating: 4.0
 },
 {
-    name: ' Zuma Japanese Restaurant - NY',
+    name: 'Zuma Japanese Restaurant - NY',
     address: '261 Madison Ave, New York, NY 10016',
     price_range: '$50 and over',
     phone_number: '(212) 544-9862',
@@ -361,7 +368,7 @@ ApplicationRecord.transaction do
     name: 'BONDST',
     address: '6 Bond St, New York, NY 10012',
     price_range: '$50 and over',
-    phone_number: '(646) 524-7409',
+    phone_number: '(646) 524-7410',
     open_time: '6pm',
     close_time: '10:30pm',
     avg_rating: 5
@@ -376,8 +383,10 @@ ApplicationRecord.transaction do
     avg_rating: 4.5
 }
     ]
+    puts "Creating restaurants..."
+
     RESTAURANTS.each do |restaurant_params|
-        Restaurant.create(restaurant_params)
+        Restaurant.create!(restaurant_params)
     end
 
 CUISINE_RESTAURANTS = [
@@ -526,9 +535,10 @@ CUISINE_RESTAURANTS = [
         restaurant_id: Restaurant.find_by(name: "Wokuni").id
     }
 ]
+puts "Creating cuisine_restaurants..."
 
 CUISINE_RESTAURANTS.each do |cuisine_restaurant_params|
-    Cuisine_restaurant.create(cuisine_restaurant_params)
+    CuisineRestaurant.create!(cuisine_restaurant_params)
 end
 
 #     # More users

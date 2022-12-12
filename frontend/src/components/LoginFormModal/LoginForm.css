@@ -67,6 +67,9 @@ button.signin-button-modal{
     text-align: center;
     text-indent: 0px;
     word-spacing: normal;
+    border: .0625rem solid #d8d9db;
+   background-color: #fff;
+   border-radius: 4px;
 }
 
 button.demo-button {

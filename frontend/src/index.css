@@ -23,7 +23,7 @@ body,html {
 body {
     text-size-adjust: 100%;
     align-items: center;
-    background-color: #f7f7f7;
+    background-color: #fff;
     color: #2d333f;
     height: 100%;
 }
@@ -33,6 +33,7 @@ body {
     width: 2.25rem;
     float: left;
     display: inline;
+    margin-left: 30px;
 }
 .title {
     float: left;

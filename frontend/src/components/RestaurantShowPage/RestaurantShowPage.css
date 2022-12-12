@@ -1,0 +1,383 @@
+button.save-restaurant-button {
+    box-sizing: border-box;
+    transition: none;
+    width: 235px;
+    position: absolute;
+    height: 48px;
+    right: 32px;
+    top: 145px;
+    background-color: #fff;
+    border: 0.0625rem solid #d8d9db;
+    color: #2d333f;
+    border-radius: 4px;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 16px;
+    outline: none;
+    padding: 1px 6px;
+}
+button.save-restaurant-button:hover {
+    background-color: rgb(246, 246, 246);
+    border-color: rgb(207, 0, 0);
+}
+
+img.save-restaurant-img {
+    display: inline-block;
+}
+
+div.save-restaurant-div {
+    display: inline-block;
+    margin-left: 8px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: .875rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+}
+
+div.inside-save-restaurant {
+    display: flex;
+    justify-content: center;
+    margin: 0 24px;
+}
+
+h1.restaurant-name-title {
+    height: 121px;
+    width: 884px;
+    margin-top: 300px;
+    font-size: 48px;
+    padding: 32px 0px;
+    border-bottom: 0.0625rem solid #d8d9db;
+    display: block;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 3.5rem;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    transition: all .15s ease-in-out;
+}
+
+ol.restaurant-show-menu {
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
+    float: left;
+    margin-right: 50px;
+    background: #fff;
+    padding-top: 16px;
+    position: sticky;
+    top: -0.0625rem;
+    transition: all .15s ease-in-out;
+    z-index: 2;
+    display: block;
+    margin-top: -65px;
+    border-radius: 4px;
+    border-bottom: 0.0625rem solid #d8d9db;
+    width: 100%;
+    padding: 16px 0px 0px;
+    transition: all .15s ease-in-out;
+}
+
+button.restaurant-show-menu-ov:hover {
+    cursor: pointer;
+    color:rgb(207, 0, 0);
+}
+button.restaurant-show-menu-pd:hover {
+    cursor: pointer;
+    color:rgb(207, 0, 0);
+}
+button.restaurant-show-menu-ph:hover {
+    cursor: pointer;
+    color:rgb(207, 0, 0);
+}
+button.restaurant-show-menu-me:hover {
+    cursor: pointer;
+    color:rgb(207, 0, 0);
+}
+button.restaurant-show-menu-re:hover {
+    cursor: pointer;
+    color:rgb(207, 0, 0);
+}
+
+li.restaurant-show-menu-ov {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    appearance: none;
+    background-color: initial;
+    border: none;
+}
+li.restaurant-show-menu-pd {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    appearance: none;
+    background-color: initial;
+    border: none;
+}
+li.restaurant-show-menu-ph {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    appearance: none;
+    background-color: initial;
+    border: none;
+}
+li.restaurant-show-menu-me {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    appearance: none;
+    background-color: initial;
+    border: none;
+}
+li.restaurant-show-menu-re {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    appearance: none;
+    background-color: initial;
+    border: none;
+}
+
+div.restaurant-profile {
+    background-color: #fff;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 0 16px calc(128px - 0.25rem);
+    display: block;
+    width: 916px;
+    margin-left: 100px;
+    margin-top: 500px;
+}
+button.restaurant-show-menu-ov {
+    box-sizing: border-box;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    appearance: none;
+    background-color: initial;
+    border: none;
+    color: #6f737b;
+}
+button.restaurant-show-menu-pd {
+    box-sizing: border-box;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    appearance: none;
+    background-color: initial;
+    border: none;
+    color: #6f737b;
+}
+button.restaurant-show-menu-ph {
+    box-sizing: border-box;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    appearance: none;
+    background-color: initial;
+    border: none;
+    color: #6f737b;
+}
+button.restaurant-show-menu-me {
+    box-sizing: border-box;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    appearance: none;
+    background-color: initial;
+    border: none;
+    color: #6f737b;
+}
+button.restaurant-show-menu-re {
+    box-sizing: border-box;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    appearance: none;
+    background-color: initial;
+    border: none;
+    color: #6f737b;
+}
+
+h4.additional-information {
+    margin: 0 0 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    display: block;
+    margin-block-start: 1.33em;
+    margin-block-end: 1.33em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    margin-bottom: 16px;
+}
+div.additional-information {
+    float: right;
+}
+
+span.neighborhood-span {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+p.neighborhood-p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-top: 0;
+    text-decoration: none;
+}
+
+.neighborhood-logo {
+    height: 24px;
+    width: 24px;
+    overflow: hidden;
+    margin-top: 2px;
+    margin-right: 5px;
+}
+
+.neighborhood-div {
+    display: flex;
+    margin-right: 400px;
+}
+
+span.hours-span {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+p.hours-p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-top: 0;
+    text-decoration: none;
+}
+
+.hours-logo {
+    height: 24px;
+    width: 24px;
+    overflow: hidden;
+    margin-top: 2px;
+    margin-right: 5px;
+}
+
+.hours-div {
+    display: flex;
+    margin-right: 400px;
+}
+
+span.phone-span {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+p.phone-p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-top: 0;
+    text-decoration: none;
+}
+
+.phone-logo {
+    height: 24px;
+    width: 24px;
+    overflow: hidden;
+    margin-top: 2px;
+    margin-right: 5px;
+}
+
+.phone-div {
+    display: flex;
+    margin-right: 400px;
+}
+
+span.location-span {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+p.location-p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-top: 0;
+    text-decoration: none;
+}
+
+.location-logo {
+    height: 24px;
+    width: 24px;
+    overflow: hidden;
+    margin-top: 2px;
+    margin-right: 5px;
+}
+
+.location-div {
+    display: flex;
+    margin-right: 400px;
+}
+
+span.cuisine-span {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+p.cuisine-p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-top: 0;
+    text-decoration: none;
+}
+
+.cuisine-logo {
+    height: 24px;
+    width: 24px;
+    overflow: hidden;
+    margin-top: 2px;
+    margin-right: 5px;
+}
+
+.cuisine-div {
+    display: flex;
+    margin-right: 400px;
+}
