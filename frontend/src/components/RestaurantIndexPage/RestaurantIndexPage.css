@@ -1,0 +1,19 @@
+header.restaurant-index-header {
+    display: flex;
+    justify-content: center;
+    width: 1500px;
+    height: 80px;
+}
+
+.restaurant-index-header-picture {
+    margin-top: 50px;
+     width: 100%;
+     height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+svg.location-logo {
+    height: 24px;
+    width: 24px;
+}

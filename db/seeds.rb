@@ -65,7 +65,8 @@ ApplicationRecord.transaction do
             phone_number: '(646) 624-2455',
             open_time: '11am',
             close_time: '12am',
-            avg_rating: 4.0
+            avg_rating: 4.0,
+            file: 'https://resizer.otstatic.com/v2/photos/xlarge/2/47150903.jpg'
         },
         {
             name: 'PHD Terrace - Dream Midtown',
@@ -74,7 +75,8 @@ ApplicationRecord.transaction do
             phone_number: '(646) 905-3660',
             open_time: '5pm',
             close_time: '2am',
-            avg_rating: 4.5
+            avg_rating: 4.5,
+            file: 'https://resizer.otstatic.com/v2/photos/xlarge/2/47150903.jpg'
         },
         {
             name: 'Tick Tock Diner NY',
@@ -83,7 +85,8 @@ ApplicationRecord.transaction do
             phone_number: '(212) 268-8444',
             open_time: '6am',
             close_time: '10pm',
-            avg_rating: 4.0
+            avg_rating: 4.0,
+            file: 'https://resizer.otstatic.com/v2/photos/xlarge/2/47150903.jpg'
         },
         {
             name: 'The Smith - Nomad',
@@ -92,7 +95,9 @@ ApplicationRecord.transaction do
             phone_number: '(212) 685-4500',
             open_time: '11:30am',
             close_time: '10pm',
-            avg_rating: 4.5
+            avg_rating: 4.5,
+            description: "The Smith is a casual American brasserie with four upbeat locations in New York City: The Smith East Village, The Smith Midtown, The Smith Lincoln Square, and The Smith NoMad, as well as locations in DC and Chicago. We care about every meal and every moment. The menu features bistro classics, seasonal fare, and craft cocktails. Walk in the door and you’re in for a great time. Whether it’s date night, drinks on the town, a big birthday bash, a working lunch, a boozy brunch, or an I-don’t-want-to-cook-tonight night, we’ve got you covered.",
+            file: 'https://resizer.otstatic.com/v2/photos/xlarge/2/47150903.jpg'
         },
         {
             name: 'Quality Bistro',
@@ -101,7 +106,8 @@ ApplicationRecord.transaction do
             phone_number: '(212) 433-3330',
             open_time: '11:30am',
             close_time: '11pm',
-            avg_rating: 4.5
+            avg_rating: 4.5,
+            file: 'https://resizer.otstatic.com/v2/photos/xlarge/2/47150903.jpg'
         },
         {
             name: "Frankie and Johnnie's Steakhouse - 46th Street",
@@ -110,7 +116,8 @@ ApplicationRecord.transaction do
             phone_number: '(212) 997-9494',
             open_time: '4pm',
             close_time: '11pm',
-            avg_rating: 4.5
+            avg_rating: 4.5,
+            file: 'https://resizer.otstatic.com/v2/photos/xlarge/2/47150903.jpg'
         },
         {
             name: "Carmine's - 44th Street - NYC",
@@ -119,7 +126,8 @@ ApplicationRecord.transaction do
             phone_number: '(212) 221-3800',
             open_time: '11:30am',
             close_time: '11pm',
-            avg_rating: 4.5
+            avg_rating: 4.5,
+            file: 'https://resizer.otstatic.com/v2/photos/xlarge/2/47150903.jpg'
         },
         {
             name: 'La Masseria',
@@ -128,7 +136,8 @@ ApplicationRecord.transaction do
             phone_number: '(212) 582-2111',
             open_time: '12pm',
             close_time: '12am',
-            avg_rating: 4.5
+            avg_rating: 4.5,
+            file: 'https://resizer.otstatic.com/v2/photos/xlarge/2/47150903.jpg'
         },
         {
             name: "Angelo's Pizza",
@@ -137,7 +146,8 @@ ApplicationRecord.transaction do
             phone_number: '(212) 245-8811',
             open_time: '11:30am',
             close_time: '3am',
-            avg_rating: 4.5
+            avg_rating: 4.5,
+            file: 'https://resizer.otstatic.com/v2/photos/xlarge/2/47150903.jpg'
         },
         {
             name: 'DaMarino NYC',
@@ -146,7 +156,8 @@ ApplicationRecord.transaction do
             phone_number: '(212) 541-6601',
             open_time: '4pm',
             close_time: '4am',
-            avg_rating: 4.0
+            avg_rating: 4.0,
+            file: 'https://resizer.otstatic.com/v2/photos/xlarge/2/47150903.jpg'
         },
         {
             name: 'Il Forno',
@@ -155,7 +166,8 @@ ApplicationRecord.transaction do
             phone_number: '(917) 994-9663',
             open_time: '5pm',
             close_time: '1am',
-            avg_rating: 4.0
+            avg_rating: 4.0,
+            file: 'https://resizer.otstatic.com/v2/photos/xlarge/2/47150903.jpg'
         },
         {
             name: "Olio e Più",
@@ -164,7 +176,8 @@ ApplicationRecord.transaction do
             phone_number: '(212) 243-6546',
             open_time: '11am',
             close_time: '12am',
-            avg_rating: 4.5
+            avg_rating: 4.5,
+            file: 'https://resizer.otstatic.com/v2/photos/xlarge/2/47150903.jpg'
         },
         {
         name: 'Indian Accent',
@@ -173,7 +186,8 @@ ApplicationRecord.transaction do
         phone_number: '(212) 842-8070',
         open_time: '5pm',
         close_time: '10:30pm',
-        avg_rating: 4.5
+        avg_rating: 4.5,
+        file: 'https://resizer.otstatic.com/v2/photos/xlarge/2/47150903.jpg'
     },
     {
         name: 'Dhaba',
@@ -182,7 +196,8 @@ ApplicationRecord.transaction do
         phone_number: '(212) 679-1284',
         open_time: '12pm',
         close_time: '12am',
-        avg_rating: 4.5
+        avg_rating: 4.5,
+        file: 'https://resizer.otstatic.com/v2/photos/xlarge/2/47150903.jpg'
     },
     {
         name: 'Bhatti Indian Grill',
@@ -200,7 +215,8 @@ ApplicationRecord.transaction do
         phone_number: '(212) 575-2525',
         open_time: '12pm',
         close_time: '10:30pm',
-        avg_rating: 4.5
+        avg_rating: 4.5,
+        file: 'https://resizer.otstatic.com/v2/photos/xlarge/2/47150903.jpg'
     },
     {
         name: 'Tamarind- Tribeca',
@@ -209,7 +225,8 @@ ApplicationRecord.transaction do
         phone_number: '(212) 775-9000',
         open_time: '11:30am',
         close_time: '11:30pm',
-        avg_rating: 4.5
+        avg_rating: 4.5,
+        file: 'https://resizer.otstatic.com/v2/photos/xlarge/2/47150903.jpg'
     },
     {
         name: "Spice Symphony - 50th St.",
@@ -218,7 +235,8 @@ ApplicationRecord.transaction do
         phone_number: '(212) 300-4869',
         open_time: '11am',
         close_time: '10:30pm',
-        avg_rating: 4.5
+        avg_rating: 4.5,
+        file: 'https://resizer.otstatic.com/v2/photos/xlarge/2/47150903.jpg'
     },
     {
         name: "Philippe Chow - Downtown",
@@ -227,7 +245,8 @@ ApplicationRecord.transaction do
         phone_number: '(212) 885-9400',
         open_time: '5pm',
         close_time: '11:30pm',
-        avg_rating: 4.5
+        avg_rating: 4.5,
+        file: 'https://resizer.otstatic.com/v2/photos/xlarge/2/47150903.jpg'
     },
     {
         name: 'Buddakan NY',
@@ -236,7 +255,8 @@ ApplicationRecord.transaction do
         phone_number: '(212) 989-6699',
         open_time: '5pm',
         close_time: '12am',
-        avg_rating: 4.5
+        avg_rating: 4.5,
+        file: 'https://resizer.otstatic.com/v2/photos/xlarge/2/47150903.jpg'
     },
     {
         name: "TAO Uptown",
@@ -245,7 +265,8 @@ ApplicationRecord.transaction do
         phone_number: '(212) 888-2288',
         open_time: '11:30am',
         close_time: '12am',
-        avg_rating: 4.5
+        avg_rating: 4.5,
+        file: 'https://resizer.otstatic.com/v2/photos/xlarge/2/47150903.jpg'
     },
     {
         name: 'Sei Less',
@@ -254,7 +275,8 @@ ApplicationRecord.transaction do
         phone_number: '(212) 586-2675',
         open_time: '12pm',
         close_time: '1am',
-        avg_rating: 4.5
+        avg_rating: 4.5,
+        file: 'https://resizer.otstatic.com/v2/photos/xlarge/2/47150903.jpg'
     },
     {
         name: 'Jue Lan Club',
@@ -263,7 +285,8 @@ ApplicationRecord.transaction do
         phone_number: '(646) 524-7409',
         open_time: '12pm',
         close_time: '11pm',
-        avg_rating: 4.5
+        avg_rating: 4.5,
+        file: 'https://resizer.otstatic.com/v2/photos/xlarge/2/47150903.jpg'
     },
     {
         name: "Xu's Public House",
@@ -272,7 +295,8 @@ ApplicationRecord.transaction do
         phone_number: '(212) 901-9971',
         open_time: '11am',
         close_time: '10pm',
-        avg_rating: 4.5
+        avg_rating: 4.5,
+        file: 'https://resizer.otstatic.com/v2/photos/xlarge/2/47150903.jpg'
     },
     {
     name: 'Marseille',
@@ -281,7 +305,8 @@ ApplicationRecord.transaction do
     phone_number: '(212) 333-2323',
     open_time: '11:30am',
     close_time: '11:30pm',
-    avg_rating: 4.5
+    avg_rating: 4.5,
+    file: 'https://resizer.otstatic.com/v2/photos/xlarge/2/47150903.jpg'
 },
 {
     name: 'Cafe Cluny',
@@ -290,7 +315,8 @@ ApplicationRecord.transaction do
     phone_number: '(212) 255-6900',
     open_time: '10am',
     close_time: '10pm',
-    avg_rating: 4.5
+    avg_rating: 4.5,
+    file: 'https://resizer.otstatic.com/v2/photos/xlarge/2/47150903.jpg'
 },
 {
     name: 'Boucherie - West Village',
@@ -299,7 +325,8 @@ ApplicationRecord.transaction do
     phone_number: '(212) 837-1616',
     open_time: '10am',
     close_time: '12am',
-    avg_rating: 4.5
+    avg_rating: 4.5,
+    file: 'https://resizer.otstatic.com/v2/photos/xlarge/2/47150903.jpg'
 },
 {
     name: 'Le Coucou',
@@ -308,7 +335,8 @@ ApplicationRecord.transaction do
     phone_number: '(212) 271-4252',
     open_time: '11:30am',
     close_time: '11pm',
-    avg_rating: 4.5
+    avg_rating: 4.5,
+    file: 'https://resizer.otstatic.com/v2/photos/xlarge/2/47150903.jpg'
 },
 {
     name: 'Koloman',
@@ -317,7 +345,8 @@ ApplicationRecord.transaction do
     phone_number: '(212) 790-8970',
     open_time: '7:30am',
     close_time: '11pm',
-    avg_rating: 4.5
+    avg_rating: 4.5,
+    file: 'https://resizer.otstatic.com/v2/photos/xlarge/2/47150903.jpg'
 },
 {
     name: "Le Parisien",
@@ -326,7 +355,8 @@ ApplicationRecord.transaction do
     phone_number: '(212) 889-5489',
     open_time: '12pm',
     close_time: '9:30pm',
-    avg_rating: 4.5
+    avg_rating: 4.5,
+    file: 'https://resizer.otstatic.com/v2/photos/xlarge/2/47150903.jpg'
 },
 {
     name: "Kumi Japanese Restaurant & Bar - NYC",
@@ -335,7 +365,8 @@ ApplicationRecord.transaction do
     phone_number: '(212) 671-0439',
     open_time: '5pm',
     close_time: '11pm',
-    avg_rating: 4.0
+    avg_rating: 4.0,
+    file: 'https://resizer.otstatic.com/v2/photos/xlarge/2/47150903.jpg'
 },
 {
     name: 'Zuma Japanese Restaurant - NY',
@@ -344,7 +375,8 @@ ApplicationRecord.transaction do
     phone_number: '(212) 544-9862',
     open_time: '11:30am',
     close_time: '11:30pm',
-    avg_rating: 4.5
+    avg_rating: 4.5,
+    file: 'https://resizer.otstatic.com/v2/photos/xlarge/2/47150903.jpg'
 },
 {
     name: "Sushi by Bou - Nomad",
@@ -353,7 +385,8 @@ ApplicationRecord.transaction do
     phone_number: '(917) 268-7268',
     open_time: '5pm',
     close_time: '11pm',
-    avg_rating: 5
+    avg_rating: 5.0,
+    file: 'https://resizer.otstatic.com/v2/photos/xlarge/2/47150903.jpg'
 },
 {
     name: 'Nobu Fifty Seven',
@@ -362,7 +395,8 @@ ApplicationRecord.transaction do
     phone_number: '(212) 757-3000',
     open_time: '12pm',
     close_time: '11pm',
-    avg_rating: 4.5
+    avg_rating: 4.5,
+    file: 'https://resizer.otstatic.com/v2/photos/xlarge/2/47150903.jpg'
 },
 {
     name: 'BONDST',
@@ -371,7 +405,8 @@ ApplicationRecord.transaction do
     phone_number: '(646) 524-7410',
     open_time: '6pm',
     close_time: '10:30pm',
-    avg_rating: 5
+    avg_rating: 5.0,
+    file: 'https://resizer.otstatic.com/v2/photos/xlarge/2/47150903.jpg'
 },
 {
     name: "Wokuni",
@@ -380,7 +415,8 @@ ApplicationRecord.transaction do
     phone_number: '(212) 447-1212',
     open_time: '11:30am',
     close_time: '10pm',
-    avg_rating: 4.5
+    avg_rating: 4.5,
+    file: 'https://resizer.otstatic.com/v2/photos/xlarge/2/47150903.jpg'
 }
     ]
     puts "Creating restaurants..."

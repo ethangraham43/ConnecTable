@@ -5,6 +5,7 @@ import Navigation from './components/Navigation';
 import './index.css';
 import SearchSplash from './components/SearchSplash';
 import RestaurantShowPage from './components/RestaurantShowPage';
+import RestaurantIndexPage from './components/RestaurantIndexPage';
 
 
 function App() {
@@ -17,6 +18,9 @@ function App() {
       </Route>
     <Route path="/restaurants/:restaurantId">
           <RestaurantShowPage />
+      </Route>
+      <Route path="/restaurants/">
+          <RestaurantIndexPage/>
       </Route>
       </Switch>
     </>

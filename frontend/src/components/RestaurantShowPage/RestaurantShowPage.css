@@ -44,9 +44,9 @@ div.inside-save-restaurant {
 h1.restaurant-name-title {
     height: 121px;
     width: 884px;
-    margin-top: 300px;
+    margin-top: 100px;
     font-size: 48px;
-    padding: 32px 0px;
+    padding-top: 32px;
     border-bottom: 0.0625rem solid #d8d9db;
     display: block;
     font-size: 3rem;
@@ -82,10 +82,7 @@ button.restaurant-show-menu-ov:hover {
     cursor: pointer;
     color:rgb(207, 0, 0);
 }
-button.restaurant-show-menu-pd:hover {
-    cursor: pointer;
-    color:rgb(207, 0, 0);
-}
+
 button.restaurant-show-menu-ph:hover {
     cursor: pointer;
     color:rgb(207, 0, 0);
@@ -112,19 +109,7 @@ li.restaurant-show-menu-ov {
     background-color: initial;
     border: none;
 }
-li.restaurant-show-menu-pd {
-    display: inline-block;
-    color: white;
-    text-align: center;
-    padding: 16px;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 20px;
-    appearance: none;
-    background-color: initial;
-    border: none;
-}
+
 li.restaurant-show-menu-ph {
     display: inline-block;
     color: white;
@@ -169,7 +154,6 @@ div.restaurant-profile {
     background-color: #fff;
     border-radius: 4px;
     box-sizing: border-box;
-    padding: 0 16px calc(128px - 0.25rem);
     display: block;
     width: 916px;
     margin-left: 100px;
@@ -271,7 +255,7 @@ p.neighborhood-p {
 
 .neighborhood-div {
     display: flex;
-    margin-right: 400px;
+    margin-right: 300px;
 }
 
 span.hours-span {
@@ -298,7 +282,7 @@ p.hours-p {
 
 .hours-div {
     display: flex;
-    margin-right: 400px;
+    margin-right: 300px;
 }
 
 span.phone-span {
@@ -325,7 +309,7 @@ p.phone-p {
 
 .phone-div {
     display: flex;
-    margin-right: 400px;
+    margin-right: 300px;
 }
 
 span.location-span {
@@ -352,7 +336,7 @@ p.location-p {
 
 .location-div {
     display: flex;
-    margin-right: 400px;
+    margin-right: 300px;
 }
 
 span.cuisine-span {
@@ -379,5 +363,127 @@ p.cuisine-p {
 
 .cuisine-div {
     display: flex;
-    margin-right: 400px;
+    margin-right: 300px;
+}
+
+span.parking-span {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+p.parking-p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-top: 0;
+    text-decoration: none;
+}
+
+.parking-logo {
+    height: 24px;
+    width: 24px;
+    overflow: hidden;
+    margin-top: 2px;
+    margin-right: 5px;
+}
+
+.parking-div {
+    display: flex;
+    margin-right: 300px;
+}
+
+div.avg-rating-div{
+    display: inline-block;
+    color: #2d333f;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    appearance: none;
+    background-color: initial;
+    border: none;
+}
+div.reviews-div{
+    display: inline-block;
+    color: #2d333f;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    appearance: none;
+    background-color: initial;
+    border: none;
+}
+
+.reviews-logo {
+    height: 24px;
+    width: 24px;
+    display: inline-block;
+    margin-bottom: -5px;
+    margin-right: 5px;
+}
+
+div.price-div{
+    display: inline-block;
+    color: #2d333f;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    appearance: none;
+    background-color: initial;
+    border: none;
+}
+
+.price-logo {
+    height: 24px;
+    width: 24px;
+    display: inline-block;
+    margin-bottom: -5px;
+    margin-right: 5px;
+}
+
+div.cuisine-top-div{
+    display: inline-block;
+    color: #2d333f;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    appearance: none;
+    background-color: initial;
+    border: none;
+}
+
+div.stars {
+    display: inline-block;
+}
+
+img.full-star {
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    color: #da3743;
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    margin-right: 8px;
+}
+
+img.half-star {
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    color: #da3743;
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    margin-right: 8px;
 }
