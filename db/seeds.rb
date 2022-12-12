@@ -1,4 +1,4 @@
-require 'open-uri'
+
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
 #
@@ -6,7 +6,8 @@ require 'open-uri'
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-ApplicationRecord.transaction do 
+# ApplicationRecord.transaction do 
+    require 'open-uri'
     puts "Destroying tables..."
     # Unnecessary if using `rails db:seed:replant`
     User.destroy_all
@@ -66,7 +67,8 @@ ApplicationRecord.transaction do
             open_time: '11am',
             close_time: '12am',
             avg_rating: 4.0,
-            file: 'https://resizer.otstatic.com/v2/photos/xlarge/2/47150903.jpg'
+            file: 'https://connectable-seeds.s3.us-east-2.amazonaws.com/47150903.jpg',
+            fileName: '47150903.jpg'
         },
         {
             name: 'PHD Terrace - Dream Midtown',
@@ -76,7 +78,8 @@ ApplicationRecord.transaction do
             open_time: '5pm',
             close_time: '2am',
             avg_rating: 4.5,
-            file: 'https://resizer.otstatic.com/v2/photos/xlarge/2/47150903.jpg'
+            file: 'https://connectable-seeds.s3.us-east-2.amazonaws.com/47150903.jpg',
+            fileName: '47150903.jpg'
         },
         {
             name: 'Tick Tock Diner NY',
@@ -86,7 +89,8 @@ ApplicationRecord.transaction do
             open_time: '6am',
             close_time: '10pm',
             avg_rating: 4.0,
-            file: 'https://resizer.otstatic.com/v2/photos/xlarge/2/47150903.jpg'
+            file: 'https://connectable-seeds.s3.us-east-2.amazonaws.com/47150903.jpg',
+            fileName: '47150903.jpg'
         },
         {
             name: 'The Smith - Nomad',
@@ -97,7 +101,8 @@ ApplicationRecord.transaction do
             close_time: '10pm',
             avg_rating: 4.5,
             description: "The Smith is a casual American brasserie with four upbeat locations in New York City: The Smith East Village, The Smith Midtown, The Smith Lincoln Square, and The Smith NoMad, as well as locations in DC and Chicago. We care about every meal and every moment. The menu features bistro classics, seasonal fare, and craft cocktails. Walk in the door and you’re in for a great time. Whether it’s date night, drinks on the town, a big birthday bash, a working lunch, a boozy brunch, or an I-don’t-want-to-cook-tonight night, we’ve got you covered.",
-            file: 'https://resizer.otstatic.com/v2/photos/xlarge/2/47150903.jpg'
+            file: 'https://connectable-seeds.s3.us-east-2.amazonaws.com/47150903.jpg',
+            fileName: '47150903.jpg'
         },
         {
             name: 'Quality Bistro',
@@ -107,7 +112,8 @@ ApplicationRecord.transaction do
             open_time: '11:30am',
             close_time: '11pm',
             avg_rating: 4.5,
-            file: 'https://resizer.otstatic.com/v2/photos/xlarge/2/47150903.jpg'
+            file: 'https://connectable-seeds.s3.us-east-2.amazonaws.com/47150903.jpg',
+            fileName: '47150903.jpg'
         },
         {
             name: "Frankie and Johnnie's Steakhouse - 46th Street",
@@ -117,7 +123,8 @@ ApplicationRecord.transaction do
             open_time: '4pm',
             close_time: '11pm',
             avg_rating: 4.5,
-            file: 'https://resizer.otstatic.com/v2/photos/xlarge/2/47150903.jpg'
+            file: 'https://connectable-seeds.s3.us-east-2.amazonaws.com/47150903.jpg',
+            fileName: '47150903.jpg'
         },
         {
             name: "Carmine's - 44th Street - NYC",
@@ -127,7 +134,8 @@ ApplicationRecord.transaction do
             open_time: '11:30am',
             close_time: '11pm',
             avg_rating: 4.5,
-            file: 'https://resizer.otstatic.com/v2/photos/xlarge/2/47150903.jpg'
+            file: 'https://connectable-seeds.s3.us-east-2.amazonaws.com/47150903.jpg',
+            fileName: '47150903.jpg'
         },
         {
             name: 'La Masseria',
@@ -137,7 +145,8 @@ ApplicationRecord.transaction do
             open_time: '12pm',
             close_time: '12am',
             avg_rating: 4.5,
-            file: 'https://resizer.otstatic.com/v2/photos/xlarge/2/47150903.jpg'
+            file: 'https://connectable-seeds.s3.us-east-2.amazonaws.com/47150903.jpg',
+            fileName: '47150903.jpg'
         },
         {
             name: "Angelo's Pizza",
@@ -147,7 +156,8 @@ ApplicationRecord.transaction do
             open_time: '11:30am',
             close_time: '3am',
             avg_rating: 4.5,
-            file: 'https://resizer.otstatic.com/v2/photos/xlarge/2/47150903.jpg'
+            file: 'https://connectable-seeds.s3.us-east-2.amazonaws.com/47150903.jpg',
+            fileName: '47150903.jpg'
         },
         {
             name: 'DaMarino NYC',
@@ -157,7 +167,8 @@ ApplicationRecord.transaction do
             open_time: '4pm',
             close_time: '4am',
             avg_rating: 4.0,
-            file: 'https://resizer.otstatic.com/v2/photos/xlarge/2/47150903.jpg'
+            file: 'https://connectable-seeds.s3.us-east-2.amazonaws.com/47150903.jpg',
+            fileName: '47150903.jpg'
         },
         {
             name: 'Il Forno',
@@ -167,7 +178,8 @@ ApplicationRecord.transaction do
             open_time: '5pm',
             close_time: '1am',
             avg_rating: 4.0,
-            file: 'https://resizer.otstatic.com/v2/photos/xlarge/2/47150903.jpg'
+            file: 'https://connectable-seeds.s3.us-east-2.amazonaws.com/47150903.jpg',
+            fileName: '47150903.jpg'
         },
         {
             name: "Olio e Più",
@@ -177,7 +189,8 @@ ApplicationRecord.transaction do
             open_time: '11am',
             close_time: '12am',
             avg_rating: 4.5,
-            file: 'https://resizer.otstatic.com/v2/photos/xlarge/2/47150903.jpg'
+            file: 'https://connectable-seeds.s3.us-east-2.amazonaws.com/47150903.jpg',
+            fileName: '47150903.jpg'
         },
         {
         name: 'Indian Accent',
@@ -187,7 +200,8 @@ ApplicationRecord.transaction do
         open_time: '5pm',
         close_time: '10:30pm',
         avg_rating: 4.5,
-        file: 'https://resizer.otstatic.com/v2/photos/xlarge/2/47150903.jpg'
+        file: 'https://connectable-seeds.s3.us-east-2.amazonaws.com/47150903.jpg',
+        fileName: '47150903.jpg'
     },
     {
         name: 'Dhaba',
@@ -197,7 +211,8 @@ ApplicationRecord.transaction do
         open_time: '12pm',
         close_time: '12am',
         avg_rating: 4.5,
-        file: 'https://resizer.otstatic.com/v2/photos/xlarge/2/47150903.jpg'
+        file: 'https://connectable-seeds.s3.us-east-2.amazonaws.com/47150903.jpg',
+        fileName: '47150903.jpg'
     },
     {
         name: 'Bhatti Indian Grill',
@@ -206,7 +221,9 @@ ApplicationRecord.transaction do
         phone_number: '(212) 683-4228 ext. 4229',
         open_time: '12pm',
         close_time: '10pm',
-        avg_rating: 4.0
+        avg_rating: 4.0,
+        file: 'https://connectable-seeds.s3.us-east-2.amazonaws.com/47150903.jpg',
+        fileName: '47150903.jpg'
     },
     {
         name: 'Utsav Indian Bar and Grill',
@@ -216,7 +233,8 @@ ApplicationRecord.transaction do
         open_time: '12pm',
         close_time: '10:30pm',
         avg_rating: 4.5,
-        file: 'https://resizer.otstatic.com/v2/photos/xlarge/2/47150903.jpg'
+        file: 'https://connectable-seeds.s3.us-east-2.amazonaws.com/47150903.jpg',
+        fileName: '47150903.jpg'
     },
     {
         name: 'Tamarind- Tribeca',
@@ -226,7 +244,8 @@ ApplicationRecord.transaction do
         open_time: '11:30am',
         close_time: '11:30pm',
         avg_rating: 4.5,
-        file: 'https://resizer.otstatic.com/v2/photos/xlarge/2/47150903.jpg'
+        file: 'https://connectable-seeds.s3.us-east-2.amazonaws.com/47150903.jpg',
+        fileName: '47150903.jpg'
     },
     {
         name: "Spice Symphony - 50th St.",
@@ -236,7 +255,8 @@ ApplicationRecord.transaction do
         open_time: '11am',
         close_time: '10:30pm',
         avg_rating: 4.5,
-        file: 'https://resizer.otstatic.com/v2/photos/xlarge/2/47150903.jpg'
+        file: 'https://connectable-seeds.s3.us-east-2.amazonaws.com/47150903.jpg',
+        fileName: '47150903.jpg'
     },
     {
         name: "Philippe Chow - Downtown",
@@ -246,7 +266,8 @@ ApplicationRecord.transaction do
         open_time: '5pm',
         close_time: '11:30pm',
         avg_rating: 4.5,
-        file: 'https://resizer.otstatic.com/v2/photos/xlarge/2/47150903.jpg'
+        file: 'https://connectable-seeds.s3.us-east-2.amazonaws.com/47150903.jpg',
+        fileName: '47150903.jpg'
     },
     {
         name: 'Buddakan NY',
@@ -256,7 +277,8 @@ ApplicationRecord.transaction do
         open_time: '5pm',
         close_time: '12am',
         avg_rating: 4.5,
-        file: 'https://resizer.otstatic.com/v2/photos/xlarge/2/47150903.jpg'
+        file: 'https://connectable-seeds.s3.us-east-2.amazonaws.com/47150903.jpg',
+        fileName: '47150903.jpg'
     },
     {
         name: "TAO Uptown",
@@ -266,7 +288,8 @@ ApplicationRecord.transaction do
         open_time: '11:30am',
         close_time: '12am',
         avg_rating: 4.5,
-        file: 'https://resizer.otstatic.com/v2/photos/xlarge/2/47150903.jpg'
+        file: 'https://connectable-seeds.s3.us-east-2.amazonaws.com/47150903.jpg',
+        fileName: '47150903.jpg'
     },
     {
         name: 'Sei Less',
@@ -276,7 +299,8 @@ ApplicationRecord.transaction do
         open_time: '12pm',
         close_time: '1am',
         avg_rating: 4.5,
-        file: 'https://resizer.otstatic.com/v2/photos/xlarge/2/47150903.jpg'
+        file: 'https://connectable-seeds.s3.us-east-2.amazonaws.com/47150903.jpg',
+        fileName: '47150903.jpg'
     },
     {
         name: 'Jue Lan Club',
@@ -286,7 +310,8 @@ ApplicationRecord.transaction do
         open_time: '12pm',
         close_time: '11pm',
         avg_rating: 4.5,
-        file: 'https://resizer.otstatic.com/v2/photos/xlarge/2/47150903.jpg'
+        file: 'https://connectable-seeds.s3.us-east-2.amazonaws.com/47150903.jpg',
+        fileName: '47150903.jpg'
     },
     {
         name: "Xu's Public House",
@@ -296,7 +321,8 @@ ApplicationRecord.transaction do
         open_time: '11am',
         close_time: '10pm',
         avg_rating: 4.5,
-        file: 'https://resizer.otstatic.com/v2/photos/xlarge/2/47150903.jpg'
+        file: 'https://connectable-seeds.s3.us-east-2.amazonaws.com/47150903.jpg',
+        fileName: '47150903.jpg'
     },
     {
     name: 'Marseille',
@@ -306,7 +332,8 @@ ApplicationRecord.transaction do
     open_time: '11:30am',
     close_time: '11:30pm',
     avg_rating: 4.5,
-    file: 'https://resizer.otstatic.com/v2/photos/xlarge/2/47150903.jpg'
+    file: 'https://connectable-seeds.s3.us-east-2.amazonaws.com/47150903.jpg',
+    fileName: '47150903.jpg'
 },
 {
     name: 'Cafe Cluny',
@@ -316,7 +343,8 @@ ApplicationRecord.transaction do
     open_time: '10am',
     close_time: '10pm',
     avg_rating: 4.5,
-    file: 'https://resizer.otstatic.com/v2/photos/xlarge/2/47150903.jpg'
+    file: 'https://connectable-seeds.s3.us-east-2.amazonaws.com/47150903.jpg',
+    fileName: '47150903.jpg'
 },
 {
     name: 'Boucherie - West Village',
@@ -326,7 +354,8 @@ ApplicationRecord.transaction do
     open_time: '10am',
     close_time: '12am',
     avg_rating: 4.5,
-    file: 'https://resizer.otstatic.com/v2/photos/xlarge/2/47150903.jpg'
+    file: 'https://connectable-seeds.s3.us-east-2.amazonaws.com/47150903.jpg',
+    fileName: '47150903.jpg'
 },
 {
     name: 'Le Coucou',
@@ -336,7 +365,8 @@ ApplicationRecord.transaction do
     open_time: '11:30am',
     close_time: '11pm',
     avg_rating: 4.5,
-    file: 'https://resizer.otstatic.com/v2/photos/xlarge/2/47150903.jpg'
+    file: 'https://connectable-seeds.s3.us-east-2.amazonaws.com/47150903.jpg',
+    fileName: '47150903.jpg'
 },
 {
     name: 'Koloman',
@@ -346,7 +376,8 @@ ApplicationRecord.transaction do
     open_time: '7:30am',
     close_time: '11pm',
     avg_rating: 4.5,
-    file: 'https://resizer.otstatic.com/v2/photos/xlarge/2/47150903.jpg'
+    file: 'https://connectable-seeds.s3.us-east-2.amazonaws.com/47150903.jpg',
+    fileName: '47150903.jpg'
 },
 {
     name: "Le Parisien",
@@ -356,7 +387,8 @@ ApplicationRecord.transaction do
     open_time: '12pm',
     close_time: '9:30pm',
     avg_rating: 4.5,
-    file: 'https://resizer.otstatic.com/v2/photos/xlarge/2/47150903.jpg'
+    file: 'https://connectable-seeds.s3.us-east-2.amazonaws.com/47150903.jpg',
+    fileName: '47150903.jpg'
 },
 {
     name: "Kumi Japanese Restaurant & Bar - NYC",
@@ -366,7 +398,8 @@ ApplicationRecord.transaction do
     open_time: '5pm',
     close_time: '11pm',
     avg_rating: 4.0,
-    file: 'https://resizer.otstatic.com/v2/photos/xlarge/2/47150903.jpg'
+    file: 'https://connectable-seeds.s3.us-east-2.amazonaws.com/47150903.jpg',
+    fileName: '47150903.jpg'
 },
 {
     name: 'Zuma Japanese Restaurant - NY',
@@ -376,7 +409,8 @@ ApplicationRecord.transaction do
     open_time: '11:30am',
     close_time: '11:30pm',
     avg_rating: 4.5,
-    file: 'https://resizer.otstatic.com/v2/photos/xlarge/2/47150903.jpg'
+    file: 'https://connectable-seeds.s3.us-east-2.amazonaws.com/47150903.jpg',
+    fileName: '47150903.jpg'
 },
 {
     name: "Sushi by Bou - Nomad",
@@ -386,7 +420,8 @@ ApplicationRecord.transaction do
     open_time: '5pm',
     close_time: '11pm',
     avg_rating: 5.0,
-    file: 'https://resizer.otstatic.com/v2/photos/xlarge/2/47150903.jpg'
+    file: 'https://connectable-seeds.s3.us-east-2.amazonaws.com/47150903.jpg',
+    fileName: '47150903.jpg'
 },
 {
     name: 'Nobu Fifty Seven',
@@ -396,7 +431,8 @@ ApplicationRecord.transaction do
     open_time: '12pm',
     close_time: '11pm',
     avg_rating: 4.5,
-    file: 'https://resizer.otstatic.com/v2/photos/xlarge/2/47150903.jpg'
+    file: 'https://connectable-seeds.s3.us-east-2.amazonaws.com/47150903.jpg',
+    fileName: '47150903.jpg'
 },
 {
     name: 'BONDST',
@@ -406,7 +442,8 @@ ApplicationRecord.transaction do
     open_time: '6pm',
     close_time: '10:30pm',
     avg_rating: 5.0,
-    file: 'https://resizer.otstatic.com/v2/photos/xlarge/2/47150903.jpg'
+    file: 'https://connectable-seeds.s3.us-east-2.amazonaws.com/47150903.jpg',
+    fileName: '47150903.jpg'
 },
 {
     name: "Wokuni",
@@ -416,13 +453,27 @@ ApplicationRecord.transaction do
     open_time: '11:30am',
     close_time: '10pm',
     avg_rating: 4.5,
-    file: 'https://resizer.otstatic.com/v2/photos/xlarge/2/47150903.jpg'
+    file: 'https://connectable-seeds.s3.us-east-2.amazonaws.com/47150903.jpg',
+    fileName: '47150903.jpg'
 }
     ]
     puts "Creating restaurants..."
 
     RESTAURANTS.each do |restaurant_params|
-        Restaurant.create!(restaurant_params)
+        keys = {
+            name: restaurant_params[:name],
+            address: restaurant_params[:address],
+            price_range: restaurant_params[:price_range],
+            phone_number: restaurant_params[:phone_number],
+            open_time: restaurant_params[:open_time],
+            close_time: restaurant_params[:close_time],
+            avg_rating: restaurant_params[:avg_rating],
+            description: restaurant_params[:description]
+        }
+        obj = Restaurant.create(keys)
+        obj.photo.attach(io: URI.open(restaurant_params[:file]),
+        filename: restaurant_params[:fileName]
+        )
     end
 
 CUISINE_RESTAURANTS = [
@@ -588,4 +639,4 @@ end
 #     end
 
 #     puts "Done!"
-end
+# end

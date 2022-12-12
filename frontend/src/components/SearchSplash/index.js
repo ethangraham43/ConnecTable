@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import './SearchSplash.css'
 
 function SearchSplash() {
@@ -64,7 +65,9 @@ function SearchSplash() {
                 <div  className='splash-search-bar-form' >
                     <input className="splash-search-bar"placeholder='Location, Restaurant, or Cuisine'></ input>  
                 </div>
-                <button className="splash-search-button" type="submit">Let's go</button>
+                <NavLink className="lets-go-navlink"exact to="/restaurants/">
+                    <button className="splash-search-button" type="submit">Let's go </button>
+                </NavLink>
             </form> 
         </header>
         )

@@ -43,8 +43,8 @@ div.inside-save-restaurant {
 
 h1.restaurant-name-title {
     height: 121px;
-    width: 884px;
-    margin-top: 100px;
+    width: 600px;
+    margin-top: 0px;
     font-size: 48px;
     padding-top: 32px;
     border-bottom: 0.0625rem solid #d8d9db;
@@ -55,6 +55,7 @@ h1.restaurant-name-title {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     transition: all .15s ease-in-out;
+    padding-left: 16px;
 }
 
 ol.restaurant-show-menu {
@@ -155,9 +156,8 @@ div.restaurant-profile {
     border-radius: 4px;
     box-sizing: border-box;
     display: block;
-    width: 916px;
-    margin-left: 100px;
-    margin-top: 500px;
+    width: 608px;
+    margin-left: 200px;
 }
 button.restaurant-show-menu-ov {
     box-sizing: border-box;
@@ -486,4 +486,15 @@ img.half-star {
     height: 16px;
     width: 16px;
     margin-right: 8px;
+}
+
+img.restaurant-image-show {
+    object-fit: cover;
+    height: 460px;
+    width: 100%;
+}
+
+.description-span {
+    line-height: 24px;
+    margin-left: 16px;
 }

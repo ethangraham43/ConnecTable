@@ -47,7 +47,8 @@ const RestaurantShowPage = () => {
         }
     }
     return (
-    <ul>
+    <>
+        <img className="restaurant-image-show" src={restaurant.restaurant.photoUrl}></img>
         <button className="save-restaurant-button">
             <div className="inside-save-restaurant">
                 <img className="save-restaurant-img"src="https://cdn.otstatic.com/cfe/11/images/ic_bookmark-f6a8ce.svg"></img>
@@ -75,7 +76,7 @@ const RestaurantShowPage = () => {
             <svg className="cuisine-logo"viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" focusable="false"><g fill="none" fill-rule="evenodd"><path d="M11,2 C12.1045695,2 13,2.8954305 13,4 L13,11 C13,12.1045695 12.1045695,13 11,13 L10,13 L10,21 C10,21.5522847 9.55228475,22 9,22 L8,22 C7.44771525,22 7,21.5522847 7,21 L7,13 L6,13 C4.8954305,13 4,12.1045695 4,11 L4,4 C4,2.8954305 4.8954305,2 6,2 L11,2 Z M11,11 L11,4 L10,4 L10,8.5 C10,8.77614237 9.77614237,9 9.5,9 C9.22385763,9 9,8.77614237 9,8.5 L9,4 L8,4 L8,8.5 C8,8.77614237 7.77614237,9 7.5,9 C7.22385763,9 7,8.77614237 7,8.5 L7,4 L6,4 L6,11 L11,11 Z M19.45,2 C19.7537566,2 20,2.24624339 20,2.55 L20,21 C20,21.5522847 19.5522847,22 19,22 L18,22 C17.4477153,22 17,21.5522847 17,21 L17,17 L16,17 C14.8954305,17 14,16.1045695 14,15 L14,7.45 C14,4.44004811 16.4400481,2 19.45,2 Z M16,15 L18,15 L18,4.32 C16.7823465,4.88673047 16.0026709,6.10692278 16,7.45 L16,15 Z" fill="#2D333F" fill-rule="nonzero"></path></g></svg>
              Cuisine</div>
         </div>
-        <span className="desciription-span">{restaurant.restaurant.description}</span>
+        <div className="description-span">{restaurant.restaurant.description}</div>
         </div>
         <div className="additional-information">
         <h4 className="additional-information">Additional Information</h4>
@@ -116,7 +117,7 @@ const RestaurantShowPage = () => {
             </span>
         </div>
         </div>
-    </ul>
+    </>
     )
 }
 

@@ -21,7 +21,7 @@
 #  index_restaurants_on_phone_number  (phone_number) UNIQUE
 #
 class Restaurant < ApplicationRecord
-    # has_many_attached :photos
+    has_one_attached :photo
     validates :name, :address, :phone_number, presence: true, uniqueness: true
     validates :avg_rating, :open_time, :close_time, :price_range, presence: true
 end

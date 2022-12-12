@@ -135,3 +135,7 @@ button.splash-search-button:hover {
     transition: all .3s ease-out;
     background-color: #b0363e;
 }
+
+.lets-go-navlink {
+    text-decoration: none;
+}
