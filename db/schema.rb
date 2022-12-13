@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_12_225826) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_13_153033) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -42,6 +42,19 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_12_225826) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
+  create_table "cuisine_restaurants", force: :cascade do |t|
+    t.integer "cuisine_id", null: false
+    t.integer "restaurant_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "cuisines", force: :cascade do |t|
+    t.string "name", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "restaurants", force: :cascade do |t|
     t.string "name", null: false
     t.string "address", null: false
@@ -54,6 +67,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_12_225826) do
     t.string "open_time"
     t.string "close_time"
     t.string "cuisine"
+    t.string "num_reviews"
     t.index ["address"], name: "index_restaurants_on_address", unique: true
     t.index ["name"], name: "index_restaurants_on_name", unique: true
     t.index ["phone_number"], name: "index_restaurants_on_phone_number", unique: true
