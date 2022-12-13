@@ -1,15 +1,21 @@
+import { useSelector } from 'react-redux';
 import restaurantsReducer from '../../store/restaurants'
-import CardItem from './CardItem'
+import CardItems from './CardItems'
 
-function CardList(restaurants) {
-    <>
-    <heading>Restaurants</heading>
-    {restaurants.map(restaurant => (
-        <CardItem
-        key={restaurant.id}
-        restaurant={restaurant}
-        />
-    ))}
-    </>
+function CardList({cuisine}) {
+    const restaurants = useSelector(({restaurants}) => {
+        return Object.values(restaurants).filter((restaurant) => {
+            return restaurant.cuisine === cuisine;
+        });
+    });
+    return (
+        <>
+        <h2 className="cuisine-header">{cuisine} Dining</h2>
+        <ul className="list-of-card-items">
+            <CardItems
+            restaurants={restaurants} />
+        </ul>
+        </>
+    );
 }
 export default CardList

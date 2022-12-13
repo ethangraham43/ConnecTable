@@ -15,7 +15,9 @@ const receiveRestaurant = (restaurant) => ({
 
 
 export const getRestaurants = (state) => state.restaurants ? Object.values(state.restaurants) : [];
-export const getRestaurant= (restaurantId) => (state) => state.restaurants ? state.restaurants[restaurantId] : null;
+export const getRestaurant= (restaurantId) => ({restaurants}) => {
+  return restaurants[restaurantId] ? restaurants[restaurantId] : null;
+}
 
 
 export const fetchRestaurants = () => async (dispatch) => {
@@ -36,7 +38,7 @@ export const fetchRestaurants = () => async (dispatch) => {
         case RECEIVE_RESTAURANTS:
             return { ...newState, ...action.restaurants}
       case RECEIVE_RESTAURANT:
-        newState[action.restaurant.restaurant.id] = action.restaurant;
+        newState[action.restaurant.id] = action.restaurant;
         return newState;
       default:
         return state;

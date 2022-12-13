@@ -11,45 +11,23 @@ const Card = () => {
     useEffect(() => {
         dispatch(fetchRestaurants())
     }, [])
-    const americanCuisine = ['American'];
-    const italianCuisine = ['Italian'];
-    const indianCuisine = ['Indian'];
-    const chineseCuisine = ['Chinese'];
-    const frenchCuisine = ['French'];
-    const japaneseCuisine = ['Japanese'];
 
-restaurants.forEach(restaurant => {
-    if (restaurant.cuisine === 'American') {
-        americanCuisine.push(restaurant)
-    } else if (restaurant.cuisine === 'Italian') {
-        italianCuisine.push(restaurant)
-    } else if (restaurant.cuisine === 'Indian') {
-        indianCuisine.push(restaurant)
-    } else if (restaurant.cuisine === 'Chinese') {
-        chineseCuisine.push(restaurant)
-    } else if (restaurant.cuisine === 'French') {
-        frenchCuisine.push(restaurant)
-    } else if (restaurant.cuisine === 'Japanese') {
-        japaneseCuisine.push(restaurant)
-    }
+const cuisines =["American", "Italian", "Indian", "Chinese", "French", "Japanese"];
+
+
+const CardLists = cuisines.map((cuisine) => {
+    return <CardList cuisine = {cuisine} />
 })
-const cuisines =[];
-cuisines.push(americanCuisine);
-cuisines.push(italianCuisine);
-cuisines.push(indianCuisine);
-cuisines.push(chineseCuisine);
-cuisines.push(frenchCuisine);
-cuisines.push(japaneseCuisine);
+
 return (
-    <div>
-        {/* <img src="" alt=""> */}
-        <div>
-            <h3>{restaurants[1].name}</h3>
-            <div>
-    
-            </div>
-        </div>
+    <>
+    <div className="fake-location-tag-div">
+        <span className="fake-location-tag">It looks like you're in Manhattan. </span>
     </div>
+    <div className="">
+        {CardLists}
+    </div>
+    </>
 )
     //  return (
     //     // <CardList

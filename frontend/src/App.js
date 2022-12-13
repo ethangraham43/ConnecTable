@@ -6,7 +6,6 @@ import './index.css';
 import SearchSplash from './components/SearchSplash';
 import RestaurantShowPage from './components/RestaurantShowPage';
 import RestaurantIndexPage from './components/RestaurantIndexPage';
-import Carousel from './components/Carousel';
 import Card from './components/Card';
 
 
