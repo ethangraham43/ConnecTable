@@ -6,6 +6,8 @@ import './index.css';
 import SearchSplash from './components/SearchSplash';
 import RestaurantShowPage from './components/RestaurantShowPage';
 import RestaurantIndexPage from './components/RestaurantIndexPage';
+import Carousel from './components/Carousel';
+import Card from './components/Card';
 
 
 function App() {
@@ -15,6 +17,7 @@ function App() {
     <Switch>
       <Route exact path="/">
         <SearchSplash />
+        <Card/>
       </Route>
     <Route path="/restaurants/:restaurantId">
           <RestaurantShowPage />

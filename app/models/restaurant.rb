@@ -6,6 +6,7 @@
 #  address      :string           not null
 #  avg_rating   :float            not null
 #  close_time   :string
+#  cuisine      :string
 #  description  :text
 #  name         :string           not null
 #  open_time    :string
@@ -24,4 +25,5 @@ class Restaurant < ApplicationRecord
     has_one_attached :photo
     validates :name, :address, :phone_number, presence: true, uniqueness: true
     validates :avg_rating, :open_time, :close_time, :price_range, presence: true
+
 end

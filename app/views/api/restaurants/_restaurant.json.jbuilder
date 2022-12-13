@@ -7,4 +7,5 @@ json.extract! restaurant,
   :description, 
   :avg_rating,
   :open_time,
-  :close_time
+  :close_time,
+  :cuisine
