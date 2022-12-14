@@ -25,7 +25,7 @@
 }
 
 .user-button {
-    border-radius: 20px;
+    border-radius: 55%;
     border-style: solid;
     float: right;
     border-width: thin;
@@ -61,6 +61,7 @@
     position: absolute;
     margin-left: 1050px;
     font-weight: bold;
+    z-index: 1;
 }
 
 .sign-out {

@@ -5,9 +5,9 @@ function CardItems({restaurants}) {
     return (
         <>
         {restaurants.map((restaurant) => (
-            <li className="card-list-item">
+            <div className="card-list-item">
                 <CardItem restaurant = {restaurant} />
-            </li>
+            </div>
         )
         )}
         </>

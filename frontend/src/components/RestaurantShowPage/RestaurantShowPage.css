@@ -69,7 +69,6 @@ ol.restaurant-show-menu {
     position: sticky;
     top: -0.0625rem;
     transition: all .15s ease-in-out;
-    z-index: 2;
     display: block;
     margin-top: -65px;
     border-radius: 4px;

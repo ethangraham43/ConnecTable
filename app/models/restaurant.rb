@@ -9,7 +9,7 @@
 #  cuisine      :string
 #  description  :text
 #  name         :string           not null
-#  num_reviews  :string
+#  num_reviews  :bigint
 #  open_time    :string
 #  phone_number :string           not null
 #  price_range  :string           not null

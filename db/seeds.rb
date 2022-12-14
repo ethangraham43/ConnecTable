@@ -41,8 +41,9 @@
 
             STK follows all local guides for Health and Safety procedures.",
             file: 'https://connectable-seeds.s3.us-east-2.amazonaws.com/47150903.jpg',
-            fileName: '47150903.jpg'
-        },
+            fileName: '47150903.jpg',
+            num_reviews: 7342
+       },
         {
             name: 'PHD Terrace - Dream Midtown',
             address: '210 W 55th St, New York, NY 10019',
@@ -61,7 +62,8 @@
             
             Enjoy the intimate, indoor atmosphere of the lower level, or head outside to the upper level to enjoy an evening on the Terrace providing breathtaking views of Manhattan & Times Square, the ultimate temporary escape from the hustle of Midtown Manhattan.",
             file: 'https://connectable-seeds.s3.us-east-2.amazonaws.com/50361353.png',
-            fileName: '50361353.png'
+            fileName: '50361353.png',
+            num_reviews: 627
         },
         {
             name: 'Tick Tock Diner NY',
@@ -75,7 +77,8 @@
             The 280 seat Midtown Manhattan location opened in 1997 at 481 8th Avenue (corner of 34th Street), across the street from Penn Station. Tick Tock Diner has long been known for its American comfort food. Today, it remains true to tradition while offering more dining choices than ever before on its extensive menu, accented with Italian, Greek and Tex-Mex influences. Keeping in the diner tradition, breakfast is served all day, featuring more than a dozen omelets, farm fresh eggs any style, pancakes, Belgian waffles and French toast.",
             cuisine: 'American', 
             file: 'https://connectable-seeds.s3.us-east-2.amazonaws.com/41722428.jpg',
-            fileName: '41722428.jpg'
+            fileName: '41722428.jpg',
+            num_reviews: 376
         },
         {
             name: 'The Smith - Nomad',
@@ -88,7 +91,8 @@
             cuisine: 'American', 
             description: "The Smith is a casual American brasserie with four upbeat locations in New York City: The Smith East Village, The Smith Midtown, The Smith Lincoln Square, and The Smith NoMad, as well as locations in DC and Chicago. We care about every meal and every moment. The menu features bistro classics, seasonal fare, and craft cocktails. Walk in the door and you’re in for a great time. Whether it’s date night, drinks on the town, a big birthday bash, a working lunch, a boozy brunch, or an I-don’t-want-to-cook-tonight night, we’ve got you covered.",
             file: 'https://connectable-seeds.s3.us-east-2.amazonaws.com/24986966.jpg',
-            fileName: '24986966.jpg'
+            fileName: '24986966.jpg',
+            num_reviews: 4678
         },
         {
             name: 'Quality Bistro',
@@ -103,7 +107,8 @@
 
             Quality Bistro has the best steak, french onion soup, salads, chicken, french fries, and desserts in Midtown Manhattan in New York.",
             file: 'https://connectable-seeds.s3.us-east-2.amazonaws.com/41736536.jpg',
-            fileName: '41736536.jpg'
+            fileName: '41736536.jpg',
+            num_reviews: 1602
         },
         {
             name: "Frankie and Johnnie's Steakhouse - 46th Street",
@@ -118,7 +123,8 @@
             description: "Frankie & Johnnie’s Steakhouse, 46th Street, is offering indoor & outdoor seating, and Dinner Menu for Take Out.
             Available from 4.30 PM - 10.30 30PM from Wednesday to Saturday & 3.30 PM - 9.30 PM Sunday.",
             file: 'https://connectable-seeds.s3.us-east-2.amazonaws.com/48121962.jpg',
-            fileName: '48121962.jpg'
+            fileName: '48121962.jpg',
+            num_reviews: 1270
         },
         {
             name: "Carmine's - 44th Street - NYC",
@@ -137,7 +143,8 @@
             
             Your safety is our priority. As of 3/7/22, NYC no longer requires proof of vaccination to dine indoors. Indoor & Outdoor dining are available.",
             file: 'https://connectable-seeds.s3.us-east-2.amazonaws.com/26428905.jpg',
-            fileName: '26428905.jpg'
+            fileName: '26428905.jpg',
+            num_reviews: 22282
         },
         {
             name: 'La Masseria',
@@ -150,7 +157,8 @@
             cuisine: 'Italian',
             description: "La Masseria Restaurant is inspired from ancient fortified farmhouses that in the Puglia Region of Italy are called “Masseria”. Executive Chef/Co-Owner, Pino Coladonato, grew up on a Farm in Puglia. He was forced to eat whatever was available but soon was tired of bean puree and decided to take matters into his own hands, creating new ways to use the same few ingredients. Now, with limitless ingredients to choose from, fava beans, chickpeas and lentils are still a core element in many of his entrees. Interior Designer Libby Langdon has created a warm, inviting dining atmosphere. Rustic and relaxed, with plenty of old world charm. Oversize iron sconces custom made from antique wrought iron gates punctuate the walls, and artful displays of antique farm tools mixed with various authentic Italian photographs all add to the farmhouse appeal. The 250-bottle wine list encompasses all regions of Italy with few of the best American and the rest of the world.",
             file: 'https://connectable-seeds.s3.us-east-2.amazonaws.com/35740108.jpg',
-            fileName: '35740108.jpg'
+            fileName: '35740108.jpg',
+            num_reviews: 5548
         },
         {
             name: "Angelo's Pizza",
@@ -163,7 +171,8 @@
             cuisine: 'Italian', 
             description: "We use Coal as a heating source to make our Coal Oven Pizza. We're close to lots of theaters in Broadway so good for before and after Show meals. We are next to late night show with Steven Colbert. We are close to time square.",
             file: 'https://connectable-seeds.s3.us-east-2.amazonaws.com/25292096.jpg',
-            fileName: '25292096.jpg'
+            fileName: '25292096.jpg',
+            num_reviews: 329
         },
         {
             name: 'DaMarino NYC',
@@ -180,7 +189,8 @@
             
             We welcome you and hope you will come join us.",
             file: 'https://connectable-seeds.s3.us-east-2.amazonaws.com/24908238.jpg',
-            fileName: '24908238.jpg'
+            fileName: '24908238.jpg',
+            num_reviews: 1964
         },
         {
             name: 'Il Forno',
@@ -193,7 +203,8 @@
             cuisine: 'Italian', 
             description: "iL Forno Italian Kitchen is a Hell's Kitchen gem. Bringing modern Italian to a whole new level. Everything that comes from our kitchen is prepared from scratch with the utmost care by Executive Chef Sarah Pouzar. So whether you stop in for a glass of wine and one of our artisan pizzas, or a full and rich Italian supper, iL Forno will take care of you.",
             file: 'https://connectable-seeds.s3.us-east-2.amazonaws.com/24929009.jpg',
-            fileName: '24929009.jpg'
+            fileName: '24929009.jpg',
+            num_reviews: 7342
         },
         {
             name: "Olio e Più",
@@ -209,7 +220,8 @@
             
             *Please note that kitchen hours may differ",
             file: 'https://connectable-seeds.s3.us-east-2.amazonaws.com/31308461.png',
-            fileName: '31308461.png'
+            fileName: '31308461.png',
+            num_reviews: 668
         },
         {
         name: 'Indian Accent',
@@ -226,7 +238,8 @@
         
         To respect the dining experiences of all our guests we practice a restricted entrance policy, only allowing children aged 10 years and above.",
         file: 'https://connectable-seeds.s3.us-east-2.amazonaws.com/24195931.jpg',
-        fileName: '24195931.jpg'
+        fileName: '24195931.jpg',
+        num_reviews: 2709
     },
     {
         name: 'Dhaba',
@@ -239,7 +252,8 @@
         cuisine: 'Indian', 
         description: "Dhaba serves authentic North Indian food and kababs from the tandoor. Offerings also include an array of curries from the 'British Curry House' setting that will satisfy a variety of curry cravings. The restaurant is open late with a limited choice menu to cater to late night cravings.",
         file: 'https://connectable-seeds.s3.us-east-2.amazonaws.com/24608019.png',
-        fileName: '24608019.png'
+        fileName: '24608019.png',
+        num_reviews: 701
     },
     {
         name: 'Bhatti Indian Grill',
@@ -254,7 +268,8 @@
 
         One of the city’s preeminent Indian chefs and restaurateurs, Gaurav Anand of Awadh and Moti Mahal Delux has completely revamped and renovated Bhatti just in time to celebrate its 10th anniversary this year. Perennially packed and attracting celebrities like Jennifer Lawrence and Food Network’s Duff Goldman, Bhatti became a popular dining destination due to its delicious, boldly-flavored food, especially kebabs. For its 10th anniversary, Gaurav wanted the restaurant that set him on a successful restaurant career to get a sexier new look, more elevated menu and an adventurous beverage program including an all natural wine list, befitting the next decade.",
         file: 'https://connectable-seeds.s3.us-east-2.amazonaws.com/31804517.jpg',
-        fileName: '31804517.jpg'
+        fileName: '31804517.jpg',
+        num_reviews: 495
     },
     {
         name: 'Utsav Indian Bar and Grill',
@@ -268,7 +283,8 @@
         description: "Utsav is a spacious bi level restaurant in the heart of Times Square located uniquely on a skywalk between two buildings. There is a bar on the lower level and the large upper level features floor to ceiling glass windows overlooking both 46th & 47th streets. There is ample room for social distancing in this current environment & all COVID guidelines are strictly adhered to. We offer an extensive Indian menu with traditional regional dishes as well as some with a modern twist. We have just introduced our new INDO CHINESE menu & welcome large groups in our spacious restaurant.
         Utsav offers various rooms for hosting private events. There is a room which can seat 25-30 people & a larger one to accommodate 70-80 people. A buyout of the restaurant is also possible on certain days of the week. Please call our catering manager to find out more details, let us host your next event for you!",
         file: 'https://connectable-seeds.s3.us-east-2.amazonaws.com/32261302.jpg',
-        fileName: '32261302.jpg'
+        fileName: '32261302.jpg',
+        num_reviews: 1648
     },
     {
         name: 'Tamarind- Tribeca',
@@ -284,7 +300,8 @@
         
         ALL CANCELLATIONS MUST BE MADE AT LEAST 48 HOURS IN ADVANCE FOR PARTY SIZE 7 GUESTS AND ABOVE, AND MARKED FOR THE MANAGER ON DUTY. IN CASE THE RESERVATION IS CANCELLED LESS THAN 48 HOURS FROM THE RESERVED TIME, THE CREDIT CARD ON FILE WILL BE CHARGED $35 PER PERSON IN ADDITION TO THE PRIVATE ROOM CHARGES.",
         file: 'https://connectable-seeds.s3.us-east-2.amazonaws.com/23685215.jpg',
-        fileName: '23685215.jpg'
+        fileName: '23685215.jpg',
+        num_reviews: 4121
     },
     {
         name: "Spice Symphony - 50th St.",
@@ -300,7 +317,8 @@
         Our Wine List is something that we are proud to present.
         We are home,family and friends.",
         file: 'https://connectable-seeds.s3.us-east-2.amazonaws.com/24874487.jpg',
-        fileName: '24874487.jpg'
+        fileName: '24874487.jpg',
+        num_reviews: 1725
     },
     {
         name: "Philippe Chow - Downtown",
@@ -313,7 +331,8 @@
         cuisine: 'Chinese', 
         description: "Philippe puts his own spin on traditional Beijing-style cuisine with results that are modern, flavorful and theatrical. All specialty dishes are served family-style, giving all guests the opportunity to experience a taste in every dish ordered. Our philosophy focuses on bringing people together for an experience that they can share with one another – starting with our signature dishes.",
         file: 'https://connectable-seeds.s3.us-east-2.amazonaws.com/47086062.jpg',
-        fileName: '47086062.jpg'
+        fileName: '47086062.jpg',
+        num_reviews: 752
     },
     {
         name: 'Buddakan NY',
@@ -327,7 +346,8 @@
         description: "The surreal atmosphere of this awe-inspiring restaurant in the Meatpacking district of Manhattan
         combines the serenity of Asia with the flamboyance of 16th century Paris. The menu features fanciful interpretations of Chinese dishes and delights even the most discriminating palates.",
         file: 'https://connectable-seeds.s3.us-east-2.amazonaws.com/32683328.jpg',
-        fileName: '32683328.jpg'
+        fileName: '32683328.jpg',
+        num_reviews: 14520
     },
     {
         name: "TAO Uptown",
@@ -340,7 +360,8 @@
         cuisine: 'Chinese', 
         description: "A 16-foot Buddha, which floats above a reflecting pool filled with Japanese carp, presides over the scene at Tao. A favorite destination for celebrities and athletes, this Pan Asian restaurant specializes in authentic Hong Kong Chinese, Japanese and Thai cuisines. Tao has three levels of dining including the prized 'Skybox' which offers views of this former movie theater unparalleled in New York. In addition to its 300 seats, Tao includes a sushi bar, lounge and two bars at which to enjoy the food and the show. Appetizers range from $8 - $18; Entrees: $16 -$39. Offering $31.50 Prix Fixe Lunch Menu year round.",
         file: 'https://connectable-seeds.s3.us-east-2.amazonaws.com/47199489.jpg',
-        fileName: '47199489.jpg'
+        fileName: '47199489.jpg',
+        num_reviews: 12711
     },
     {
         name: 'Sei Less',
@@ -357,7 +378,8 @@
         
         The curated Pan-Asian menu with a one-of-a-kindcocktail experience as well as mocktails, for the sober-curious set, isdesigned to enhance every evening. In addition to the main dining area,the venue will offer 4 private dining areas to accommodate private parties and events.",
         file: 'https://connectable-seeds.s3.us-east-2.amazonaws.com/47121779.jpg',
-        fileName: '47121779.jpg'
+        fileName: '47121779.jpg',
+        num_reviews: 508
     },
     {
         name: 'Jue Lan Club',
@@ -371,7 +393,8 @@
         description: "Jue Lan Club is a multi-level, 275 seat Asian-Fusion restaurant featuring our 100 seat outdoor garden courtyard. We have several distinctive private dining rooms. Jue Lan features an incredibly flavorful Asian Raw Menu, numerous Dim Sum options along with other classic Asian-Fusion dishes with a contemporary spin by our chef Nick Zhong! Dine on our one of a kind sweet creations by our Head Pasty Chef McCleeford Orientus.
         Please visit us on all social media @JueLanClub / Web JueLanClub.com",
         file: 'https://connectable-seeds.s3.us-east-2.amazonaws.com/24982449.jpg',
-        fileName: '24982449.jpg'
+        fileName: '24982449.jpg',
+        num_reviews: 1800
     },
     {
         name: "Xu's Public House",
@@ -392,7 +415,8 @@
         
         Alcoholic Beverages Available!",
         file: 'https://connectable-seeds.s3.us-east-2.amazonaws.com/26861765.jpg',
-        fileName: '26861765.jpg'
+        fileName: '26861765.jpg',
+        num_reviews: 94
     },
     {
     name: 'Marseille',
@@ -405,7 +429,8 @@
     cuisine: 'French', 
     description: "For nearly two decades, Marseille has been the essential French brasserie of Broadway & Hell’s Kitchen, its favorite gathering place and its premiere dining destination. The brasserie has long been known as the heartbeat of its neighborhood, and as such Marseilles is beloved by neighbors, theatre goers, performers, tourists, and lovers of joie de vivre of all ages and backgrounds.",
     file: 'https://connectable-seeds.s3.us-east-2.amazonaws.com/23892913.jpg',
-    fileName: '23892913.jpg'
+    fileName: '23892913.jpg',
+    num_reviews: 7793
 },
 {
     name: 'Cafe Cluny',
@@ -422,7 +447,8 @@
     
     We do not accept reservations during Brunch on the weekends and seat tables on a first come first serve basis",
     file: 'https://connectable-seeds.s3.us-east-2.amazonaws.com/23697660.jpg',
-    fileName: '23697660.jpg'
+    fileName: '23697660.jpg',
+    num_reviews: 1842
 },
 {
     name: 'Boucherie - West Village',
@@ -438,7 +464,8 @@
     
     *Please note that kitchen hours may differ",
     file: 'https://connectable-seeds.s3.us-east-2.amazonaws.com/49963551.jpg',
-    fileName: '49963551.jpg'
+    fileName: '49963551.jpg',
+    num_reviews: 2358
 },
 {
     name: 'Le Coucou',
@@ -451,7 +478,8 @@
     cuisine: 'French', 
     description: "After taking the Parisian dining scene by storm, acclaimed chef Daniel Rose brings home the James Beard 'Best New Restaurant' award for his very first stateside restaurant. Located in SoHo, the space is a gracious modern nod to fine European gastronomy, with crisp linens, fliberking candles, and whitewashed brick. Updating classical French cuisine with charm and verve, Rose shrinks the intercontinental divide separating the City of Light and the Big Apple, proving that the true essence of fine French dining can thrive in any time zone.",
     file: 'https://connectable-seeds.s3.us-east-2.amazonaws.com/24603881.jpg',
-    fileName: '24603881.jpg'
+    fileName: '24603881.jpg',
+    num_reviews: 3791
 },
 {
     name: 'Koloman',
@@ -466,7 +494,8 @@
 
     For reservations for groups 7 and over, special events or private dining, please call or email us at info@kolomanrestaurant.com.",
     file: 'https://connectable-seeds.s3.us-east-2.amazonaws.com/50572425.png',
-    fileName: '50572425.png'
+    fileName: '50572425.png',
+    num_reviews: 170
 },
 {
     name: "Le Parisien",
@@ -482,7 +511,8 @@
     
     Also open daily for lunch and brunch on weekends.",
     file: 'https://connectable-seeds.s3.us-east-2.amazonaws.com/24816207-1.jpg',
-    fileName: '24816207-1.jpg'
+    fileName: '24816207-1.jpg',
+    num_reviews: 1907
 },
 {
     name: "Kumi Japanese Restaurant & Bar - NYC",
@@ -495,7 +525,8 @@
     cuisine: 'Japanese', 
     description: "Kumi Restaurant + Lounge combines East-Asian ingredients with Korean flavors, creating a modern approach to Japanese Cuisine. Utilizing sustainably sourced ingredients, guests are welcome to indulge in a variety of shared plates, seasonal fish selections ranging from raw to seared, as well as an array of bold dishes including Chili Lobster Tempura, Miso Black Cod and the Wagyu Ribeye. Kumi’s dining experience is complemented with a list of fine wines, Japanese whiskeys, ultra-premium sakes, and specialty libations.",
     file: 'https://connectable-seeds.s3.us-east-2.amazonaws.com/47145770.jpg',
-    fileName: '47145770.jpg'
+    fileName: '47145770.jpg',
+    num_reviews: 99
 },
 {
     name: 'Zuma Japanese Restaurant - NY',
@@ -511,7 +542,8 @@
     Serving dishes designed to share and inspired by the informal dining style of izakaya; the three kitchens present authentic yet alluring options, with bold flavors and simple presentation, highlighting quality ingredients.
     261 Madison Avenue 10016",
     file: 'https://connectable-seeds.s3.us-east-2.amazonaws.com/23896524.jpg',
-    fileName: '23896524.jpg'
+    fileName: '23896524.jpg',
+    num_reviews: 1495
 },
 {
     name: "Sushi by Bou - Nomad",
@@ -528,7 +560,8 @@
     
     Parties of 1-4 who wish to book our Bougie 60-min Omakase should text 917.268.7268 their full name, preferred location/date/time, number of guests, and email address. *Space is limited and we cannot guarantee we will be able to honor requests submitted via your booking notes*",
     file: 'https://connectable-seeds.s3.us-east-2.amazonaws.com/49380984.jpg',
-    fileName: '49380984.jpg'
+    fileName: '49380984.jpg',
+    num_reviews: 27
 },
 {
     name: 'Nobu Fifty Seven',
@@ -541,7 +574,8 @@
     cuisine: 'Japanese', 
     description: "As the first uptown New York location for legendary chef Nobu Matsuhisa, we opened with much anticipation in the summer of 2005.Nobu's co-owners are his longtime partners: renowned restaurateur Drew Nieporent, Oscar-winning actor Robert De Niro, and Hollywood film producer Meir Teper. The restaurant showcases Nobu's signature new style Japanese cuisine with classic dishes such as Tiradito Nobu Style and Black Cod Miso, and the hibachi table. The restaurant received three stars from the New York Times.",
     file: 'https://connectable-seeds.s3.us-east-2.amazonaws.com/50458861.jpg',
-    fileName: '50458861.jpg'
+    fileName: '50458861.jpg',
+    num_reviews: 4807
 },
 {
     name: 'BONDST',
@@ -554,7 +588,8 @@
     cuisine: 'Japanese', 
     description: "BONDST, located in NoHo, is a trendy downtown restaurant with a warm minimalist interior design. The cuisine is new Japanese with European and Asian influences. BONDST is Citysearch's 2007 and 2008 audience award winner for Best Sushi in NYC, as well as the 2008 audience award winner for Best Martini in NYC.",
     file: 'https://connectable-seeds.s3.us-east-2.amazonaws.com/23677354.jpg',
-    fileName: '23677354.jpg'
+    fileName: '23677354.jpg',
+    num_reviews: 2519
 },
 {
     name: "Wokuni",
@@ -569,7 +604,8 @@
     We oversee the process through professional culinary eyes, from when the fish is cultivated until it is served to our guests. This allows us to build a sustainable and traceable system that will lead to higher customer satisfaction.
     Japanese cuisine is blessed with opulent nature from both the mountains and the sea, which brings us rich seafood. Our wish is to bring quality seafood and Japanese food culture to the world, making the global food culture even richer and stronger.",
     file: 'https://connectable-seeds.s3.us-east-2.amazonaws.com/25114879.jpg',
-    fileName: '25114879.jpg'
+    fileName: '25114879.jpg',
+    num_reviews: 939
 }
     ]
     puts "Creating restaurants..."

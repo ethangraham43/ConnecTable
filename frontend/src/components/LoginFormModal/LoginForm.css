@@ -47,6 +47,7 @@ div #modal-content {
     padding-top: 4.5rem;
     border-radius: 3px;
     position: absolute;
+    z-index: 2;
 }
 
 button.signin-change {

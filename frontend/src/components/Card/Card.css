@@ -78,8 +78,8 @@ div.card-div {
     text-decoration: none;
 }
 
-.cuisine-header {
-    margin-left: 20px;
+h2.cuisine-header {
+    margin-left: 50px;
     font-size: 1.5rem;
     font-weight: 700;
     line-height: 1.75rem;
