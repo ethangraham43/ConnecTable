@@ -13,11 +13,12 @@
 #
 # Indexes
 #
-#  index_reservations_on_restaurant_id  (restaurant_id) UNIQUE
-#  index_reservations_on_user_id        (user_id) UNIQUE
+#  index_reservations_on_restaurant_id              (restaurant_id)
+#  index_reservations_on_user_id_and_restaurant_id  (user_id,restaurant_id) UNIQUE
+#
 
 class Reservation < ApplicationRecord
-    validates :restaurant_id, :user_id, presence: true
+    validates :date, :time, :seats, presence: true
     belongs_to :user
     belongs_to :restaurant
 end

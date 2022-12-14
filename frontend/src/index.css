@@ -26,6 +26,7 @@ body {
     background-color: #fff;
     color: #2d333f;
     height: 100%;
+    overflow-x: hidden;
 }
 
 .logo {

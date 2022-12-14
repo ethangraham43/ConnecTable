@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import restaurantsReducer, { getRestaurant, fetchRestaurant } from "../../store/restaurants";
 import { useEffect } from "react";
 import './RestaurantShowPage.css';
+import ReservationForm from '../ReservationForm'
 
 const RestaurantShowPage = () => {
     const dispatch = useDispatch();
@@ -50,35 +51,39 @@ const RestaurantShowPage = () => {
 
     return (
     <>
-        <img className="restaurant-image-show" src={restaurant.photoUrl}></img>
-        <button className="save-restaurant-button">
-            <div className="inside-save-restaurant">
-                <img className="save-restaurant-img"src="https://cdn.otstatic.com/cfe/11/images/ic_bookmark-f6a8ce.svg"></img>
-                <div className="save-restaurant-div">Save this restaurant</div>
-            </div>
-        </button>
-        <br/>
-        <div className="restaurant-profile">
-            <ol className="restaurant-show-menu">
-                <li className="restaurant-show-menu-ov"><button className="restaurant-show-menu-ov">Overview</button></li>
-                <li className="restaurant-show-menu-ph"><button className="restaurant-show-menu-ph">Photos</button></li>
-                <li className="restaurant-show-menu-me"><button className="restaurant-show-menu-me">Menu</button></li>
-                <li className="restaurant-show-menu-re"><button className="restaurant-show-menu-re">Reviews</button></li>
-            </ol>
-            <h1 className="restaurant-name-title">{restaurant.name}</h1>
-        <div className="title-details-div">
-            <div className="avg-rating-div">{reviewStars(restaurant.avgRating)}{restaurant.avgRating.toFixed(1)} </div>
-            <div className="reviews-div"> 
-            <svg className="reviews-logo"viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" focusable="false"><g fill="none" fill-rule="evenodd"><path d="M19,4 L5,4 C3.8954305,4 3,4.8954305 3,6 L3,15 C3,16.1045695 3.8954305,17 5,17 L11,17 L15.36,20.63 C15.6583354,20.8784924 16.0735425,20.9318337 16.4250008,20.7668198 C16.776459,20.6018059 17.0006314,20.2482681 17,19.86 L17,17 L19,17 C20.1045695,17 21,16.1045695 21,15 L21,6 C21,4.8954305 20.1045695,4 19,4 Z M19,15 L15,15 L15,17.73 L11.72,15 L5,15 L5,6 L19,6 L19,15 Z" fill="#2D333F" fill-rule="nonzero"></path></g></svg>
-            {restaurant.numReviews} Reviews </div>
-            <div className="price-div">
-            <svg className="price-logo"viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" focusable="false"><g fill="none" fill-rule="evenodd"><path d="M20,15 L20,9 L18.5,9 C18.2238576,9 18,8.77614237 18,8.5 L18,7 L6,7 L6,8.5 C6,8.77614237 5.77614237,9 5.5,9 L4,9 L4,15 L5.5,15 C5.77614237,15 6,15.2238576 6,15.5 L6,17 L18,17 L18,15.5 C18,15.2238576 18.2238576,15 18.5,15 L20,15 Z M4,5 L20,5 C21.1045695,5 22,5.8954305 22,7 L22,17 C22,18.1045695 21.1045695,19 20,19 L4,19 C2.8954305,19 2,18.1045695 2,17 L2,7 C2,5.8954305 2.8954305,5 4,5 Z M12,10 C13.1045695,10 14,10.8954305 14,12 C14,13.1045695 13.1045695,14 12,14 C10.8954305,14 10,13.1045695 10,12 C10,10.8954305 10.8954305,10 12,10 Z" fill="#2D333F"></path></g></svg>
-            {restaurant.priceRange}</div>
-            <div className="cuisine-top-div">
-            <svg className="cuisine-logo"viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" focusable="false"><g fill="none" fill-rule="evenodd"><path d="M11,2 C12.1045695,2 13,2.8954305 13,4 L13,11 C13,12.1045695 12.1045695,13 11,13 L10,13 L10,21 C10,21.5522847 9.55228475,22 9,22 L8,22 C7.44771525,22 7,21.5522847 7,21 L7,13 L6,13 C4.8954305,13 4,12.1045695 4,11 L4,4 C4,2.8954305 4.8954305,2 6,2 L11,2 Z M11,11 L11,4 L10,4 L10,8.5 C10,8.77614237 9.77614237,9 9.5,9 C9.22385763,9 9,8.77614237 9,8.5 L9,4 L8,4 L8,8.5 C8,8.77614237 7.77614237,9 7.5,9 C7.22385763,9 7,8.77614237 7,8.5 L7,4 L6,4 L6,11 L11,11 Z M19.45,2 C19.7537566,2 20,2.24624339 20,2.55 L20,21 C20,21.5522847 19.5522847,22 19,22 L18,22 C17.4477153,22 17,21.5522847 17,21 L17,17 L16,17 C14.8954305,17 14,16.1045695 14,15 L14,7.45 C14,4.44004811 16.4400481,2 19.45,2 Z M16,15 L18,15 L18,4.32 C16.7823465,4.88673047 16.0026709,6.10692278 16,7.45 L16,15 Z" fill="#2D333F" fill-rule="nonzero"></path></g></svg>
-             {restaurant.cuisine}</div>
-        </div>
-        <div className="description-span">{restaurant.description}</div>
+                        
+                <img className="restaurant-image-show" src={restaurant.photoUrl}></img>
+                <button className="save-restaurant-button">
+                    <div className="inside-save-restaurant">
+                        <img className="save-restaurant-img"src="https://cdn.otstatic.com/cfe/11/images/ic_bookmark-f6a8ce.svg"></img>
+                        <div className="save-restaurant-div">Save this restaurant</div>
+                    </div>
+                </button>
+                <div className="rest-profile-with-reservation">
+                <br/>
+                <div className="restaurant-profile">
+                    <ol className="restaurant-show-menu">
+                        <li className="restaurant-show-menu-ov"><button className="restaurant-show-menu-ov">Overview</button></li>
+                        <li className="restaurant-show-menu-ph"><button className="restaurant-show-menu-ph">Photos</button></li>
+                        <li className="restaurant-show-menu-me"><button className="restaurant-show-menu-me">Menu</button></li>
+                        <li className="restaurant-show-menu-re"><button className="restaurant-show-menu-re">Reviews</button></li>
+                    </ol>
+                    <h1 className="restaurant-name-title">{restaurant.name}</h1>
+                <div className="title-details-div">
+                    <div className="avg-rating-div">{reviewStars(restaurant.avgRating)}{restaurant.avgRating.toFixed(1)} </div>
+                    <div className="reviews-div"> 
+                    <svg className="reviews-logo"viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" focusable="false"><g fill="none" fill-rule="evenodd"><path d="M19,4 L5,4 C3.8954305,4 3,4.8954305 3,6 L3,15 C3,16.1045695 3.8954305,17 5,17 L11,17 L15.36,20.63 C15.6583354,20.8784924 16.0735425,20.9318337 16.4250008,20.7668198 C16.776459,20.6018059 17.0006314,20.2482681 17,19.86 L17,17 L19,17 C20.1045695,17 21,16.1045695 21,15 L21,6 C21,4.8954305 20.1045695,4 19,4 Z M19,15 L15,15 L15,17.73 L11.72,15 L5,15 L5,6 L19,6 L19,15 Z" fill="#2D333F" fill-rule="nonzero"></path></g></svg>
+                    {restaurant.numReviews} Reviews </div>
+                    <div className="price-div">
+                    <svg className="price-logo"viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" focusable="false"><g fill="none" fill-rule="evenodd"><path d="M20,15 L20,9 L18.5,9 C18.2238576,9 18,8.77614237 18,8.5 L18,7 L6,7 L6,8.5 C6,8.77614237 5.77614237,9 5.5,9 L4,9 L4,15 L5.5,15 C5.77614237,15 6,15.2238576 6,15.5 L6,17 L18,17 L18,15.5 C18,15.2238576 18.2238576,15 18.5,15 L20,15 Z M4,5 L20,5 C21.1045695,5 22,5.8954305 22,7 L22,17 C22,18.1045695 21.1045695,19 20,19 L4,19 C2.8954305,19 2,18.1045695 2,17 L2,7 C2,5.8954305 2.8954305,5 4,5 Z M12,10 C13.1045695,10 14,10.8954305 14,12 C14,13.1045695 13.1045695,14 12,14 C10.8954305,14 10,13.1045695 10,12 C10,10.8954305 10.8954305,10 12,10 Z" fill="#2D333F"></path></g></svg>
+                    {restaurant.priceRange}</div>
+                    <div className="cuisine-top-div">
+                    <svg className="cuisine-logo"viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" focusable="false"><g fill="none" fill-rule="evenodd"><path d="M11,2 C12.1045695,2 13,2.8954305 13,4 L13,11 C13,12.1045695 12.1045695,13 11,13 L10,13 L10,21 C10,21.5522847 9.55228475,22 9,22 L8,22 C7.44771525,22 7,21.5522847 7,21 L7,13 L6,13 C4.8954305,13 4,12.1045695 4,11 L4,4 C4,2.8954305 4.8954305,2 6,2 L11,2 Z M11,11 L11,4 L10,4 L10,8.5 C10,8.77614237 9.77614237,9 9.5,9 C9.22385763,9 9,8.77614237 9,8.5 L9,4 L8,4 L8,8.5 C8,8.77614237 7.77614237,9 7.5,9 C7.22385763,9 7,8.77614237 7,8.5 L7,4 L6,4 L6,11 L11,11 Z M19.45,2 C19.7537566,2 20,2.24624339 20,2.55 L20,21 C20,21.5522847 19.5522847,22 19,22 L18,22 C17.4477153,22 17,21.5522847 17,21 L17,17 L16,17 C14.8954305,17 14,16.1045695 14,15 L14,7.45 C14,4.44004811 16.4400481,2 19.45,2 Z M16,15 L18,15 L18,4.32 C16.7823465,4.88673047 16.0026709,6.10692278 16,7.45 L16,15 Z" fill="#2D333F" fill-rule="nonzero"></path></g></svg>
+                    {restaurant.cuisine}</div>
+                </div>
+                <div className="description-span">{restaurant.description}</div>
+                </div>
+            <ReservationForm />
         </div>
         <div className="additional-information">
         <h4 className="additional-information">Additional Information</h4>

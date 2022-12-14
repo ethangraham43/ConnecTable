@@ -70,6 +70,8 @@
     border: transparent;
     float: left;
     flex-direction: column;
+    height: 34px;
+    margin-top: 10px;
 }
 
 .sign-out:hover {
@@ -81,4 +83,24 @@
 div.nav-class {
     background-color: #fff;
     margin-top: 16px;
+}
+
+.my-profile-button {
+    background: white;
+    color: #2d333f;
+    border: transparent;
+    float: left;
+    flex-direction: column;
+    height: 34px;
+    margin-top: 10px;
+}
+
+.my-profile-button:hover {
+    cursor: pointer;
+    background-color: #00000008;
+    width: 100%;
+}
+
+.profile-title {
+    padding: 16px 16px 8px 8px;
 }

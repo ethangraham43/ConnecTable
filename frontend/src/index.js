@@ -9,6 +9,7 @@ import csrfFetch, { restoreCSRF } from './store/csrf';
 import * as sessionActions from './store/session';
 import { ModalProvider } from './context/Modal';
 import * as restaurantActions from './store/restaurants';
+import * as reservationActions from './store/reservations';
 
 const store = configureStore();
 
@@ -17,6 +18,7 @@ if (process.env.NODE_ENV !== 'production') {
   window.csrfFetch = csrfFetch;
   window.sessionActions = sessionActions;
   window.restaurantActions = restaurantActions;
+  window.reservationActions = reservationActions;
 }
 
 

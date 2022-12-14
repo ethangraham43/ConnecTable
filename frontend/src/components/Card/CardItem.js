@@ -68,7 +68,7 @@ function CardItem({restaurant}) {
         <NavLink className="restaurant-card-navlink" to={`/restaurants/${restaurant.id}`}>
         <div className="card-base">
             <h3 className="restaurant-card-header">{restaurant.name}</h3>
-            <div>
+            <div className="card-stars-and-reviews">
                 <div>{reviewStars(restaurant.avgRating)}</div>
                 <span className="reviews-span">{restaurant.numReviews} reviews</span>
             </div>

@@ -2,6 +2,7 @@ import { getRestaurants, fetchRestaurants} from '../../store/restaurants';
 import {useSelector, useDispatch} from 'react-redux';
 import {useEffect} from 'react';
 import './RestaurantIndexPage.css'
+import RestaurantIndexItem from './RestaurantIndexItem'
 
 
 const RestaurantIndexPage = () => {
@@ -12,9 +13,9 @@ const RestaurantIndexPage = () => {
         dispatch(fetchRestaurants());
     }, []);
 
-    // const restaurantList = restaurants.map(restaurant => {
-    //     return (restaurant.restaurant.name)
-    // })
+    const restaurantList = restaurants.map(restaurant => {
+        return <RestaurantIndexItem restaurant = {restaurant} />
+    })
 
     return (
         <>
@@ -93,8 +94,8 @@ const RestaurantIndexPage = () => {
         </header>
 
         <ul>
-            Restaurants:
-            {/* {restaurantList} */}
+            <h3 className="restaurant-index-heading">36 restaurants available in Manhattan</h3>
+            {restaurantList}
         </ul>
         </>
     )

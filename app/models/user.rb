@@ -27,6 +27,7 @@ class User < ApplicationRecord
     validates :session_token, :phone_number, presence: true, uniqueness: true
     # validates :password, length: { in: 6..255 }, allow_nil: true
 
+    has_many :reservations
 
     def self.find_by_credentials(credential)
         if URI::MailTo::EMAIL_REGEXP.match(credential)

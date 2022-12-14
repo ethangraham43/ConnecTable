@@ -11,10 +11,12 @@ div.card-div {
     transition: all .3s;
     font-size:larger;
     width: 236px;
+    transition: top ease 0.5s;
 }
 
 .card-div:hover {
     cursor: pointer;
+    top: -10px;
 }
 
 .booked-times-logo {
@@ -28,12 +30,17 @@ div.card-div {
 
 .list-of-card-items {
     display: flex;
+    margin-left: -25px;
 }
 
 .card-photo {
     width: 234px;
     height: 132px;
     object-fit: cover;
+}
+
+.card-photo:hover {
+    transform: scale(1.1)
 }
 
 .dot-separator {
@@ -79,14 +86,13 @@ div.card-div {
 }
 
 h2.cuisine-header {
-    margin-left: 50px;
+    margin-left: 20px;
     font-size: 1.5rem;
     font-weight: 700;
     line-height: 1.75rem;
     border-bottom: 0.0625rem solid #d8d9db;
     display: flex;
     justify-content: space-between;
-    margin: 0 0 16px;
     padding-bottom: 16px;
     margin-top: 20px;
 }
@@ -105,4 +111,8 @@ h2.cuisine-header {
     padding-top: 1rem;
     transition: opacity .5s 4s,height .5s 4.5s,padding-bottom .5s 4.5s,padding-top .5s 4.5s;
     margin-left: 20px;
+}
+
+.card-stars-and-reviews {
+    display: flex;
 }

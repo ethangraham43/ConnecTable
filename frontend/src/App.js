@@ -7,6 +7,7 @@ import SearchSplash from './components/SearchSplash';
 import RestaurantShowPage from './components/RestaurantShowPage';
 import RestaurantIndexPage from './components/RestaurantIndexPage';
 import Card from './components/Card';
+import UserProfileShow from './components/UserProfileShow';
 
 
 function App() {
@@ -23,6 +24,9 @@ function App() {
       </Route>
       <Route path="/restaurants/">
           <RestaurantIndexPage/>
+      </Route>
+      <Route path="/users/:userId">
+          <UserProfileShow />
       </Route>
       </Switch>
     </>
