@@ -619,7 +619,8 @@
             close_time: restaurant_params[:close_time],
             avg_rating: restaurant_params[:avg_rating],
             description: restaurant_params[:description],
-            cuisine: restaurant_params[:cuisine]
+            cuisine: restaurant_params[:cuisine],
+            num_reviews: restaurant_params[:num_reviews]
         }
         obj = Restaurant.create(keys)
         obj.photo.attach(io: URI.open(restaurant_params[:file]),

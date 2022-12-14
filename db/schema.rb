@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_14_031624) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_14_152007) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -79,7 +79,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_14_031624) do
     t.string "open_time"
     t.string "close_time"
     t.string "cuisine"
-    t.bigint "num_reviews"
+    t.integer "num_reviews"
     t.index ["address"], name: "index_restaurants_on_address", unique: true
     t.index ["name"], name: "index_restaurants_on_name", unique: true
     t.index ["phone_number"], name: "index_restaurants_on_phone_number", unique: true
