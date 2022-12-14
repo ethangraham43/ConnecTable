@@ -27,10 +27,6 @@
 //       const data = await response.json();
 //     }
 
-<<<<<<< HEAD
-//     function reservationsReducer(state=null, action) {
-
-=======
 //     function reservationsReducer(state={}, action) {
 //         const newState = { ...state };
 //         switch (action.type) {
@@ -40,7 +36,6 @@
 
 
 //         }
->>>>>>> reservation
 //     }
 
 //     export default reservationsReducer;
