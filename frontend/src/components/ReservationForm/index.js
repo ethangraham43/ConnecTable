@@ -1,27 +1,34 @@
 import './ReservationForm.css'
 import { useSelector, useDispatch } from 'react-redux';
-import { receiveReservation, getRestaurant} from '../../store/reservations';
+import { receiveReservation, getRestaurant} from '../../store/restaurants';
 import { useState } from 'react';
 import * as reservationActions from '../../store/reservations'
 import { fetchRestaurant } from '../../store/restaurants';
 import { useParams } from 'react-router-dom';
 
-function ReservationForm() {
+function ReservationForm({ restaurantId }) {
     const dispatch = useDispatch();
     const [seats, setSeats] = useState(1);
     const [date, setDate] = useState(new Date());
     const [time, setTime] = useState(new Date())
     const [errors, setErrors] = useState([]);
-    const restaurantId = useParams();
+    // const {restaurantId} = useParams();
+    const userId = useSelector(({session:  {user }}) => user.id );
+
+
     // const userId = user.id;
 
-    // const { reservationData } = { userId, restaurantId, date, time, seats}
+    // const restaurant = useSelector(getRestaurant(restaurantId));
 
+    
     const handleSubmit = (e) => {
         e.preventDefault();
+        const reservationData = { date, time, seats, restaurantId,  userId };
+
+        //  debugger;
         setErrors([]);
 
-        // return dispatch(reservationActions.createReservation({reservationData}));
+        return dispatch(reservationActions.createReservation(reservationData));
     }
 
     return (
@@ -60,7 +67,7 @@ function ReservationForm() {
                     <label for="time" className="time-reservation-label">Time</label>
                 </div>
                 <div className="date-time-pickers">
-                    <input type="date" class="date-selector" value={date} onChange={(e) => setDate(e.target.value)}>
+                    <input type="date" className="date-selector" value={date} onChange={(e) => setDate(e.target.value)}>
                     </input>
                     <select className="time-selector" value={time} onChange={(e) => setTime(e.target.value)}>
                     <option value="12:30:00">12:30 PM</option>

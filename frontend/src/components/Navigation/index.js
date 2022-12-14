@@ -10,11 +10,7 @@ import ProfileDropdown from './ProfileDropdown';
 
 function Navigation() {
 
-    const dispatch = useDispatch();
-    const logout = (e) => {
-        e.preventDefault();
-        dispatch(sessionActions.logout());
-    };
+  const dispatch = useDispatch();
 
   const sessionUser = useSelector(state => state.session.user);
 

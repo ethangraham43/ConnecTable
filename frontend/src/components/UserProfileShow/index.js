@@ -1,6 +1,8 @@
+import { useSelector } from 'react-redux';
 import './UserProfileShow.css'
 
-function UserProfileShow({user}) {
+function UserProfileShow() {
+    const user = useSelector(({session: {user}}) => user ? user : {});
 
     return (
         <>
