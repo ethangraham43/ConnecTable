@@ -27,8 +27,20 @@
 //       const data = await response.json();
 //     }
 
+<<<<<<< HEAD
 //     function reservationsReducer(state=null, action) {
 
+=======
+//     function reservationsReducer(state={}, action) {
+//         const newState = { ...state };
+//         switch (action.type) {
+//             case RECEIVE_RESERVATIONS:
+//                 return action.reservations;
+//             case RECEIVE_RESERVATION:
+
+
+//         }
+>>>>>>> reservation
 //     }
 
 //     export default reservationsReducer;
