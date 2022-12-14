@@ -47,6 +47,7 @@ const RestaurantShowPage = () => {
             );
         }
     }
+
     return (
     <>
         <img className="restaurant-image-show" src={restaurant.photoUrl}></img>
