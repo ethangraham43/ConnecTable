@@ -39,7 +39,7 @@ function Navigation() {
     </div>
     <div className='nav-class'>
         <NavLink exact to="/">
-            <img src="https://images.squarespace-cdn.com/content/v1/582be445b3db2bdbeed3fa84/1521179933545-OZZ96GQGL8QCU49OXFEC/ot-logo-mark.png?format=1000w" className="logo"/><h3 className='title'>ConnecTable</h3>
+            <img src="https://www.pngfind.com/pngs/m/3-38455_stacked-lockup-opentable-logo-png-transparent-png.png" className="logo"/><h3 className='title'>ConnecTable</h3>
         </NavLink>
         <img src="https://img.icons8.com/ios-filled/512/search.png" className='search-button'/>
         {sessionLinks}
