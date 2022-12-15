@@ -8,6 +8,7 @@ import RestaurantShowPage from './components/RestaurantShowPage';
 import RestaurantIndexPage from './components/RestaurantIndexPage';
 import Card from './components/Card';
 import UserProfileShow from './components/UserProfileShow';
+import ReservationShow from './components/ReservationForm/ReservationShow';
 
 
 function App() {
@@ -28,6 +29,9 @@ function App() {
       <Route path="/users/:userId">
           <UserProfileShow />
       </Route>
+        <Route path='/reservation/:reservationId'>
+          <ReservationShow/>
+        </Route>
       </Switch>
     </>
   );

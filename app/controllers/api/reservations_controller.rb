@@ -10,6 +10,10 @@ class Api::ReservationsController < ApplicationController
             render json: ["User not found"], status: 404
         end
     end
+    
+    def show
+        
+    end
 
     def create
         @reservation = Reservation.new(reservation_params)
@@ -20,6 +24,23 @@ class Api::ReservationsController < ApplicationController
         end
     end
 
+    def destroy
+        @reservation = Reservation.find(params[:id])
+        if @reservation
+            @reservation.destroy
+            render :show
+        else
+            render json: ["Oops! We can't find the reservation you're looking for."], status: 404
+        end
+    end
+
+    def update
+        if @reservation.update(reservation_params)
+            render :show
+          else
+            render json: @reservation.errors.full_messages, status: :unprocessable_entity
+          end
+    end
     private
     def reservation_params
         params.require(:reservation).permit(:user_id, :restaurant_id, :date, :time, :seats)

@@ -1,11 +1,12 @@
 import { useSelector } from 'react-redux';
 import './UserProfileShow.css'
-import './UserProfileCard'
-import UserProfileCardList from './UserProfileCard';
+import UserProfileCardList from './UserProfileCardList';
+import { fetchRestaurants } from '../../store/restaurants';
 
 function UserProfileShow() {
     const user = useSelector(({session: {user}}) => user ? user : {});
-
+    const restaurants = useSelector(fetchRestaurants)
+    // debugger
     return (
         <>
             <div className='user-show-header-div'>
@@ -24,7 +25,7 @@ function UserProfileShow() {
                 </div>
                 <div className='user-show-reservations'>
                     <h2 className='upcoming-reservations-h2'>Upcoming Reservations</h2>
-                    <UserProfileCardList />
+                    <UserProfileCardList key={user.id}/>
                 </div>
             </div>
         </>

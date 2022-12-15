@@ -19,8 +19,20 @@ export const removeReservation = reservationId => ({
     payload: reservationId
 })
 
-export const getReservations = (state) => state.reservations ? Object.values(state.reservations) : [];
+export const getReservations = (state) => Object.values(state.reservations);
 
+export const fetchReservations = () => async (dispatch) => {
+    const response = await fetch('/api/reservations/');
+    const data = await response.json();
+    dispatch(receiveReservations(data));
+}
+
+export const fetchReservation = (reservationId) => async (dispatch) => {
+    const response = await csrfFetch(`/api/reservations/${reservationId}`);
+    const data = await response.json();
+    dispatch(receiveReservation(data.reservation));
+    return response;
+  };
 
 export const createReservation = reservation => async dispatch => {
     const response = await csrfFetch("/api/reservations", {
@@ -32,12 +44,12 @@ export const createReservation = reservation => async dispatch => {
     //   return data;
     }
 
+
     export const destroyReservation = (reservationId) => async dispatch => {
         const response = await csrfFetch(`/api/reservations/${reservationId}`, {
-            method: "DELETE",
+            method: "DELETE"
           });
-          const data = await response.json();
-          dispatch(removeReservation(data.reservation));
+          dispatch(removeReservation(reservationId));
           return response;
     }
 
@@ -62,8 +74,7 @@ export const createReservation = reservation => async dispatch => {
                 newState[action.reservation.id] = action.reservation;
                 return newState;
             case REMOVE_RESERVATION: {
-                const reservation = action.payload;
-                const { [reservation.id]: _remove, ...newState } = state;
+                delete newState[action.payload];
                 return newState;
                 }
             default:

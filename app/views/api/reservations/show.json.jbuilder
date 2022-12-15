@@ -1,1 +1,1 @@
-json.extract! @reservation, :id, :user_id, :restaurant_id, :date, :time, :seats
+json.partial! 'api/reservations/reservation', reservation: @reservation

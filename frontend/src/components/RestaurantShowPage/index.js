@@ -83,7 +83,7 @@ const RestaurantShowPage = () => {
                 </div>
                 <div className="description-span">{restaurant.description}</div>
                 </div>
-            <ReservationForm restaurantId={restaurantId} />
+            <ReservationForm restaurantId={parseInt(restaurantId)} />
         </div>
         <div className="additional-information">
         <h4 className="additional-information">Additional Information</h4>

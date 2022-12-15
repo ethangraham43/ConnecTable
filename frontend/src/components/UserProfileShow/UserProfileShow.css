@@ -105,10 +105,37 @@
     border-radius: 4px;
     box-shadow: none;
     padding: 16px;
+    display: flex;
+    margin-bottom: 16px;
 }
 
 .user-profile-restaurant-name {
     font-size: 1.125rem;
     font-weight: 700;
     line-height: 1.5rem;
+}
+
+.user-profile-card-img {
+    height: 128px;
+    width: 128px;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.user-profile-reservation-profile {
+    margin-left: 8px;
+}
+
+
+.modify-cancel-user-show {
+    display: flex;
+}
+
+.cancel-user-show {
+    margin-left: 16px;
+    color: #da3743;
+}
+
+.modify-user-show {
+    color: #da3743;
 }

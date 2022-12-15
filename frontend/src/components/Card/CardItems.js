@@ -6,7 +6,7 @@ function CardItems({restaurants}) {
         <>
         {restaurants.map((restaurant) => (
             <div className="card-list-item">
-                <CardItem restaurant = {restaurant} />
+                <CardItem restaurant = {restaurant} key={restaurant.id}/>
             </div>
         )
         )}

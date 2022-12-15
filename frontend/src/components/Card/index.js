@@ -16,7 +16,7 @@ const cuisines =["American", "Italian", "Indian", "Chinese", "French", "Japanese
 
 
 const CardLists = cuisines.map((cuisine) => {
-    return <CardList cuisine = {cuisine} />
+    return <CardList key= {cuisine.id}  cuisine = {cuisine} />
 })
 
 return (

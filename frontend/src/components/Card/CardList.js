@@ -13,6 +13,7 @@ function CardList({cuisine}) {
         <h2 className="cuisine-header">{cuisine} Dining</h2>
         <ul className="list-of-card-items">
             <CardItems
+            key={cuisine.id}
             restaurants={restaurants} />
         </ul>
         </>
