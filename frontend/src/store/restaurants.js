@@ -3,12 +3,12 @@ import csrfFetch from './csrf';
 const RECEIVE_RESTAURANTS = 'restaurants/RECEIVE_RESTAURANTS'
 const RECEIVE_RESTAURANT = 'restaurants/RECEIVE_RESTAURANT'
 
-const receiveRestaurants = (restaurants) => ({
+export const receiveRestaurants = (restaurants) => ({
     type: RECEIVE_RESTAURANTS,
     restaurants
 })
 
-const receiveRestaurant = (restaurant) => ({
+export const receiveRestaurant = (restaurant) => ({
     type: RECEIVE_RESTAURANT,
     restaurant
 })

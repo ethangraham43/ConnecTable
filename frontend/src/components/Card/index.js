@@ -24,7 +24,7 @@ return (
     <div className="fake-location-tag-div">
         <span className="fake-location-tag">It looks like you're in Manhattan. </span>
     </div>
-    <div className="">
+    <div>
         {CardLists}
     </div>
     </>
