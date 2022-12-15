@@ -74,7 +74,7 @@ function ReservationForm({ restaurantId }) {
                     <input type="date" className="date-selector" value={date} onChange={(e) => setDate(e.target.value)}>
                     </input>
                     <select className="time-selector" value={time} onChange={(e) => setTime(e.target.value)}>
-                    <option value="12:30:00">12:30 PM</option>
+                    <option value="12:30:00" selected>12:30 PM</option>
                         <option value="13:00:00">1:00 PM</option>
                         <option value="13:30:00">1:30 PM</option>
                         <option value="14:00:00">2:00 PM</option>

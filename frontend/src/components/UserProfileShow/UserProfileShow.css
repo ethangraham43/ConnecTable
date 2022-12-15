@@ -139,3 +139,7 @@
 .modify-user-show {
     color: #da3743;
 }
+
+.modify-button {
+    text-decoration: none;
+}

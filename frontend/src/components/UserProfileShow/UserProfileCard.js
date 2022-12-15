@@ -3,14 +3,17 @@ import { useSelector, useDispatch } from 'react-redux';
 import { destroyReservation, fetchReservation } from '../../store/reservations';
 import { useHistory } from 'react-router-dom';
 import { useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
+import { fetchRestaurant } from '../../store/restaurants';
 
 function UserProfileCard({reservation}) {
     const history = useHistory();
 
     const dispatch = useDispatch();
     const restaurant = useSelector(({restaurants}) => restaurants[reservation.restaurantId]);
-debugger
-
+    useEffect(() => {
+        dispatch(fetchRestaurant(reservation.restaurantId));
+    }, [reservation.restaurantId, dispatch])
     const monthNames = [
         "January",
         "February",
@@ -55,9 +58,12 @@ debugger
 
       const reservationTime = (resTime) => {
         const currentDate = new Date(resTime)
-        const hour = (currentDate.getHours() - 7);
-        const minutes = currentDate.getMinutes();
-        return `${hour}:${minutes} PM`
+        const hour = (currentDate.getHours() - 7).toString();
+        const minutes = currentDate.getMinutes().toString();
+        const actualMinutes = (minutes==="0") ? '00' : '30';
+        const actualHour = (hour === "0") ? '12' : hour
+    
+        return `${actualHour}:${actualMinutes} PM`
       }
 
     return (
@@ -83,7 +89,9 @@ debugger
                     </span>
                 </span>
                 <div className='modify-cancel-user-show'>
+                    <NavLink to={`/reservations/${reservation.id}/edit`} className="modify-button">
                     <p className='modify-user-show'>Modify</p> 
+                    </NavLink>
                     <p className='cancel-user-show' onClick={handleCancelClick}>Cancel</p>
                 </div>
             </div>
