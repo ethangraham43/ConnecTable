@@ -22,7 +22,7 @@
 #     # Create one user with an easy to remember username, email, and password:
     User.create!(
         first_name: 'Demo', 
-        last_name: 'User',
+        last_name: 'Lition',
         email: 'demo@user.io', 
         phone_number: '0000000000'
     )
