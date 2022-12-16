@@ -58,6 +58,12 @@ div.card-div {
     font-size: 18px;
     text-overflow: ellipsis;
     white-space: nowrap;
+    padding: 4px;
+    margin-block-start: 0px;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+
 }
 
 .card-base {
@@ -115,4 +121,38 @@ h2.cuisine-header {
 
 .card-stars-and-reviews {
     display: flex;
+}
+
+.fake-splash-button {
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: #da3743;
+    color: #fff;
+    box-sizing: border-box;
+    font-weight: 500;
+    display: inline-block;
+    border: 2px solid transparent;
+    height: 32px;
+    width: 72px;
+    margin-left: 2px;
+    
+}
+
+.fake-splash-button:hover {
+    cursor: pointer;
+    background-color: rgb(183, 0, 0);
+}
+
+.splash-booked-22 {
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+.booked-times-div {
+    display: flex;
+}
+
+.fake-splash-buttons {
+    margin-top: -4px;
+    /* padding: 4px; */
 }

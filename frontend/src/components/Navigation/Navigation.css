@@ -104,3 +104,11 @@ div.nav-class {
 .profile-title {
     padding: 16px 16px 8px 8px;
 }
+
+.language-top-nav {
+    float: left;
+    margin-right: 900px;
+    font-size: 13px;
+    color: #2d333f;
+    cursor: pointer;
+}

@@ -34,8 +34,9 @@ function Navigation() {
   return (
     <>
     <div className='top-nav'>
-    <a className="github" href="https://github.com/ethangraham43"><img className="githubLogo" src="https://upload.wikimedia.org/wikipedia/commons/9/95/Font_Awesome_5_brands_github.svg" /></a>
-    <a className="linkedin" href="https://www.linkedin.com/in/ethan-graham-28454918b/"><img className="linkedinLogo" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" /></a>
+      <p className='language-top-nav'>Ruby | Rails | JavaScript | CSS3 | HTML5 | AWS | React | Redux | postgresql</p>
+      <a className="github" href="https://github.com/ethangraham43"><img className="githubLogo" src="https://upload.wikimedia.org/wikipedia/commons/9/95/Font_Awesome_5_brands_github.svg" /></a>
+      <a className="linkedin" href="https://www.linkedin.com/in/ethan-graham-28454918b/"><img className="linkedinLogo" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" /></a>
     </div>
     <div className='nav-class'>
         <NavLink exact to="/">
