@@ -7,4 +7,4 @@ ConnecTable is an OpenTable clone that creates a platform for users to book rese
 
 # Technologies
 
-Python JavaScript CSS3 HTML5 AWS React Redux SQLite postgresql
+Ruby Rails JavaScript CSS3 HTML5 AWS React Redux SQLite postgresql
