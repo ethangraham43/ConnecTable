@@ -138,11 +138,6 @@ h2.cuisine-header {
     
 }
 
-.fake-splash-button:hover {
-    cursor: pointer;
-    background-color: rgb(183, 0, 0);
-}
-
 .splash-booked-22 {
     font-size: 14px;
     margin-top: 4px;
