@@ -14,6 +14,7 @@ function UserProfileCard({reservation}) {
     useEffect(() => {
         dispatch(fetchRestaurant(reservation.restaurantId));
     }, [reservation.restaurantId, dispatch])
+
     const monthNames = [
         "January",
         "February",
@@ -42,13 +43,10 @@ function UserProfileCard({reservation}) {
         dispatch(destroyReservation(reservation.id))
         history.push(`/users/${reservation.userId}`)
       }
-    //   if (!reservation) {
-    //     return null
-    //   };
-
-    //   if (!restaurant) {
-    //     return null
-    //   };
+      
+      if (!restaurant) {
+        return null
+      };
     const reservationDate = (resDate) => {
         const date = new Date(resDate);
         let str = date.toDateString(0, 10);
