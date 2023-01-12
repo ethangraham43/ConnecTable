@@ -20,3 +20,27 @@
     box-shadow: 0 0.0625rem 0 #0000001a;
     padding: 1.5rem;
 }
+
+.embarrassing-title {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 2.25rem;
+}
+
+.unable-to-find {
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1.5rem;
+}
+
+.errorcode-404 {
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 1.25rem;
+}
+
+ .links-p-tag-errors{
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 1.25rem;
+ }
