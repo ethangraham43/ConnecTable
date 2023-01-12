@@ -1,5 +1,5 @@
-
-import React from 'react';
+import icon from './assets/connectable-favicon.png';
+import {React, useEffect} from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import './index.css';
@@ -14,6 +14,13 @@ import Footer from './components/Footer';
 
 
 function App() {
+
+
+useEffect(() => {
+  const favicon = document.getElementById('favicon');
+  favicon.setAttribute('href', icon);
+}, []);
+
   return (
     <>
     <Navigation />
