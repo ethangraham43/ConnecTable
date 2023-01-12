@@ -135,7 +135,7 @@ h2.cuisine-header {
     height: 32px;
     width: 72px;
     margin-left: 2px;
-    
+    cursor: not-allowed;
 }
 
 .splash-booked-22 {
