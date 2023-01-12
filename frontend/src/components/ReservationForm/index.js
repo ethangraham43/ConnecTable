@@ -13,26 +13,28 @@ function ReservationForm({ restaurantId }) {
     const [time, setTime] = useState();
     const [errors, setErrors] = useState([]);
     // const {restaurantId} = useParams();
-    const userId = useSelector(({session:  {user }}) => user.id );
 
-    const history = useHistory();
+    const userId = useSelector(({session:  {user }}) => user? user.id: null);
 
-    const submitResForm = () => {
-        history.push(`/users/${userId}`)
-    }
-    // const userId = user.id;
+    // if (!userId) return null;
+    // const history = useHistory();
+
+    // const submitResForm = () => {
+    //     history.push(`/users/${userId}`)
+    // }
 
     // const restaurant = useSelector(getRestaurant(restaurantId));
 
     
     const handleSubmit = (e) => {
         e.preventDefault();
-        const reservationData = { date, time, seats, restaurantId,  userId };
-
-        //  debugger;
-        setErrors([]);
-
-        return dispatch(reservationActions.createReservation(reservationData));
+        if (userId === null) {setErrors(["You must sign in to make a reservation."])} else {
+            const reservationData = { date, time, seats, restaurantId,  userId };
+            //  debugger;
+            setErrors([]);
+    
+            return dispatch(reservationActions.createReservation(reservationData));
+        }
     }
 
     return (

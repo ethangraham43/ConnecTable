@@ -16,6 +16,9 @@ const RestaurantShowPage = () => {
 
     if (!restaurant) return null;
 
+    // const userId = useSelector(({session:  {user }}) => user.id);
+
+
     const reviewStars = (num) => {
         if (num === 4.0) {
             return (
@@ -83,7 +86,7 @@ const RestaurantShowPage = () => {
                 </div>
                 <div className="description-span">{restaurant.description}</div>
                 </div>
-            <ReservationForm restaurantId={parseInt(restaurantId)} />
+            <ReservationForm restaurantId={parseInt(restaurantId)}/>
         </div>
         <div className="additional-information">
         <h4 className="additional-information">Additional Information</h4>
