@@ -3,7 +3,8 @@ import { useSelector, useDispatch } from "react-redux";
 import restaurantsReducer, { getRestaurant, fetchRestaurant } from "../../store/restaurants";
 import { useEffect } from "react";
 import './RestaurantShowPage.css';
-import ReservationForm from '../ReservationForm'
+import ReservationForm from '../ReservationForm';
+import ErrorPage from "../ErrorPage";
 
 const RestaurantShowPage = () => {
     const dispatch = useDispatch();
@@ -14,7 +15,11 @@ const RestaurantShowPage = () => {
         if (!restaurant) dispatch(fetchRestaurant(restaurantId));
       }, [restaurantId,  dispatch]);
 
-    if (!restaurant) return null;
+    if (!restaurant) {
+        return (
+            <ErrorPage />
+        )
+    }
 
     // const userId = useSelector(({session:  {user }}) => user.id);
 

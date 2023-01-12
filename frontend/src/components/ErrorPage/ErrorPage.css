@@ -1,0 +1,22 @@
+.error-octopus {
+    width: 300px;
+    height: 231px;
+    margin: 0.5rem;
+    margin-top: 100px;
+}
+
+.full-error-page {
+    align-items: center;
+    background-color: #f1f2f4;
+    color: #2d333f;
+    display: flex;
+    flex-direction: column;
+    height: 650px;
+}
+
+.error-page {
+    background-color: #fff;
+    border-radius: 0.3125rem;
+    box-shadow: 0 0.0625rem 0 #0000001a;
+    padding: 1.5rem;
+}

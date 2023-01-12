@@ -6,7 +6,12 @@ class Api::RestaurantsController < ApplicationController
     end
 
     def show
-        @restaurant = Restaurant.find(params[:id])
+        @restaurant = Restaurant.find_by(id: params[:id])
+        if @restaurant
+            render :show
+        else
+            render json: { error: 'Restaurant not found' }, status: 404
+        end
     end
 
     private

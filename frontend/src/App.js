@@ -11,6 +11,7 @@ import UserProfileShow from './components/UserProfileShow';
 import ReservationShow from './components/ReservationForm/ReservationShow';
 import ReservationUpdateForm from './components/ReservationForm/ReservationUpdateForm';
 import Footer from './components/Footer';
+import ErrorPage from './components/ErrorPage';
 
 
 function App() {
@@ -30,25 +31,28 @@ useEffect(() => {
         <Card/>
         <Footer />
       </Route>
-    <Route path="/restaurants/:restaurantId">
+    <Route exact path="/restaurants/:restaurantId">
           <RestaurantShowPage />
           <Footer />
       </Route>
-      <Route path="/restaurants/">
+      <Route exact path="/restaurants/">
           <RestaurantIndexPage/>
           <Footer />
       </Route>
-      <Route path="/users/:userId">
+      <Route exact path="/users/:userId">
           <UserProfileShow />
           <Footer />
       </Route>
-        <Route path='/reservation/:reservationId'>
+        <Route exact path='/reservation/:reservationId'>
           <ReservationShow/>
           <Footer />
         </Route>
-        <Route path="/reservations/:reservationId/edit">
+        <Route exact path="/reservations/:reservationId/edit">
           <ReservationUpdateForm/>
           <Footer />
+        </Route>
+        <Route exact path='*'>
+          <ErrorPage />
         </Route>
       </Switch>
     </>
