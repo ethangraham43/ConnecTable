@@ -11,7 +11,7 @@ button.save-restaurant-button {
     color: #2d333f;
     border-radius: 4px;
     font-weight: 700;
-    cursor: pointer;
+    cursor: not-allowed;
     font-size: 16px;
     outline: none;
     padding: 1px 6px;
@@ -79,20 +79,20 @@ ol.restaurant-show-menu {
 }
 
 button.restaurant-show-menu-ov:hover {
-    cursor: pointer;
+    cursor: not-allowed;
     color:rgb(207, 0, 0);
 }
 
 button.restaurant-show-menu-ph:hover {
-    cursor: pointer;
+    cursor: not-allowed;
     color:rgb(207, 0, 0);
 }
 button.restaurant-show-menu-me:hover {
-    cursor: pointer;
+    cursor: not-allowed;
     color:rgb(207, 0, 0);
 }
 button.restaurant-show-menu-re:hover {
-    cursor: pointer;
+    cursor: not-allowed;
     color:rgb(207, 0, 0);
 }
 
