@@ -33,7 +33,10 @@ function ReservationForm({ restaurantId }) {
             //  debugger;
             setErrors([]);
     
-            return dispatch(reservationActions.createReservation(reservationData));
+            if (dispatch(reservationActions.createReservation(reservationData))) {
+                return dispatch(reservationActions.createReservation(reservationData));
+                
+            }
         }
     }
 
