@@ -5,6 +5,7 @@ import { useState } from 'react';
 import * as reservationActions from '../../store/reservations'
 import { fetchRestaurant } from '../../store/restaurants';
 import { useHistory, useParams } from 'react-router-dom';
+import ReservationShow from './ReservationShow';
 
 function ReservationForm({ restaurantId }) {
     const dispatch = useDispatch();
@@ -34,8 +35,8 @@ function ReservationForm({ restaurantId }) {
             setErrors([]);
     
             if (dispatch(reservationActions.createReservation(reservationData))) {
-                return dispatch(reservationActions.createReservation(reservationData));
-                
+                dispatch(reservationActions.createReservation(reservationData));
+                <ReservationShow reservation={reservationData} />
             }
         }
     }
