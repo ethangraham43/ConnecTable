@@ -5,7 +5,7 @@ import { useState } from 'react';
 import * as reservationActions from '../../store/reservations'
 import { fetchRestaurant } from '../../store/restaurants';
 import { useHistory, useParams } from 'react-router-dom';
-import ReservationShow from './ReservationShow';
+import ReservationShow from '../ReservationShow/index';
 
 function ReservationForm({ restaurantId }) {
     const dispatch = useDispatch();

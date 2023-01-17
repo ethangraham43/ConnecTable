@@ -8,7 +8,7 @@ import RestaurantShowPage from './components/RestaurantShowPage';
 import RestaurantIndexPage from './components/RestaurantIndexPage';
 import Card from './components/Card';
 import UserProfileShow from './components/UserProfileShow';
-import ReservationShow from './components/ReservationForm/ReservationShow';
+import ReservationShow from './components/ReservationShow';
 import ReservationUpdateForm from './components/ReservationForm/ReservationUpdateForm';
 import Footer from './components/Footer';
 import ErrorPage from './components/ErrorPage';
