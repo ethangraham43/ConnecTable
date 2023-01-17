@@ -4,6 +4,7 @@ function ReservationShow(reservation) {
 
     return (
         <>
+        {reservation}
         <div className='reservation-show-res-div'>
             
         </div>

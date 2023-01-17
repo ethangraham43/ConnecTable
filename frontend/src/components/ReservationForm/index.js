@@ -26,20 +26,21 @@ function ReservationForm({ restaurantId }) {
 
     // const restaurant = useSelector(getRestaurant(restaurantId));
 
-    
+    const history = useHistory();
     const handleSubmit = (e) => {
         e.preventDefault();
         if (userId === null) {setErrors(["You must sign in to make a reservation."])} else {
             const reservationData = { date, time, seats, restaurantId,  userId };
-            //  debugger;
             setErrors([]);
-    
-            if (dispatch(reservationActions.createReservation(reservationData))) {
+            reservationData.id = response.data.id;
+
+            if (dispatch(reservationActions.createReservation(reservationData)) ){
                 dispatch(reservationActions.createReservation(reservationData));
-                <ReservationShow reservation={reservationData} />
+                history.push(`/reservation/${reservationData.id}`, {reservation: reservationData});
             }
         }
     }
+
 
     return (
         <form onSubmit={handleSubmit}>
