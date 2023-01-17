@@ -1,10 +1,11 @@
 import './ReservationShow.css';
 
-function ReservationShow(reservation) {
-
+function ReservationShow({ reservation }) {
+    console.log(reservation);
+    if(!reservation) return null;
     return (
         <>
-        {reservation}
+            {Object.keys(reservation).map(key => <p>{`${key}: ${reservation[key]}`}</p>)}
         <div className='reservation-show-res-div'>
             
         </div>

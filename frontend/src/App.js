@@ -12,6 +12,7 @@ import ReservationShow from './components/ReservationShow';
 import ReservationUpdateForm from './components/ReservationForm/ReservationUpdateForm';
 import Footer from './components/Footer';
 import ErrorPage from './components/ErrorPage';
+import  ReservationForm  from './components/ReservationForm';
 
 
 function App() {
@@ -21,6 +22,8 @@ useEffect(() => {
   const favicon = document.getElementById('favicon');
   favicon.setAttribute('href', icon);
 }, []);
+
+const { reservationData } = ReservationForm();
 
   return (
     <>
@@ -43,8 +46,8 @@ useEffect(() => {
           <UserProfileShow />
           <Footer />
       </Route>
-        <Route exact path='/reservation/:reservationId'>
-          <ReservationShow/>
+        <Route exact path='/reservations/:reservationId'>
+        {reservationData && <ReservationShow reservation={reservationData}/>}
           <Footer />
         </Route>
         <Route exact path="/reservations/:reservationId/edit">

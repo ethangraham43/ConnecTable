@@ -9,10 +9,18 @@ export const receiveReservations = reservations => ({
     reservations
 })
 
-export const receiveReservation = reservation => ({
-    type: RECEIVE_RESERVATION,
-    reservation
-})
+// export const receiveReservation = reservation => ({
+//     type: RECEIVE_RESERVATION,
+//     reservation
+// })
+
+export const receiveReservation = data => {
+    const reservation = { ...data, id: data.id };
+    return {
+        type: RECEIVE_RESERVATION,
+        reservation
+    }
+}
 
 export const removeReservation = reservationId => ({
     type: REMOVE_RESERVATION,
@@ -34,16 +42,29 @@ export const fetchReservation = (reservationId) => async (dispatch) => {
     return response;
   };
 
-export const createReservation = reservation => async dispatch => {
-    const response = await csrfFetch("/api/reservations", {
-        method: "POST",
-        body: JSON.stringify(reservation)
-      });
-      const data = await response.json();
-      dispatch(receiveReservation(data));
-    //   return data;
-    }
+// export const createReservation = reservation => async dispatch => {
+//     const response = await csrfFetch("/api/reservations", {
+//         method: "POST",
+//         body: JSON.stringify(reservation)
+//       });
+//       const data = await response.json();
+//       dispatch(receiveReservation(data));
+//     //   return data;
+//     }
 
+export const createReservation = reservation => async dispatch => {
+    try {
+        const response = await csrfFetch("/api/reservations", {
+            method: "POST",
+            body: JSON.stringify(reservation)
+        });
+        const data = await response.json();
+        dispatch(receiveReservation(data));
+        return data;
+    } catch (err) {
+        console.log(err);
+    }
+};
 
     export const destroyReservation = (reservationId) => async dispatch => {
         const response = await csrfFetch(`/api/reservations/${reservationId}`, {

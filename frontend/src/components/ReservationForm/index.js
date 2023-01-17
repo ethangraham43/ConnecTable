@@ -1,7 +1,7 @@
 import './ReservationForm.css'
 import { useSelector, useDispatch } from 'react-redux';
 import { receiveReservation, getRestaurant} from '../../store/restaurants';
-import { useState } from 'react';
+import { useState, useEffect} from 'react';
 import * as reservationActions from '../../store/reservations'
 import { fetchRestaurant } from '../../store/restaurants';
 import { useHistory, useParams } from 'react-router-dom';
@@ -13,9 +13,11 @@ function ReservationForm({ restaurantId }) {
     const [date, setDate] = useState();
     const [time, setTime] = useState();
     const [errors, setErrors] = useState([]);
+    const [response,setResponse] = useState(null);
     // const {restaurantId} = useParams();
 
     const userId = useSelector(({session:  {user }}) => user? user.id: null);
+    const [reservationData, setReservationData] = useState({ date, time, seats, restaurantId, userId });
 
     // if (!userId) return null;
     // const history = useHistory();
@@ -27,19 +29,39 @@ function ReservationForm({ restaurantId }) {
     // const restaurant = useSelector(getRestaurant(restaurantId));
 
     const history = useHistory();
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        if (userId === null) {setErrors(["You must sign in to make a reservation."])} else {
-            const reservationData = { date, time, seats, restaurantId,  userId };
-            setErrors([]);
-            reservationData.id = response.data.id;
+    // const handleSubmit = (e) => {
+    //     e.preventDefault();
+    //     if (userId === null) {setErrors(["You must sign in to make a reservation."])} else {
+    //         const reservationData = { date, time, seats, restaurantId,  userId };
+    //         setErrors([]);
+    //         reservationData.id = response.data.id;
 
-            if (dispatch(reservationActions.createReservation(reservationData)) ){
-                dispatch(reservationActions.createReservation(reservationData));
-                history.push(`/reservation/${reservationData.id}`, {reservation: reservationData});
-            }
+    //         if (dispatch(reservationActions.createReservation(reservationData)) ){
+    //             dispatch(reservationActions.createReservation(reservationData));
+    //             history.push(`/reservation/${reservationData.id}`, {reservation: reservationData});
+    //         }
+    //     }
+    // }
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        if (userId === null) {
+            setErrors(["You must sign in to make a reservation."])
+        } else {
+            const reservationData = { date, time, seats, restaurantId, userId };
+            setReservationData(reservationData);
+            setErrors([]);
+            const response = await dispatch(reservationActions.createReservation(reservationData));
+            setResponse(response);
         }
     }
+    
+    useEffect(() => {
+      if(response){
+        reservationData.id = response.id;
+        history.push(`/reservations/${reservationData.id}`, {reservation: reservationData});
+      }
+    }, [response])
 
 
     return (
