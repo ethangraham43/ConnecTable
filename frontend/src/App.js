@@ -23,8 +23,6 @@ useEffect(() => {
   favicon.setAttribute('href', icon);
 }, []);
 
-const { reservationData } = ReservationForm();
-
   return (
     <>
     <Navigation />
@@ -47,7 +45,7 @@ const { reservationData } = ReservationForm();
           <Footer />
       </Route>
         <Route exact path='/reservations/:reservationId'>
-        {reservationData && <ReservationShow reservation={reservationData}/>}
+          <ReservationShow />
           <Footer />
         </Route>
         <Route exact path="/reservations/:reservationId/edit">
