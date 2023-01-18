@@ -53,7 +53,7 @@ function ReservationForm({ restaurantId }) {
             setErrors([]);
             const reservationData = { date, time, seats, restaurantId, userId }
             dispatch(reservationActions.createReservation(reservationData));
-            setSuccessMessage(["You're reservation is successful! Check your profile to see all of your reservations."])
+            history.replace({ pathname: `/users/${userId}`});
         }
     }
     
