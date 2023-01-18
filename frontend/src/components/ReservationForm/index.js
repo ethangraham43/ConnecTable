@@ -10,7 +10,7 @@ import ReservationShow from '../ReservationShow/index';
 function ReservationForm({ restaurantId }) {
     const dispatch = useDispatch();
     const [seats, setSeats] = useState(1);
-    const [date, setDate] = useState();
+    const [date, setDate] = useState(new Date());
     const [time, setTime] = useState();
     const [errors, setErrors] = useState([]);
     const [successMessage, setSuccessMessage] = useState([]);
@@ -46,6 +46,9 @@ function ReservationForm({ restaurantId }) {
         e.preventDefault();
         if (userId === null) {
             setErrors(["You must sign in to make a reservation."])
+        } else if ((date.valueOf()) < ((new Date()).valueOf())) {
+            debugger;
+            setErrors(["You may not pick a past date."])
         } else {
             // setReservationData({ date, time, seats, restaurantId, userId });
             setErrors([]);
