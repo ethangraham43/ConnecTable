@@ -42,14 +42,15 @@ function ReservationForm({ restaurantId }) {
     //     }
     // }
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
+        debugger;
         if (userId === null) {
-            setErrors(["You must sign in to make a reservation."])
+            setErrors(["You must sign in to make a reservation."]);
         } else if ((date.valueOf()) < ((new Date()).valueOf())) {
             debugger;
-            setErrors(["You may not pick a past date."])
-        } else {
+            setErrors(["You may not pick a past date."]);
+        } else if (dispatch(reservationActions.createReservation({date, time, seats, restaurantId, userId}))){
             // setReservationData({ date, time, seats, restaurantId, userId });
             setErrors([]);
             const reservationData = { date, time, seats, restaurantId, userId }
