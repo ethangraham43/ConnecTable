@@ -1,5 +1,5 @@
 import icon from './assets/connectable-favicon.png';
-import {React, useEffect} from 'react';
+import {React, useEffect, useState} from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import './index.css';
@@ -16,7 +16,6 @@ import  ReservationForm  from './components/ReservationForm';
 
 
 function App() {
-
 
 useEffect(() => {
   const favicon = document.getElementById('favicon');
@@ -45,7 +44,7 @@ useEffect(() => {
           <Footer />
       </Route>
         <Route exact path='/reservations/:reservationId'>
-          <ReservationShow />
+          <ReservationShow/>
           <Footer />
         </Route>
         <Route exact path="/reservations/:reservationId/edit">

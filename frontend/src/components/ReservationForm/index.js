@@ -13,11 +13,10 @@ function ReservationForm({ restaurantId }) {
     const [date, setDate] = useState();
     const [time, setTime] = useState();
     const [errors, setErrors] = useState([]);
-    const [response,setResponse] = useState(null);
     // const {restaurantId} = useParams();
 
     const userId = useSelector(({session:  {user }}) => user? user.id: null);
-    const [reservationData, setReservationData] = useState({ date, time, seats, restaurantId, userId });
+    const [reservationData, setReservationData] = useState({});
 
     // if (!userId) return null;
     // const history = useHistory();
@@ -48,20 +47,19 @@ function ReservationForm({ restaurantId }) {
         if (userId === null) {
             setErrors(["You must sign in to make a reservation."])
         } else {
-            const reservationData = { date, time, seats, restaurantId, userId };
-            setReservationData(reservationData);
+            // setReservationData({ date, time, seats, restaurantId, userId });
             setErrors([]);
-            const response = await dispatch(reservationActions.createReservation(reservationData));
-            setResponse(response);
+            dispatch(reservationActions.createReservation({ date, time, seats, restaurantId, userId }));
+            console.log({ date, time, seats, restaurantId, userId });
+            history.push(`/reservations/`, { reservation: { date, time, seats, restaurantId, userId } });
         }
     }
     
-    useEffect(() => {
-      if(response){
-        reservationData.id = response.id;
-        history.push(`/reservations/${reservationData.id}`, {reservation: reservationData});
-      }
-    }, [response])
+    // useEffect(() => {
+    //     if (reservationData.id) {
+    //         history.push(`/reservations/${reservationData.id}`, { reservation: reservationData });
+    //     }
+    // }, [reservationData]);
 
 
     return (
