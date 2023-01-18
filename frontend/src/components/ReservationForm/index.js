@@ -10,8 +10,8 @@ import ReservationShow from '../ReservationShow/index';
 function ReservationForm({ restaurantId }) {
     const dispatch = useDispatch();
     const [seats, setSeats] = useState(1);
-    const [date, setDate] = useState(new Date());
-    const [time, setTime] = useState();
+    const [date, setDate] = useState("");
+    const [time, setTime] = useState("2000-02-01T12:00:00");
     const [errors, setErrors] = useState([]);
     const [successMessage, setSuccessMessage] = useState([]);
     // const {restaurantId} = useParams();
@@ -46,8 +46,6 @@ function ReservationForm({ restaurantId }) {
         e.preventDefault();
         if (userId === null) {
             setErrors(["You must sign in to make a reservation."]);
-        } else if ((new Date(date).valueOf()) < (new Date().valueOf())) {
-            setErrors(["You must pick a future date."]);
         } else if (dispatch(reservationActions.createReservation({date, time, seats, restaurantId, userId}))){
             // setReservationData({ date, time, seats, restaurantId, userId });
             setErrors([]);
@@ -95,7 +93,7 @@ function ReservationForm({ restaurantId }) {
                     <label for="time" className="time-reservation-label">Time</label>
                 </div>
                 <div className="date-time-pickers">
-                    <input type="date" className="date-selector" value={date} onChange={(e) => setDate(e.target.value)}>
+                    <input type="date" className="date-selector" min={new Date().toISOString().split('T')[0]}  value={date} onChange={(e) => setDate(e.target.value)}>
                     </input>
                     <select className="time-selector" value={time} onChange={(e) => setTime(e.target.value)}>
                     <option value="12:30:00" selected>12:30 PM</option>
