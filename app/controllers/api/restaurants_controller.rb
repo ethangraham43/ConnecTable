@@ -1,7 +1,12 @@
 class Api::RestaurantsController < ApplicationController
     wrap_parameters include: Restaurant.attribute_names
     def index
-        @restaurants = Restaurant.all
+        search_term = params[:search]
+        if search_term
+            @restaurants = Restaurant.where("name LIKE ?", "%#{search_term}%")
+        else
+            @restaurants = Restaurant.all
+        end
         render :index
     end
 

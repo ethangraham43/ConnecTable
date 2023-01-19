@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useHistory } from 'react-router-dom';
 import './SearchSplash.css'
 import { fetchRestaurants } from '../../store/restaurants';
 import { useDispatch } from 'react-redux';
@@ -78,10 +78,11 @@ import { useDispatch } from 'react-redux';
 function SearchSplash() {
   const [searchValue, setSearchValue] = useState('');
   const dispatch = useDispatch();
+  const history = useHistory();
 
   const handleSearch = (e) => {
     e.preventDefault();
-    dispatch(fetchRestaurants(searchValue));
+    history.push(`/restaurants?searchValue=${searchValue}`);
   }
 
   return (
@@ -120,3 +121,5 @@ function SearchSplash() {
 
 
 export default SearchSplash;
+
+// const encodedSearchValue = encodeURIComponent(searchValue);

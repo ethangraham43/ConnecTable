@@ -2,20 +2,29 @@ import { getRestaurants, fetchRestaurants} from '../../store/restaurants';
 import {useSelector, useDispatch} from 'react-redux';
 import {useEffect} from 'react';
 import './RestaurantIndexPage.css'
-import RestaurantIndexItem from './RestaurantIndexItem'
+import RestaurantIndexItem from './RestaurantIndexItem';
+import { useLocation } from 'react-router-dom';
 
 
 const RestaurantIndexPage = () => {
     const dispatch = useDispatch();
     const restaurants = useSelector(getRestaurants)
+    const location = useLocation();
+    const searchValue = new URLSearchParams(location.search).get('searchValue');
 
     useEffect(() => {
         dispatch(fetchRestaurants());
     }, []);
 
-    const restaurantList = restaurants.map(restaurant => {
-        return <RestaurantIndexItem restaurant = {restaurant} />
-    })
+    // const restaurantList = restaurants.map(restaurant => {
+    //     return <RestaurantIndexItem restaurant = {restaurant} />
+    // })
+
+    const filteredRestaurantList = restaurants.filter(restaurant => {
+        return restaurant.name.toLowerCase().includes(searchValue.toLowerCase())
+      }).map(restaurant => {
+        return <RestaurantIndexItem restaurant={restaurant} />
+      });
 
     return (
         <>
@@ -95,7 +104,7 @@ const RestaurantIndexPage = () => {
 
         <ul>
             <h3 className="restaurant-index-heading">36 restaurants available in Manhattan</h3>
-            {restaurantList}
+            {filteredRestaurantList}
         </ul>
         </>
     )
