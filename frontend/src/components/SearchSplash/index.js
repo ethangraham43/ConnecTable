@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import './SearchSplash.css'
-
+import { fetchRestaurants } from '../../store/restaurants';
+import { useDispatch } from 'react-redux';
 // function SearchSplash() {
 //     return (
 //         <header className='splash-background'>
@@ -76,10 +77,11 @@ import './SearchSplash.css'
 
 function SearchSplash() {
   const [searchValue, setSearchValue] = useState('');
+  const dispatch = useDispatch();
 
   const handleSearch = (e) => {
     e.preventDefault();
-    // Perform the search here using the searchValue state
+    dispatch(fetchRestaurants(searchValue));
   }
 
   return (

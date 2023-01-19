@@ -20,11 +20,15 @@ export const getRestaurant= (restaurantId) => ({restaurants}) => {
 }
 
 
-export const fetchRestaurants = () => async (dispatch) => {
-    const response = await csrfFetch(`/api/restaurants/`);
-    const data = await response.json();
-    dispatch(receiveRestaurants(data));
-  };
+export const fetchRestaurants = (searchValue) => async (dispatch) => {
+  let url = '/api/restaurants/';
+  if (searchValue) {
+    url += `?search=${searchValue}`;
+  }
+  const response = await csrfFetch(url);
+  const data = await response.json();
+  dispatch(receiveRestaurants(data));
+};
 
   export const fetchRestaurant = (restaurant) => async (dispatch) => {
     const response = await csrfFetch(`/api/restaurants/${restaurant}`);

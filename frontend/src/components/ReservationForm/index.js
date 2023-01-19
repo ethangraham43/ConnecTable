@@ -23,7 +23,6 @@ function ReservationForm({ restaurantId }) {
         if (userId === null) {
             setErrors(["You must sign in to make a reservation."]);
         } else if (dispatch(reservationActions.createReservation({date, time, seats, restaurantId, userId}))){
-            // setReservationData({ date, time, seats, restaurantId, userId });
             setErrors([]);
             const reservationData = { date, time, seats, restaurantId, userId }
             dispatch(reservationActions.createReservation(reservationData));
