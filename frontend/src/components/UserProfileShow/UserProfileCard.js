@@ -43,16 +43,20 @@ function UserProfileCard({reservation}) {
         dispatch(destroyReservation(reservation.id))
         history.push(`/users/${reservation.userId}`)
       }
-      
+
       if (!restaurant) {
         return null
       };
+
     const reservationDate = (resDate) => {
-        const date = new Date(resDate);
-        let str = date.toDateString(0, 10);
-        str = str.split(" ");
-        return `${days[date.getDay()]}, ${monthNames[date.getMonth()]} ${str[2]}`;
-      };
+      const date = new Date(resDate);
+      return date.toLocaleDateString("en-US", {
+        weekday: "short",
+        month: "long",
+        day: "numeric",
+        timeZone: "UTC"
+      });
+    };
 
       const reservationTime = (resTime) => {
         const currentDate = new Date(resTime)
