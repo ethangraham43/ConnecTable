@@ -20,11 +20,15 @@ const RestaurantIndexPage = () => {
     //     return <RestaurantIndexItem restaurant = {restaurant} />
     // })
 
-    const filteredRestaurantList = restaurants.filter(restaurant => {
-        return restaurant.name.toLowerCase().includes(searchValue.toLowerCase())
-      }).map(restaurant => {
-        return <RestaurantIndexItem restaurant={restaurant} />
-      });
+    const filteredRestaurantList = searchValue && searchValue.length > 0 
+    ? restaurants.filter(restaurant => {
+      return restaurant.name.toLowerCase().includes(searchValue.toLowerCase()) || restaurant.cuisine.toLowerCase().includes(searchValue.toLowerCase())
+    }).map(restaurant => {
+      return <RestaurantIndexItem restaurant={restaurant} />
+    })
+    : restaurants.map(restaurant => {
+      return <RestaurantIndexItem restaurant={restaurant} />
+    });
 
     return (
         <>
