@@ -42,7 +42,7 @@ option {
     padding: 0px 2px 1px;
 }
 select.splash-time-select {
-    cursor: pointer;
+    cursor: not-allowed;
     font: inherit;
     height: 48px;
     width: 147.04px;
@@ -57,7 +57,7 @@ select.splash-time-select {
 
 select.party-size-picker {
     -webkit-appearance: none;
-    cursor: pointer;
+    cursor: not-allowed;
     font: inherit;
     height: 48px;
     width: 147.04px;
@@ -74,7 +74,7 @@ select.party-size-picker {
 
 input.reservation-date-select {
     color: #2d333f;
-    cursor: pointer;
+    cursor: not-allowed;
     display: inline-block;
     font-size: 16px;
     font-weight: 500;

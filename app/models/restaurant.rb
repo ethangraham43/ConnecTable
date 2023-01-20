@@ -28,4 +28,6 @@ class Restaurant < ApplicationRecord
     validates :avg_rating, :open_time, :close_time, :price_range, presence: true
     
     has_many :reservations
+    has_many :favorites
+    has_many :favorited_by, through: :favorites, source: :user
 end

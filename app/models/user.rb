@@ -28,6 +28,8 @@ class User < ApplicationRecord
     # validates :password, length: { in: 6..255 }, allow_nil: true
 
     has_many :reservations
+    has_many :favorites
+    has_many :favorite_restaurants, through: :favorites, source: :restaurant
 
     def self.find_by_credentials(credential)
         if URI::MailTo::EMAIL_REGEXP.match(credential)
