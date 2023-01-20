@@ -4,6 +4,7 @@ import {useEffect, useState} from 'react';
 import './RestaurantIndexPage.css'
 import RestaurantIndexItem from './RestaurantIndexItem';
 import { useLocation, useHistory } from 'react-router-dom';
+import BadSearch from './BadSearch';
 
 
 const RestaurantIndexPage = () => {
@@ -22,15 +23,17 @@ const RestaurantIndexPage = () => {
     //     return <RestaurantIndexItem restaurant = {restaurant} />
     // })
 
-    const filteredRestaurantList = searchValue && searchValue.length > 0 
+    const filteredRestaurantList = 
+    searchValue && searchValue.length > 0 
     ? restaurants.filter(restaurant => {
-      return restaurant.name.toLowerCase().includes(searchValue.toLowerCase()) || restaurant.cuisine.toLowerCase().includes(searchValue.toLowerCase())
+        return restaurant.name.toLowerCase().includes(searchValue.toLowerCase()) || restaurant.cuisine.toLowerCase().includes(searchValue.toLowerCase())
     }).map(restaurant => {
-      return <RestaurantIndexItem restaurant={restaurant} />
+        return <RestaurantIndexItem restaurant={restaurant} />
     })
     : restaurants.map(restaurant => {
-      return <RestaurantIndexItem restaurant={restaurant} />
+        return <RestaurantIndexItem restaurant={restaurant} />
     });
+
 
     const handleSearch = (e) => {
         e.preventDefault();
@@ -114,8 +117,8 @@ const RestaurantIndexPage = () => {
         </header>
 
         <ul>
-            <h3 className="restaurant-index-heading">36 restaurants available in Manhattan</h3>
-            {filteredRestaurantList}
+            <h3 className="restaurant-index-heading">{filteredRestaurantList.length} restaurants available in Manhattan</h3>
+            { filteredRestaurantList.length === 0 ? <BadSearch /> : filteredRestaurantList}
         </ul>
         </>
     )
