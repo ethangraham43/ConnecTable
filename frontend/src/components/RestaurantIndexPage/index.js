@@ -1,13 +1,15 @@
 import { getRestaurants, fetchRestaurants} from '../../store/restaurants';
 import {useSelector, useDispatch} from 'react-redux';
-import {useEffect} from 'react';
+import {useEffect, useState} from 'react';
 import './RestaurantIndexPage.css'
 import RestaurantIndexItem from './RestaurantIndexItem';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useHistory } from 'react-router-dom';
 
 
 const RestaurantIndexPage = () => {
     const dispatch = useDispatch();
+    const history = useHistory();
+    const [search, setSearch] = useState('');
     const restaurants = useSelector(getRestaurants)
     const location = useLocation();
     const searchValue = new URLSearchParams(location.search).get('searchValue');
@@ -30,6 +32,11 @@ const RestaurantIndexPage = () => {
       return <RestaurantIndexItem restaurant={restaurant} />
     });
 
+    const handleSearch = (e) => {
+        e.preventDefault();
+        history.push(`/restaurants?searchValue=${search}`);
+      }
+
     return (
         <>
         <div>
@@ -41,7 +48,7 @@ const RestaurantIndexPage = () => {
             </div>
         </div>
         <header className="restaurant-index-header">
-            <form className='index-search'>
+            <form className='index-search' onSubmit={handleSearch}>
                 <div className='index-search'>
                     <input type="date" className="index-reservation-date-select"></input>
                     <select className="index-time-select" aria-label='Time selector' date-test="time-picker">
@@ -99,7 +106,7 @@ const RestaurantIndexPage = () => {
                     </select>
                 </div>
                 <div  className='index-search-bar-form' >
-                    <input className="index-search-bar"placeholder='Location, Restaurant, or Cuisine'></ input>  
+                    <input className="index-search-bar"placeholder='Location, Restaurant, or Cuisine'  value={search} onChange={(e) => setSearch(e.target.value)}></ input>  
                 </div>
                 <button className="index-search-button" type="submit">Find a table</button>
             </form> 
