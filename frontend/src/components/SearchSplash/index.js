@@ -159,8 +159,10 @@ function SearchSplash() {
             value={searchValue}
             onChange={(e) => setSearchValue(e.target.value)}
           ></input>
-          <button type="submit">Search</button>
-        </div>
+          </div>
+          <div className="lets-go-navlink">
+          <button type="submit" className="splash-search-button" >Search</button>
+          </div>
       </form>
     </header>
   );
