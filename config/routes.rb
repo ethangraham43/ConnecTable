@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     resource :session, only: [:show, :create, :destroy]
     resources :restaurants, only: [:show, :index]
     resources :reservations, only: [:index, :create, :update, :destroy, :show]
+    resources :favorites, only: [:index, :create, :destroy] 
   end
   get '*path', to: "static_pages#frontend_index"
 end
