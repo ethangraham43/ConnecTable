@@ -15,6 +15,7 @@
 
 ## Technologies
 
+
 - Ruby 
 - Rails 
 - JavaScript 
