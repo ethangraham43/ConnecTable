@@ -1,7 +1,7 @@
 import './RestaurantIndexPage.css';
 
 function BadSearch() {
-    debugger;
+    
     return (
         <div>
         <h2>We didn't find a match for your search</h2>
