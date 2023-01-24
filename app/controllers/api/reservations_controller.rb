@@ -1,7 +1,6 @@
 class Api::ReservationsController < ApplicationController
     wrap_parameters include: Reservation.attribute_names + [:userId, :restaurantId]
     before_action :require_logged_in
-    protect_from_forgery with: :exception
 
     def index
         # @reservations = Reservation.all

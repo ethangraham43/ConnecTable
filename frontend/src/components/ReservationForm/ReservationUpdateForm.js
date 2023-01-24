@@ -275,6 +275,7 @@ function ReservationUpdateForm() {
     const [seats, setSeats] = useState(1);
     const [date, setDate] = useState("");
     const [time, setTime] = useState("2000-02-01T12:00:00");
+    debugger;
     const [error, setError] = useState(null);
     // debugger;
     useEffect(() => {
@@ -284,15 +285,17 @@ function ReservationUpdateForm() {
     const handleSubmit = (e) => {
         e.preventDefault();
         try {
+            debugger;
             // Create separate date and time constants
             dispatch(updateReservation({
                 id: reservation.id,
-                seats: seats,
-                date: new Date(date),
-                time: new Date(time),
-                restaurantId: restaurant.id,
-                userId: reservation.userId
+                seats: Number(seats),
+                date: new Date(date).toISOString(),
+                time: ('2023-01-26T'+time+'.000Z'),
+                userId: reservation.userId,
+                restaurantId: reservation.restaurantId
             }));
+            debugger;
             history.replace({ pathname: `/users/${reservation.userId}`});
         } catch (error) {
             setError(error.message);
@@ -413,7 +416,6 @@ function ReservationUpdateForm() {
     
     )
 }
-
 export default ReservationUpdateForm;
 
 
