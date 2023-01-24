@@ -51,7 +51,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_20_214647) do
     t.index ["user_id", "restaurant_id"], name: "index_favorites_on_user_id_and_restaurant_id", unique: true
     t.index ["user_id"], name: "index_favorites_on_user_id"
   end
-  
+
   create_table "reservations", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.bigint "restaurant_id", null: false

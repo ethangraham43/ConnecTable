@@ -6,6 +6,46 @@
     text-align: center;
     font-size: 16px;
 }
+.border-between-update{
+    height: 0.0625rem;
+    margin: -0.0625rem 0 0;
+}
+
+.update-card-img {
+    width: 64px;
+    height: 64px;
+    border-radius: 4px;
+    height: 4rem;
+    width: 4rem;
+}
+
+.update-card-description-title {
+    color: #2d333f;
+    display: flex;
+    justify-content: flex-start;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
+    margin: 0 0 4px;
+}
+
+.update-card {
+    display: flex;
+    margin-bottom: 16px;
+}
+
+
+.reservation-show-user-div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.reservation-show-res-div {
+    display: flex;
+    margin-right: 16px;
+}
 
 .reservation-form {
     position: sticky;

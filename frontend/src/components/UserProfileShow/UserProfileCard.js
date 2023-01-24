@@ -91,9 +91,12 @@ function UserProfileCard({reservation}) {
                     </span>
                 </span>
                 <div className='modify-cancel-user-show'>
-                    <NavLink to={`/reservations/${reservation.id}/edit`} className="modify-button">
-                    <p className='modify-user-show'>Modify</p> 
-                    </NavLink>
+                <NavLink to={{
+                  pathname: `/reservations/${reservation.id}/edit`,
+                  state: { reservation }
+                }} className="modify-button">
+                  <p className='modify-user-show'>Modify</p> 
+                </NavLink>
                     <p className='cancel-user-show' onClick={handleCancelClick}>Cancel</p>
                 </div>
             </div>
