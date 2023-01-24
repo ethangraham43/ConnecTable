@@ -35,12 +35,14 @@ class Api::ReservationsController < ApplicationController
     end
 
     def update
+        @reservation = Reservation.find(params[:id])
         if @reservation.update(reservation_params)
-            render :show
-          else
-            render json: @reservation.errors.full_messages, status: :unprocessable_entity
-          end
+          render json: @reservation
+        else
+          render json: @reservation.errors, status: :unprocessable_entity
+        end
     end
+
     private
     def reservation_params
         params.require(:reservation).permit(:user_id, :restaurant_id, :date, :time, :seats)

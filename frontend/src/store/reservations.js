@@ -75,12 +75,14 @@ export const createReservation = reservation => async dispatch => {
     }
 
     export const updateReservation = (reservation) => async (dispatch) => {
+        const csrfToken = sessionStorage.getItem('X-CSRF-Token');
         const response = await fetch(`/api/reservations/${reservation.id}`, {
             method: 'PATCH',
-            body: JSON.stringify(reservation),
             headers: {
-                'Content-Type': 'application/json'
-            }
+                'Content-Type': 'application/json',
+                'X-CSRF-Token': csrfToken
+            },
+            body: JSON.stringify({ reservation: reservation })
         });
         const data = await response.json();
         dispatch(receiveReservation(data));

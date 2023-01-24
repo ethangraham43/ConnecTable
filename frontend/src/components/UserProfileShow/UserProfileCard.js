@@ -14,31 +14,7 @@ function UserProfileCard({reservation}) {
     useEffect(() => {
         dispatch(fetchRestaurant(reservation.restaurantId));
     }, [reservation.restaurantId, dispatch])
-
-    const monthNames = [
-        "January",
-        "February",
-        "March",
-        "April",
-        "May",
-        "June",
-        "July",
-        "August",
-        "September",
-        "October",
-        "November",
-        "December",
-      ];
-      const days = [
-        "Sun",
-        "Mon",
-        "Tue",
-        "Wed",
-        "Thu",
-        "Fri",
-        "Sat",
-      ];
-    // const reservation = useSelector((state) => state.reservations.reservations.id)
+    
       const handleCancelClick = () => {
         dispatch(destroyReservation(reservation.id))
         history.push(`/users/${reservation.userId}`)

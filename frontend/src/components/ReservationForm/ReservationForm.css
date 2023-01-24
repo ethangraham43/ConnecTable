@@ -35,6 +35,28 @@
     margin-bottom: 16px;
 }
 
+.update-description-li {
+    align-items: center;
+    display: flex;
+    margin-right: 24px;
+    margin-top: 8px;
+}
+
+
+.description-ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    margin: 0;
+    padding-inline-start: 0;
+}
+
+.description-ul-div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
 
 .reservation-show-user-div {
     display: flex;
