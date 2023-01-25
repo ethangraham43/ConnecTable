@@ -10,7 +10,8 @@ function UserProfileCardList() {
 
     useEffect(() => {
         dispatch(fetchReservations());
-    }, []);
+    }, [dispatch]);
+
     return (
         <>
         {reservations.map((reservation) => {
@@ -25,3 +26,4 @@ function UserProfileCardList() {
 }
 
 export default UserProfileCardList;
+
