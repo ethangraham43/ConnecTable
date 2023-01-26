@@ -37,6 +37,18 @@ const RestaurantShowPage = () => {
         }
     };
 
+    const handleFavorite = () => {
+        return (
+        favorite ? (
+            <div className="inside-save-restaurant">
+            <img className="save-restaurant-img"src={favorite ? "favorite-icon.svg" : "https://cdn.otstatic.com/cfe/11/images/ic_bookmark-f6a8ce.svg"} ></img>
+            <div className="save-restaurant-div">Save this restaurant</div>
+        </div>
+        ) :
+        (<p>x</p>)
+        )
+    }
+
 
     const reviewStars = (num) => {
         if (num === 4.0) {
@@ -75,11 +87,8 @@ const RestaurantShowPage = () => {
     <>
                         
                 <img className="restaurant-image-show" src={restaurant.photoUrl}></img>
-                <button className="save-restaurant-button" onClick={handleClick}>
-                    <div className="inside-save-restaurant">
-                        <img className="save-restaurant-img"src={favorite ? "favorite-icon.svg" : "https://cdn.otstatic.com/cfe/11/images/ic_bookmark-f6a8ce.svg"} ></img>
-                        <div className="save-restaurant-div">Save this restaurant</div>
-                    </div>
+                <button className="save-restaurant-button" onClick={handleClick()}>
+                    {handleFavorite}
                 </button>
                 <div className="rest-profile-with-reservation">
                 <br/>
