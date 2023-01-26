@@ -42,7 +42,6 @@
     margin-top: 8px;
 }
 
-
 .description-ul {
     display: flex;
     flex-wrap: wrap;
@@ -58,6 +57,50 @@
     width: 100%;
 }
 
+.update-button {
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #da3743;
+    color: #fff;
+    height: 3rem;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    outline: none;
+    transition: all .3s ease-out;
+    width: 620px;
+}
+
+.update-button:hover {
+    background-color: #a82c34;
+    cursor: pointer;
+}
+
+.update-selectors {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: row;
+    margin-bottom: 16px;
+    border-radius: 4px;
+    height: 3rem;
+}
+
+.update-party-size-selector {
+    position: relative;
+}
+
+.update-date-selector {
+    position: relative;
+}
+
+.update-time-selector {
+    position: relative;
+}
+
+.full-update-form {
+    margin-left: 60px;
+}
 .reservation-show-user-div {
     display: flex;
     flex-direction: column;
@@ -221,7 +264,12 @@
 
 .your-current-reservation {
     font-size: 16px;
-    margin-top: 110px;
-    margin-left: 200px;
+    margin-top: 60px;
 }
 
+.update-card {
+    margin-top: 40px;
+}
+.update-card-description {
+    margin-left: 8px;
+}

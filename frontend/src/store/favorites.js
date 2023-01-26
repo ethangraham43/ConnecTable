@@ -1,9 +1,29 @@
 import csrfFetch from "./csrf";
 
-export const RECEIVE_FAVORITE = 'favorites/RECEIVE_FAVORITE'
-export const RECEIVE_FAVORITES = 'favorites/RECEIVE_FAVORITES'
-export const REMOVE_FAVORITE = 'favorites/REMOVE_FAVORITE'
+const RECEIVE_FAVORITE = 'favorites/RECEIVE_FAVORITE'
+const RECEIVE_FAVORITES = 'favorites/RECEIVE_FAVORITES'
+const REMOVE_FAVORITE = 'favorites/REMOVE_FAVORITE'
 
+export const receiveFavorite = (favorite) => {
+    return {
+        type: RECEIVE_FAVORITE,
+        favorite
+    }
+}
+
+export const receiveFavorites = (favorites) => {
+    return {
+      type: RECEIVE_FAVORITES,
+      favorites
+    };
+  };
+
+  export const removeFavorite = (favoriteId) => {
+    return {
+      type: REMOVE_FAVORITE,
+      favoriteId
+    };
+  };
 
 export const createFavorite = favorite => async dispatch => {
     try {
@@ -12,12 +32,16 @@ export const createFavorite = favorite => async dispatch => {
             body: JSON.stringify({ favorite: favorite })
         });
         const data = await response.json();
+        if (!response.ok) {
+            throw new Error(data.message);
+        }
         dispatch({ type: RECEIVE_FAVORITE, favorite: data });
         return data;
     } catch (err) {
         console.log(err);
     }
 };
+
 
 export const deleteFavorite = favoriteId => async dispatch => {
     const response = await csrfFetch(`/api/favorites/${favoriteId}`, {
@@ -27,10 +51,10 @@ export const deleteFavorite = favoriteId => async dispatch => {
     return response;
 };
 
-export const fetchAllFavorites = () => async dispatch => {
-    const response = await fetch('/api/favorites/');
+export const fetchAllFavorites = (userId) => async dispatch => {
+    const response = await csrfFetch(`/api/users/${userId}/favorites/`);
     const data = await response.json();
-    dispatch({ type: RECEIVE_FAVORITES, favorites: data });
+    dispatch(receiveFavorites(data));
 };
 
 function favoritesReducer(state={}, action) {

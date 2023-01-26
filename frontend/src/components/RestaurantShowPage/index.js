@@ -1,19 +1,25 @@
 import { useParams } from "react-router";
 import { useSelector, useDispatch } from "react-redux";
-import restaurantsReducer, { getRestaurant, fetchRestaurant } from "../../store/restaurants";
+import { getRestaurant, fetchRestaurant } from "../../store/restaurants";
 import { useEffect } from "react";
 import './RestaurantShowPage.css';
 import ReservationForm from '../ReservationForm';
 import ErrorPage from "../ErrorPage";
+import { createFavorite, deleteFavorite, fetchAllFavorites } from "../../store/favorites";
+import { useHistory } from "react-router-dom";
 
 const RestaurantShowPage = () => {
     const dispatch = useDispatch();
     const { restaurantId } = useParams();
     const restaurant = useSelector(getRestaurant(parseInt(restaurantId)));
+    const history = useHistory();
+    const currentUser = useSelector(state => state.session.user);
+    const favorite = useSelector(state => state.favorites.all && state.favorites.all.find(favorite => favorite.restaurant_id === restaurant.id));
 
     useEffect(() => {
         if (!restaurant) dispatch(fetchRestaurant(restaurantId));
-      }, [restaurantId,  dispatch]);
+        dispatch(fetchAllFavorites())
+    }, [restaurantId,  dispatch]);
 
     if (!restaurant) {
         return (
@@ -21,7 +27,15 @@ const RestaurantShowPage = () => {
         )
     }
 
-    // const userId = useSelector(({session:  {user }}) => user.id);
+    const handleClick = () => {
+        if (!currentUser) {
+            history.push('/');
+        } else if (!favorite) {
+            dispatch(createFavorite({ restaurant_id: restaurant.id, user_id: currentUser.id }));
+        } else {
+            dispatch(deleteFavorite(favorite.id));
+        }
+    };
 
 
     const reviewStars = (num) => {
@@ -61,9 +75,9 @@ const RestaurantShowPage = () => {
     <>
                         
                 <img className="restaurant-image-show" src={restaurant.photoUrl}></img>
-                <button className="save-restaurant-button">
+                <button className="save-restaurant-button" onClick={handleClick}>
                     <div className="inside-save-restaurant">
-                        <img className="save-restaurant-img"src="https://cdn.otstatic.com/cfe/11/images/ic_bookmark-f6a8ce.svg"></img>
+                        <img className="save-restaurant-img"src={favorite ? "favorite-icon.svg" : "https://cdn.otstatic.com/cfe/11/images/ic_bookmark-f6a8ce.svg"} ></img>
                         <div className="save-restaurant-div">Save this restaurant</div>
                     </div>
                 </button>
