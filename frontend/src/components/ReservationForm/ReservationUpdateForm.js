@@ -60,7 +60,7 @@ function ReservationUpdateForm() {
         return null
     };
     return (
-        <div>
+        <div className='full-update-form'>
             {error && <div>{error}</div>}
             <h2 className='your-current-reservation'>Your current reservation</h2>
             <div className='update-card'>
@@ -89,7 +89,10 @@ function ReservationUpdateForm() {
             </div>
             <form onSubmit={handleSubmit}>
                 <div className='update-input-container'>
-                <select className='party-size-selector' value={seats} onChange={(e) => setSeats(e.target.value)}>
+                    <h3>Modify your reservation</h3>
+                    <div>
+                        <div className='update-selectors'>
+                        <select className='update-party-size-selector' value={seats} onChange={(e) => setSeats(e.target.value)}>
                             <option className="party-size-option" value="1">1 person</option>
                             <option className="party-size-option" value="2" selected>2 people</option>
                             <option className="party-size-option" value="3">3 people</option>
@@ -111,10 +114,8 @@ function ReservationUpdateForm() {
                             <option className="party-size-option" value="19">19 people</option>
                             <option className="party-size-option" value="20">20 people</option>
                         </select>
-                    <label className="update-input-label">Date:</label>
-                    <input type="date" className="date-selector" min={new Date().toISOString().split('T')[0]}  value={date} onChange={(e) => setDate(e.target.value)}
+                    <input type="date" className="update-date-selector" min={new Date().toISOString().split('T')[0]}  value={date} onChange={(e) => setDate(e.target.value)}
                     />
-                    <label className="update-input-label">Time:</label>
                     <select className="update-time-selector" value={time} onChange={(e) => setTime(e.target.value)}>
                     <option value="12:30:00" selected>12:30 PM</option>
                     <option value="13:00:00">1:00 PM</option>
@@ -140,7 +141,11 @@ function ReservationUpdateForm() {
                     <option value="23:00:00">11:00 PM</option>
                     <option value="23:30:00">11:30 PM</option>]
                     </select>
-                    <button className='update-button'>Update reservation</button>
+                        </div>
+                        <div>
+                        <button className='update-button'>Update reservation</button>
+                        </div>
+                    </div>
                 </div>
             </form>
         </div>
