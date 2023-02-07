@@ -1,25 +1,51 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Carousel.css";
 import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
 import "pure-react-carousel/dist/react-carousel.es.css";
+import { useDispatch, useSelector } from "react-redux";
+import fetchRestaurants from "../../store/reservations";
+import CardItem from "../Card/CardItem";
+import { NavLink } from "react-router-dom";
 
-export default class extends React.Component {
-  render() {
+function Carousel({ restaurants }) {
+  const dispatch = useDispatch();
+
+  // const restaurants = useSelector((state) =>
+  //   state.restaurants ? Object.values(state.restaurants) : []
+  // );
+
+  useEffect(() => {
+    dispatch(fetchRestaurants);
+  }, []);
+
     return (
       <CarouselProvider
-        naturalSlideWidth={100}
-        naturalSlideHeight={125}
-        totalSlides={3}
+      naturalSlideWidth={125}
+      isIntrinsicHeight={true}
+      totalSlides={restaurants.length}
+      visibleSlides={5}
+      step={4}
+      dragEnabled={false}
       >
+        <ButtonBack>Back</ButtonBack>
         <Slider>
-          <Slide index={0}>I am the first Slide.</Slide>
-          <Slide index={1}>I am the second Slide.</Slide>
-          <Slide index={2}>I am the third Slide.</Slide>
+          {restaurants.map((restaurant, index) => {
+            return (
+            <Slide key={restaurant.id} index={index}>
+            <li id="restaurant-card-slides">
+              <CardItem restaurant={restaurant} />
+            </li>
+          </Slide>
+            )
+          })}
         </Slider>
+        <ButtonNext>Next</ButtonNext>
       </CarouselProvider>
     );
-  }
+
 }
+
+export default Carousel;
 
 // const Carousel = ({ slides, interval = 5000 }) => {
 //   const [active, setActive] = useState(0);

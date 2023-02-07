@@ -49,7 +49,7 @@ function CardList({ cuisine }) {
   return (
     <>
       <h2 className="cuisine-header">{cuisine} Dining</h2>
-      <Carousel slides={slides} dispatch={dispatch} state={state} />
+      <Carousel restaurants={restaurants} dispatch={dispatch} state={state} />
     </>
   );
 }
