@@ -40,3 +40,45 @@
   .carousel-next {
     right: 10px;
   }
+
+  .next-button-svg{
+    display: inline-block;
+    font-size: 0;
+    height: 1.5rem;
+    line-height: 1;
+    min-width: 1.5rem;
+    width: 1.5rem;
+  }
+
+  .back-button-svg{
+    display: inline-block;
+    font-size: 0;
+    height: 1.5rem;
+    line-height: 1;
+    min-width: 1.5rem;
+    width: 1.5rem;
+  }
+
+  .next-button {
+    align-items: center;
+    background-color: #fff;
+    border: 0.0625rem solid #d8d9db;
+    border-radius: 50%;
+    box-shadow: 0 0.125rem 0.5rem #9996;
+    display: inline-flex;
+    height: 42px;
+    justify-content: center;
+    width: 42px;
+  }
+
+  .back-button {
+    align-items: center;
+    background-color: #fff;
+    border: 0.0625rem solid #d8d9db;
+    border-radius: 50%;
+    box-shadow: 0 0.125rem 0.5rem #9996;
+    display: inline-flex;
+    height: 42px;
+    justify-content: center;
+    width: 42px;
+  }
