@@ -58,8 +58,8 @@ function LoginForm() {
       <button className="signin-continue" type="submit">Continue</button>
       <br />
     </form>
-    <button className="signin-switch" type="button" onClick={(e) => setFormType(false)}>Use email instead</button> 
     <button className="demo-button"type="button" onClick={handleDemo}>Demo User</button>
+    <button className="signin-switch" type="button" onClick={(e) => setFormType(false)}>Use email instead</button> 
     </>) : (
       <form onSubmit={handleSubmit}>
       <h2 className="login-title">Enter your email</h2>
@@ -78,8 +78,8 @@ function LoginForm() {
       <br/>
       <button className="signin-continue" type="submit">Continue</button>
       <br/>
-      <button className="signin-switch" type="button" onClick={(e) => setFormType(true)}>Use phone instead</button> 
       <button className="demo-button" type="button" onClick={handleDemo}>Demo User</button>
+      <button className="signin-switch" type="button" onClick={(e) => setFormType(true)}>Use phone instead</button> 
   </form>
     )
 

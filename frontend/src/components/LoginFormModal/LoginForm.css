@@ -20,7 +20,6 @@ button.signin-continue {
 .signin-switch {
     color: red;
     background-color: #fff;
-    text-decoration: underline;
     border-radius: 4px;
     height: 3rem;
     font-weight: 700;
@@ -36,7 +35,12 @@ button.signin-continue {
     justify-content: center;
     align-items: center;
     padding-bottom:20px;
+    margin-top: 16px;
 }
+.signin-switch:hover {
+    text-decoration: underline;
+}
+
 button.signin-continue:hover:not(:disabled) {
     background-color: #b8222d;
 }
