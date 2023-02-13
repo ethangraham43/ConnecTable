@@ -87,3 +87,26 @@ Users are able to create as many reservations as they wish at different restaura
 
 ```
 
+## Extra Code Snippet
+
+Here is a snippet from my search functionality on the frontend: 
+
+```
+    const filteredRestaurantList = 
+    searchValue && searchValue.length > 0 
+    ? restaurants.filter(restaurant => {
+        return restaurant.name.toLowerCase().includes(searchValue.toLowerCase()) || restaurant.cuisine.toLowerCase().includes(searchValue.toLowerCase())
+    }).map(restaurant => {
+        return <RestaurantIndexItem restaurant={restaurant} />
+    })
+    : restaurants.map(restaurant => {
+        return <RestaurantIndexItem restaurant={restaurant} />
+    });
+
+
+    const handleSearch = (e) => {
+        e.preventDefault();
+        history.push(`/restaurants?searchValue=${search}`);
+      }
+```
+
